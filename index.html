@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>LoL Win Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Victorias por Campeón</h1>
+    <div id="counter" class="counter">
+      Completados: 0
+    </div>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Buscar campeón..."
+    />
+
+    <div class="import-export">
+  <button id="exportBtn">Exportar progreso</button>
+
+  <label class="import-btn">
+    Importar progreso
+    <input type="file" id="importInput" accept=".json" hidden />
+  </label>
+</div>
+
+    <div class="filters">
+      <label>
+        <input type="radio" name="filter" value="all" checked />
+        Todos
+      </label>
+      <label>
+        <input type="radio" name="filter" value="won" />
+        Con victoria
+      </label>
+      <label>
+        <input type="radio" name="filter" value="not-won" />
+        Sin victoria
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <div id="championsGrid" class="grid"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
