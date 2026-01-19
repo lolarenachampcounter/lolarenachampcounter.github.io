@@ -1,188 +1,333 @@
-body {
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0a0a0a;
-  color: #e6e6e6;
+  padding: 0;
 }
 
+body.base {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  padding: 20px 28px;
 }
 
 .header-left {
-  flex: 1;
+  max-width: 1200px;
 }
 
-.header-right {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 4px;
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.tip-lang {
+
+.counter {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   INPUTS / BUTTONS
+========================= */
+input[type="text"] {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+input[type="text"]::placeholder {
+  color: #64748b;
+}
+
+button,
+.import-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+    line-height: 1;
+  display: inline-flex;
+  height: 34px;
+
+  color: #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s, border 0.2s;
+}
+
+button:hover,
+.import-btn:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+/* =========================
+   IMPORT / EXPORT
+========================= */
+.import-export {
+  display: flex;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.import-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.filters label {
+  cursor: pointer;
+  color: #cbd5f5;
+}
+
+.filters input {
+  margin-right: 4px;
+}
+
+/* =========================
+   SORT
+========================= */
+.sort-container {
+  margin-top: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-
-.tipjar {
-  color: #d4af37;       /* Dorado */
-  text-decoration: none; /* Quita subrayado */
-  font-weight: bold;
-  font-size: 13px;
-  cursor: pointer;
-  opacity: 90%;
-  padding-right: 10px;
+.sort-container label {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  margin-top: 1px;
 }
 
-.base{
-  padding: 20px;
+.sort-container select {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #e5e7eb;
+  padding: 3px 8px;
+  font-size: 0.85rem;
 }
 
-.tipjar:hover {
-  text-decoration: underline; /* Opcional: solo al pasar el ratón */
+/* =========================
+   HEADER RIGHT
+========================= */
+.header-right {
+  position: absolute;
+  top: 20px;
+  right: 28px;
 }
 
-
-h1 {
-  margin: 0 0 10px 0;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.filters label {
-  margin-right: 15px;
-  font-size: 14px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 90px);
-  gap: 12px;
-  padding: 16px;
-}
-
-.champion {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-}
-
-.champion img {
-  width: 80px;
-  height: 80px;
-  border-radius: 6px;
-  border: 2px solid transparent;
-}
-
-.champion.won img {
-  border: 2px solid #d4af37; /* dorado tipo LoL */
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.8);
-  filter: none; /* evita oscurecer si está completado */
-}
-.champion.won:hover img {
-  filter: none;
-}
-.champion {
-  cursor: pointer;
-}
-.counter {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #d4af37;
-  font-weight: bold;
-}
-.import-export {
+.tip-lang {
   display: flex;
-  gap: 10px;
-  margin-bottom: 12px;
+  align-items: center;
+  gap: 14px;
 }
 
-.import-export button,
-.import-export .import-btn {
-  background: #1a1a1a;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  padding: 6px 10px;
-  font-size: 12px;
-  cursor: pointer;
+.tipjar a {
+  text-decoration: none;
+  color: #facc15;
+  font-size: 0.85rem;
 }
 
-.import-export button:hover,
-.import-export .import-btn:hover {
-  background: #2a2a2a;
-}
 .lang-switch {
   display: flex;
   gap: 6px;
 }
+
 .lang-flag {
-  width: 20px;
-  height: 14px;
   cursor: pointer;
-  opacity: 0.85;
-  padding-top:5px ;
-  padding-right:5px ;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
-.lang-flag.active {
+.lang-flag.active,
+.lang-flag:hover {
   opacity: 1;
+  transform: scale(1.05);
 }
+
+/* =========================
+   GRID
+========================= */
+main {
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+/* =========================
+   CHAMPION CARD
+========================= */
+.champion {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 7px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s, border 0.15s, box-shadow 0.15s;
+}
+
+.champion img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.champion-name {
+  font-size: 0.75rem;
+  color: #cbd5f5;
+}
+
+.champion:hover {
+  transform: translateY(-2px);
+  border-color: #475569;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.champion.won {
+  border-color: #22c55e;
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 0.15),
+    rgba(2, 6, 23, 1)
+  );
+}
+
+.champion.won .champion-name {
+  color: #86efac;
+}
+
+/* =========================
+   MODAL
+========================= */
 .modal {
-  display: none; /* oculto por defecto */
   position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  justify-content: center;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  display: none;
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background-color: #1c1c24;
-  color: #eee;
-  padding: 20px;
-  border-radius: 8px;
-  width: 320px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 24px;
+  width: 90%;
+  max-width: 420px;
   text-align: center;
-  position: relative;
 }
 
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  cursor: pointer;
+.modal-content p {
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
 }
 
 .modal-buttons {
   display: flex;
-  justify-content: space-around;
-  margin-top: 16px;
+  justify-content: center;
+  gap: 12px;
 }
 
-.modal-buttons button {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #212121;
-  color: #d4af37;
-  font-weight: bold;
+.close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
   cursor: pointer;
+  font-size: 1.3rem;
+  color: #94a3b8;
 }
 
-.modal-buttons button:hover {
-  background-color: #2c2c2c;
+.close:hover {
+  color: #e5e7eb;
+}
+.import-export {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  height: 34px;
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.85rem;
+  font-family: inherit;
+  font-weight: 400;
+
+  background: #1e293b;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.action-btn:hover {
+  background: #334155;
+}
+
+/* Quitar el azul y el subrayado por defecto */
+.tipjar {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit;        /* Hereda el color del texto de tu app (blanco/gris) */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.2s;
+}
+
+/* Efecto al pasar el ratón */
+.tipjar:hover {
+  text-decoration: underline; /* Solo se subraya al pasar el ratón (opcional) */
+  opacity: 0.8;
+}
+
+/* Contenedor para separarlo un poco de las banderas */
+.tipjar-container {
+  display: flex;
+  align-items: center;
 }

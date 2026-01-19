@@ -2,7 +2,7 @@ const grid = document.getElementById("championsGrid");
 const searchInput = document.getElementById("searchInput");
 const filterRadios = document.querySelectorAll("input[name='filter']");
 const counter = document.getElementById("counter");
-const exportBtn = document.getElementById("exportBtn");
+const importBtn = document.getElementById("importBtn");
 const importInput = document.getElementById("importInput");
 const LANG_KEY = "lol-lang";
 const importModal = document.getElementById("importModal");
@@ -10,6 +10,7 @@ const modalText = document.getElementById("modalText");
 const closeModal = document.getElementById("closeModal");
 const replaceBtn = document.getElementById("replaceBtn");
 const addBtn = document.getElementById("addBtn");
+const sortSelect = document.getElementById("sortSelect");
 
 const translations = {
   es: {
@@ -25,7 +26,12 @@ const translations = {
     // AGREGA ESTAS LÍNEAS:
     importReplaceOrAdd: "¿Quieres sustituir tu progreso actual o añadir los nuevos campeones?",
     replace: "Sustituir",
-    add: "Añadir"
+    add: "Añadir",
+    sortLabel: "Ordenar",
+    sortNameAsc: "Nombre A-Z",
+    sortNameDesc: "Nombre Z-A",
+    sortWonFirst: "Ganados primero",
+    sortNotWonFirst: "Por ganar primero"
   },
   en: {
     title: "Champions with victory",
@@ -40,11 +46,17 @@ const translations = {
     // AGREGA ESTAS LÍNEAS:
     importReplaceOrAdd: "Do you want to replace your current progress or add to it?",
     replace: "Replace",
-    add: "Add"
+    add: "Add",
+      sortLabel: "Sort by",
+  sortNameAsc: "Name A-Z",
+  sortNameDesc: "Name Z-A",
+  sortWonFirst: "Won first",
+  sortNotWonFirst: "Not won first"
   }
 };
 let currentLang =  "en";
 
+sortSelect.addEventListener("change", render);
 
 const STORAGE_KEY = "lol-wins";
 let champions = [];
@@ -133,38 +145,60 @@ function getActiveFilter() {
 }
 
 function render() {
-  counter.textContent = `Completados: ${wins.size}`;
+  const t = translations[currentLang];
+  counter.textContent = `${t.completed}: ${wins.size}`;
 
   const search = searchInput.value.toLowerCase();
   const filter = getActiveFilter();
+  const sortOption = sortSelect.value;
 
-  grid.innerHTML = "";
-
-  champions
+  // 1️⃣ Filtrar campeones
+  let filteredChamps = champions
     .filter(c => c.name.toLowerCase().includes(search))
     .filter(c => {
       if (filter === "won") return wins.has(c.id);
       if (filter === "not-won") return !wins.has(c.id);
       return true;
-    })
-    .forEach(champ => {
-      const div = document.createElement("div");
-      div.className = "champion" + (wins.has(champ.id) ? " won" : "");
-      div.onclick = () => toggleWin(champ.id);
-
-      div.innerHTML = `
-        <img src="${champ.image}" alt="${champ.name}" />
-        <div class="champion-name">${champ.name}</div>
-      `;
-
-      grid.appendChild(div);
     });
+
+  // 2️⃣ Ordenar según opción
+  filteredChamps.sort((a, b) => {
+    switch(sortOption) {
+      case "name-asc":
+        return a.name.localeCompare(b.name);
+      case "name-desc":
+        return b.name.localeCompare(a.name);
+      case "won-first":
+        return (wins.has(b.id) ? 1 : 0) - (wins.has(a.id) ? 1 : 0);
+      case "not-won-first":
+        return (wins.has(a.id) ? 1 : 0) - (wins.has(b.id) ? 1 : 0);
+      default:
+        return 0;
+    }
+  });
+
+  // 3️⃣ Renderizar
+  grid.innerHTML = "";
+  filteredChamps.forEach(champ => {
+    const div = document.createElement("div");
+    div.className = "champion" + (wins.has(champ.id) ? " won" : "");
+    div.onclick = () => toggleWin(champ.id);
+
+    div.innerHTML = `
+      <img src="${champ.image}" alt="${champ.name}" />
+      <div class="champion-name">${champ.name}</div>
+    `;
+
+    grid.appendChild(div);
+  });
 }
+
 
 searchInput.addEventListener("input", render);
 filterRadios.forEach(radio => radio.addEventListener("change", render));
 
 loadChampions();
+
 function applyLanguage() {
   const t = translations[currentLang];
 
@@ -180,12 +214,9 @@ function applyLanguage() {
   counter.textContent = `${t.completed}: ${wins.size}`;
 
   // Botones Export / Import
-  const exportBtn = document.getElementById("exportBtn");
   exportBtn.textContent = t.export;
-
-  const importLabel = document.querySelector(".import-btn");
-  importLabel.childNodes[0].textContent = t.import;
-
+  document.getElementById("exportBtn").textContent = t.export;
+document.getElementById("importBtn").textContent = t.import;
   // Filtros
   document.querySelector('input[value="all"]').parentNode.lastChild.textContent = " " + t.filterAll;
   document.querySelector('input[value="won"]').parentNode.lastChild.textContent = " " + t.filterWon;
@@ -198,6 +229,12 @@ function applyLanguage() {
   document.querySelectorAll(".lang-flag").forEach(flag => {
     flag.classList.toggle("active", flag.dataset.lang === currentLang);
   });
+
+  document.getElementById("sortLabel").textContent = translations[currentLang].sortLabel;
+  sortSelect.options[0].textContent = t.sortNameAsc;
+  sortSelect.options[1].textContent = t.sortNameDesc;
+  sortSelect.options[2].textContent = t.sortWonFirst;
+  sortSelect.options[3].textContent = t.sortNotWonFirst;
 }
 
 
@@ -210,33 +247,28 @@ document.querySelectorAll(".lang-flag").forEach(flag => {
 });
 
 
-
 importInput.addEventListener("change", e => {
   const file = e.target.files[0];
   if (!file) return;
 
   const reader = new FileReader();
-
   reader.onload = () => {
     try {
       const data = JSON.parse(reader.result);
-
-      // Soporte para array directo o { wins: [...] }
       let winsArray = Array.isArray(data) ? data : data.wins;
 
-      // Validación flexible: array de strings o números (IDs)
       if (!Array.isArray(winsArray)) throw new Error("Formato incorrecto");
-      winsArray = winsArray.map(String); // Convertir todo a string
+      
+      // Convertimos a string por si vienen como IDs numéricos
+      const sanitizedWins = winsArray.map(String);
 
-      // Abrir modal de añadir/sustituir
-      openImportModal(winsArray);
-
+      // Llamamos al modal
+      openImportModal(sanitizedWins);
     } catch (err) {
-      alert("Archivo inválido: asegúrate de que es un JSON correcto de la app");
+      alert("Error al leer el archivo JSON.");
       console.error(err);
     }
   };
-
   reader.readAsText(file);
 });
 
@@ -262,3 +294,9 @@ window.onclick = (event) => {
 };
 
 applyLanguage();
+
+if (importBtn) {
+  importBtn.addEventListener("click", () => {
+    importInput.click(); // Esto abre la ventana de selección de archivo
+  });
+}
