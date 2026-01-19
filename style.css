@@ -5,12 +5,30 @@ body {
   color: #e6e6e6;
 }
 
-header {
-  padding: 16px;
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  flex-shrink: 0;
+}
+
+.tipjar a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tipjar a:hover {
+  text-decoration: underline;
 }
 
 
@@ -87,3 +105,4 @@ input[type="text"] {
 .import-export .import-btn:hover {
   background: #2a2a2a;
 }
+
