@@ -4,6 +4,33 @@ const filterRadios = document.querySelectorAll("input[name='filter']");
 const counter = document.getElementById("counter");
 const exportBtn = document.getElementById("exportBtn");
 const importInput = document.getElementById("importInput");
+const LANG_KEY = "lol-lang";
+
+let currentLang =
+  localStorage.getItem(LANG_KEY) ||
+  (navigator.language.startsWith("es") ? "es" : "en");
+
+const translations = {
+  es: {
+    title: "Victorias por Campeón",
+    searchPlaceholder: "Buscar campeón...",
+    filterAll: "Todos",
+    filterWon: "Con victoria",
+    filterNotWon: "Sin victoria",
+    completed: "Completados",
+    donate: "Donar"
+  },
+  en: {
+    title: "Champion Wins",
+    searchPlaceholder: "Search champion...",
+    filterAll: "All",
+    filterWon: "Won",
+    filterNotWon: "Not won",
+    completed: "Completed",
+    donate: "Donate"
+  }
+};
+
 
 const STORAGE_KEY = "lol-wins";
 let champions = [];
@@ -102,3 +129,4 @@ searchInput.addEventListener("input", render);
 filterRadios.forEach(radio => radio.addEventListener("change", render));
 
 loadChampions();
+
