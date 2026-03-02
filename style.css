@@ -362,7 +362,6 @@ main {
    SEO FOOTER STYLE
 ========================= */
 .seo-footer {
-  margin-top: 4rem;
   padding: 3rem 2rem 1rem;
   background: #020617; /* Color de tu cabecera */
   border-top: 1px solid #1e293b;
@@ -426,4 +425,23 @@ main {
   .tags {
     justify-content: center;
   }
+}
+.seo-content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.seo-inner {
+  margin-top: 15px;
+}
+
+.seo-inner h3 {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+.seo-inner ul {
+  margin: 15px 0 20px 20px;
+  line-height: 1.6;
 }

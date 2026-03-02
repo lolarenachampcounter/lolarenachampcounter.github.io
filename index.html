@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title> Arena LoL Win Tracker</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="assets/ini.png" />
-
-  <title>Arena LoL Win Tracker | Challenge Progress & Champion Counter</title>
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="style.css">
+</noscript>  <link rel="icon" type="image/png" href="assets/ini.png" />
   
-  <meta name="description" content="Track your Arena LoL wins easily. Tracker de victorias para el modo Arena de League of Legends. Completa el desafío de campeones y gestiona tu progreso.">
-  <meta name="keywords" content="Arena LoL Tracker, LoL Arena win counter, Arena Mode Challenge, League of Legends, campeones arena lol, contador de victorias arena, Arena God challenge, tracker progreso arena">
-  <meta name="author" content="SGiroWen">
+<meta name="description" content="Track your Arena wins in League of Legends. Mark champions, manage progress and complete the Arena God challenge easily." />  <meta name="author" content="SGiroWen">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
@@ -22,13 +20,26 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Arena LoL Win Tracker">
   <meta property="twitter:description" content="Manage your Arena Mode wins in League of Legends. Free and easy to use.">
-
+<link rel="canonical" href="https://lolarenachampcounter.github.io/" />
   <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is the Arena God challenge?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Arena God challenge requires winning with every champion in Arena mode."
+    }
+  }]
+}
+</script>
 </head>
 <body class="base">
   <header class="header">
@@ -48,17 +59,16 @@
 
     </div>
 
-    <div class="import-export">
-      <button id="exportBtn" class="action-btn">
-        Export progress
-      </button>
+   <div class="import-export">
+  <button id="exportBtn" class="action-btn">
+    Export progress
+  </button>
 
-      <button id="importBtn" class="action-btn">
-        Import progress
-        <input type="file" id="importInput" accept=".json" hidden />
-      </button>
-    </div>
-
+  <button id="importBtn" class="action-btn">
+    Import progress
+    <input type="file" id="importInput" accept=".json" hidden />
+  </button>
+</div>
 
     <div class="filters">
       <label><input type="radio" name="filter" value="all" checked /> Todos</label>
@@ -111,6 +121,60 @@
 
   <main>
     <div id="championsGrid" class="grid"></div>
+  
+ <section class="seo-content">
+  <details>
+    <summary>About Arena LoL Win Tracker</summary>
+    <div class="seo-inner">
+
+      <h2>Arena LoL Win Tracker – Complete the Arena God Challenge Efficiently</h2>
+
+      <p>
+        Arena LoL Win Tracker is a free, lightweight tool designed to help League of Legends players 
+        track their victories in Arena mode and efficiently complete the <strong>Arena God</strong> challenge.
+        Mark the champions you’ve won with, monitor your remaining picks, and organize your progress in seconds.
+      </p>
+
+      <h3>Why Use This Tracker?</h3>
+      <p>
+        Completing the Arena God challenge requires winning with 160+ champions. Without tracking, 
+        it’s easy to forget who you’ve already used. This tool helps you:
+      </p>
+
+      <ul>
+        <li>Identify champions you still need to win with</li>
+        <li>Avoid repeating already completed champions</li>
+        <li>Plan your next Arena sessions strategically</li>
+        <li>Track progress clearly and efficiently</li>
+      </ul>
+
+      <h3>Core Features</h3>
+      <ul>
+        <li>✔ Mark victories for each champion</li>
+        <li>✔ Filter by won or not-won champions</li>
+        <li>✔ Instant champion search</li>
+        <li>✔ Sort alphabetically or by win status</li>
+        <li>✔ Export and import progress (JSON format)</li>
+        <li>✔ Multi-language support (English & Spanish)</li>
+        <li>✔ Fully responsive for desktop and mobile</li>
+      </ul>
+
+      <h3>Privacy & Data</h3>
+      <p>
+        Your progress is stored locally in your browser. No accounts, no logins, and no personal 
+        data collection. You can export your progress at any time to back it up or move it to another device.
+      </p>
+
+      <h3>Designed for Arena Mode Players</h3>
+      <p>
+        Whether you're a casual player aiming to complete the challenge gradually or a competitive 
+        player optimizing every session, this Arena LoL Tracker helps you stay organized and focused.
+        Save time, track smarter, and reach the Arena God title faster.
+      </p>
+
+    </div>
+  </details>
+</section>
   </main>
 
 

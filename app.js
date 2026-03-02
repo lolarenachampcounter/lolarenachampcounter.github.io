@@ -4,7 +4,11 @@ const filterRadios = document.querySelectorAll("input[name='filter']");
 const counter = document.getElementById("counter");
 const importBtn = document.getElementById("importBtn");
 const importInput = document.getElementById("importInput");
-const LANG_KEY = "lol-lang";
+const LANG_KEY = "lang";
+let currentLang = "en"; 
+
+const savedLang = localStorage.getItem(LANG_KEY);
+if (savedLang) currentLang = savedLang; 
 const importModal = document.getElementById("importModal");
 const modalText = document.getElementById("modalText");
 const closeModal = document.getElementById("closeModal");
@@ -56,7 +60,6 @@ const translations = {
   sortNotWonFirst: "Not won first"
   }
 };
-let currentLang =  "en";
 
 sortSelect.addEventListener("change", render);
 
@@ -65,29 +68,39 @@ let champions = [];
 let wins = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
 
 async function loadChampions() {
+
+  const locale = currentLang === "es" ? "es_ES" : "en_US";
+
   const versionsRes = await fetch(
     "https://ddragon.leagueoflegends.com/api/versions.json"
   );
   const versions = await versionsRes.json();
   const latestVersion = versions[0];
 
+  
   const champsRes = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/data/es_ES/champion.json`
+    `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/data/${locale}/champion.json`
   );
-  const data = await champsRes.json();
+    const data = await champsRes.json();
 
-  champions = Object.values(data.data).map(c => ({
-    id: c.id,
-    name: c.name,
-    image: `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/${c.image.full}`
-  }));
+    champions = Object.values(data.data).map(c => ({
+      id: c.id,
+      name: c.name,
+      image: `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/${c.image.full}`
+    }));
 
-  render();
+    render();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  render();           // Render de campeones
-  applyLanguage();    // Traducciones
+  const savedSort = localStorage.getItem(SORT_KEY);
+  if (savedSort) sortSelect.value = savedSort;
+
+  const savedLang = localStorage.getItem(LANG_KEY);
+  if (savedLang) currentLang = savedLang;
+
+  applyLanguage();
+  loadChampions();
 });
 
 function openImportModal(winsArray) {
@@ -153,10 +166,7 @@ function render() {
   const search = searchInput.value.toLowerCase();
   const filter = getActiveFilter();
   const sortOption = sortSelect.value;
-  const savedSort = localStorage.getItem(SORT_KEY);
-if (savedSort) {
-  sortSelect.value = savedSort;
-}
+  
 
   // 1️⃣ Filtrar campeones
   let filteredChamps = champions
@@ -203,7 +213,6 @@ if (savedSort) {
 searchInput.addEventListener("input", render);
 filterRadios.forEach(radio => radio.addEventListener("change", render));
 
-loadChampions();
 
 function applyLanguage() {
   const t = translations[currentLang];
@@ -247,7 +256,7 @@ document.getElementById("importBtn").textContent = t.import;
 document.querySelectorAll(".lang-flag").forEach(flag => {
   flag.addEventListener("click", () => {
     currentLang = flag.dataset.lang;
-    localStorage.setItem("lang", currentLang);
+    localStorage.setItem(LANG_KEY, currentLang);
     applyLanguage();
   });
 });
