@@ -359,6 +359,19 @@ main {
   color: #e5e7eb;
 }
 /* =========================
+   AD CONTAINER
+========================= */
+.ad-container {
+  max-width: 900px;
+  min-height: 100px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* =========================
    SEO FOOTER STYLE
 ========================= */
 .seo-footer {
@@ -428,8 +441,8 @@ main {
 }
 .seo-content {
   max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: 30px 0;
+  padding: 0 4px;
 }
 
 .seo-inner {

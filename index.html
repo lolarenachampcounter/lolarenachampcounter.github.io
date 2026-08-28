@@ -2,14 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title> Arena LoL Win Tracker</title>
-<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="style.css">
-</noscript>  <link rel="icon" type="image/png" href="assets/ini.png" />
-  
-<meta name="description" content="Track your Arena wins in League of Legends. Mark champions, manage progress and complete the Arena God challenge easily." />  <meta name="author" content="SGiroWen">
+  <title>Arena LoL Win Tracker - Track Your Arena God Progress</title>
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+  <link rel="icon" type="image/png" href="assets/ini.png" />
+
+  <meta name="description" content="Track your Arena wins in League of Legends. Mark champions, manage progress and complete the Arena God challenge easily." />
+  <meta name="author" content="SGiroWen">
   <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lolarenachampcounter.github.io/">
@@ -20,26 +23,82 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Arena LoL Win Tracker">
   <meta property="twitter:description" content="Manage your Arena Mode wins in League of Legends. Free and easy to use.">
-<link rel="canonical" href="https://lolarenachampcounter.github.io/" />
+  <link rel="canonical" href="https://lolarenachampcounter.github.io/" />
+
+  <!-- Preconnects: acelera la primera carga de fuentes de datos externas -->
+  <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
+  <link rel="preconnect" href="https://flagcdn.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://ddragon.leagueoflegends.com">
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-2421399084369005">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421399084369005"
+     crossorigin="anonymous"></script>
+
   <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "What is the Arena God challenge?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The Arena God challenge requires winning with every champion in Arena mode."
-    }
-  }]
-}
-</script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Arena LoL Win Tracker",
+        "url": "https://lolarenachampcounter.github.io/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "description": "Free tool to track your League of Legends Arena mode wins and complete the Arena God challenge.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Arena God challenge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Arena God challenge requires winning with every champion in Arena mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Arena LoL Win Tracker free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the tracker is completely free, requires no account, and stores your progress locally in your browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I back up or transfer my Arena progress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can export your progress as a JSON file and import it later or on another device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many champions do I need to win with for Arena God?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You need to win at least one Arena match with every champion currently in the game, which is currently over 160 champions."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="base">
   <header class="header">
@@ -121,7 +180,7 @@
 
   <main>
     <div id="championsGrid" class="grid"></div>
-  
+
  <section class="seo-content">
   <details>
     <summary>About Arena LoL Win Tracker</summary>
@@ -158,6 +217,14 @@
         <li>✔ Multi-language support (English & Spanish)</li>
         <li>✔ Fully responsive for desktop and mobile</li>
       </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Is Arena LoL Win Tracker free to use?</strong><br>
+      Yes, it's completely free, with no account required and no personal data collected.</p>
+      <p><strong>Can I back up or transfer my Arena progress?</strong><br>
+      Yes, export your progress as a JSON file and import it on any device.</p>
+      <p><strong>How many champions do I need for Arena God?</strong><br>
+      You need at least one Arena win with every champion currently in the game (160+).</p>
 
       <h3>Privacy & Data</h3>
       <p>
@@ -220,7 +287,3 @@
   </div>
 </footer>
 </html>
-
-
-
-

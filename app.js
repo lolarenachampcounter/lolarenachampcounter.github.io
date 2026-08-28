@@ -201,7 +201,7 @@ function render() {
     div.onclick = () => toggleWin(champ.id);
 
     div.innerHTML = `
-      <img src="${champ.image}" alt="${champ.name}" />
+      <img src="${champ.image}" alt="${champ.name}" loading="lazy" decoding="async" width="64" height="64" />
       <div class="champion-name">${champ.name}</div>
     `;
 
