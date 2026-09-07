@@ -4,11 +4,10 @@ const filterRadios = document.querySelectorAll("input[name='filter']");
 const counter = document.getElementById("counter");
 const importBtn = document.getElementById("importBtn");
 const importInput = document.getElementById("importInput");
-const LANG_KEY = "lang";
-let currentLang = "en"; 
-
-const savedLang = localStorage.getItem(LANG_KEY);
-if (savedLang) currentLang = savedLang; 
+// El idioma lo determina la propia URL de la página (/ = en, /es/ = es),
+// no una preferencia guardada, para que cada versión sea siempre la misma
+// para usuarios y buscadores.
+const currentLang = window.APP_LANG === "es" ? "es" : "en";
 const importModal = document.getElementById("importModal");
 const modalText = document.getElementById("modalText");
 const closeModal = document.getElementById("closeModal");
@@ -68,7 +67,27 @@ let champions = [];
 let wins = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
 
 async function loadChampions() {
+  // Snapshot local: evita depender de una llamada en vivo a la API de Riot
+  // para pintar el contenido principal (mejor rendimiento y contenido
+  // disponible de inmediato para usuarios y crawlers).
+  try {
+    const localRes = await fetch("/data/champions.json");
+    if (!localRes.ok) throw new Error("local snapshot unavailable");
+    const localData = await localRes.json();
 
+    champions = localData.champions.map(c => ({
+      id: c.id,
+      name: c.name[currentLang] || c.name.en,
+      image: c.image
+    }));
+
+    render();
+    return;
+  } catch (err) {
+    console.warn("No se pudo cargar data/champions.json, usando la API en vivo.", err);
+  }
+
+  // Fallback: API en vivo de Data Dragon si el snapshot local falla
   const locale = currentLang === "es" ? "es_ES" : "en_US";
 
   const versionsRes = await fetch(
@@ -77,27 +96,23 @@ async function loadChampions() {
   const versions = await versionsRes.json();
   const latestVersion = versions[0];
 
-  
   const champsRes = await fetch(
     `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/data/${locale}/champion.json`
   );
-    const data = await champsRes.json();
+  const data = await champsRes.json();
 
-    champions = Object.values(data.data).map(c => ({
-      id: c.id,
-      name: c.name,
-      image: `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/${c.image.full}`
-    }));
+  champions = Object.values(data.data).map(c => ({
+    id: c.id,
+    name: c.name,
+    image: `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/${c.image.full}`
+  }));
 
-    render();
+  render();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedSort = localStorage.getItem(SORT_KEY);
   if (savedSort) sortSelect.value = savedSort;
-
-  const savedLang = localStorage.getItem(LANG_KEY);
-  if (savedLang) currentLang = savedLang;
 
   applyLanguage();
   loadChampions();
@@ -240,26 +255,12 @@ document.getElementById("importBtn").textContent = t.import;
   // Tipjar
   document.querySelector(".tipjar").textContent = "☕ " + t.donate;
 
-  // Banderas: resaltar activa
-  document.querySelectorAll(".lang-flag").forEach(flag => {
-    flag.classList.toggle("active", flag.dataset.lang === currentLang);
-  });
-
   document.getElementById("sortLabel").textContent = translations[currentLang].sortLabel;
   sortSelect.options[0].textContent = t.sortNameAsc;
   sortSelect.options[1].textContent = t.sortNameDesc;
   sortSelect.options[2].textContent = t.sortWonFirst;
   sortSelect.options[3].textContent = t.sortNotWonFirst;
 }
-
-
-document.querySelectorAll(".lang-flag").forEach(flag => {
-  flag.addEventListener("click", () => {
-    currentLang = flag.dataset.lang;
-    localStorage.setItem(LANG_KEY, currentLang);
-    applyLanguage();
-  });
-});
 
 
 importInput.addEventListener("change", e => {

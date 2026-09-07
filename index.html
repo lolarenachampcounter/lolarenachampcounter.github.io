@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Arena LoL Win Tracker - Track Your Arena God Progress</title>
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
   </noscript>
-  <link rel="icon" type="image/png" href="assets/ini.png" />
+  <link rel="icon" type="image/png" href="/assets/ini.png" />
 
   <meta name="description" content="Track your Arena wins in League of Legends. Mark champions, manage progress and complete the Arena God challenge easily." />
   <meta name="author" content="SGiroWen">
@@ -17,13 +17,19 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lolarenachampcounter.github.io/">
   <meta property="og:title" content="Arena LoL Win Tracker - Win with every Champion">
-  <meta property="og:description" content="Lleva la cuenta de tus victorias en Arena. Track your progress for the Arena God title.">
+  <meta property="og:description" content="Track your Arena wins in League of Legends and reach the Arena God title.">
   <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/ini.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Arena LoL Win Tracker">
   <meta property="twitter:description" content="Manage your Arena Mode wins in League of Legends. Free and easy to use.">
   <link rel="canonical" href="https://lolarenachampcounter.github.io/" />
+
+  <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
+  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
 
   <!-- Preconnects: acelera la primera carga de fuentes de datos externas -->
   <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
@@ -103,9 +109,9 @@
 <body class="base">
   <header class="header">
   <div class="header-left">
-    <h1>Campeones con victoria</h1>
+    <h1>Champions with victory</h1>
 
-    <div id="counter" class="counter">Completados: 0</div>
+    <div id="counter" class="counter">Completed: 0</div>
 
     <div class="search-wrapper">
   <span id="clearSearch" class="clear-btn">×</span>
@@ -113,7 +119,7 @@
     <input
       type="text"
       id="searchInput"
-      placeholder="Buscar campeón..."
+      placeholder="Search champion..."
     />
 
     </div>
@@ -130,9 +136,9 @@
 </div>
 
     <div class="filters">
-      <label><input type="radio" name="filter" value="all" checked /> Todos</label>
-      <label><input type="radio" name="filter" value="won" /> Con victoria</label>
-      <label><input type="radio" name="filter" value="not-won" /> Sin victoria</label>
+      <label><input type="radio" name="filter" value="all" checked /> All</label>
+      <label><input type="radio" name="filter" value="won" /> Won</label>
+      <label><input type="radio" name="filter" value="not-won" /> Not won</label>
     </div>
     <div class="sort-container">
       <label for="sortSelect" id="sortLabel"></label>
@@ -158,20 +164,12 @@
     </div>
 
     <div class="lang-switch">
-      <img
-        src="https://flagcdn.com/w20/es.png"
-        alt="Español"
-        data-lang="es"
-        title="Español"
-        class="lang-flag"
-      />
-      <img
-        src="https://flagcdn.com/w20/gb.png"
-        alt="English"
-        data-lang="en"
-        title="English"
-        class="lang-flag"
-      />
+      <a href="/es/" hreflang="es" title="Español">
+        <img src="https://flagcdn.com/w20/es.png" alt="Español" class="lang-flag" />
+      </a>
+      <a href="/" hreflang="en" title="English">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag active" />
+      </a>
     </div>
   </div>
 </div>
@@ -182,21 +180,29 @@
     <div id="championsGrid" class="grid"></div>
 
  <section class="seo-content">
-  <details>
+  <details open>
     <summary>About Arena LoL Win Tracker</summary>
     <div class="seo-inner">
 
       <h2>Arena LoL Win Tracker – Complete the Arena God Challenge Efficiently</h2>
 
       <p>
-        Arena LoL Win Tracker is a free, lightweight tool designed to help League of Legends players 
+        Arena LoL Win Tracker is a free, lightweight tool designed to help League of Legends players
         track their victories in Arena mode and efficiently complete the <strong>Arena God</strong> challenge.
         Mark the champions you’ve won with, monitor your remaining picks, and organize your progress in seconds.
       </p>
 
+      <h3>What Is the Arena God Challenge?</h3>
+      <p>
+        Arena God is a League of Legends challenge that asks players to win at least one Arena match
+        with every champion in the game — currently over 160. Riot doesn't provide an in-client checklist
+        for this, so most players end up guessing which champions they've already used. This tracker
+        replaces the guesswork with a simple, visual list you can filter and search as you play.
+      </p>
+
       <h3>Why Use This Tracker?</h3>
       <p>
-        Completing the Arena God challenge requires winning with 160+ champions. Without tracking, 
+        Completing the Arena God challenge requires winning with 160+ champions. Without tracking,
         it’s easy to forget who you’ve already used. This tool helps you:
       </p>
 
@@ -205,6 +211,14 @@
         <li>Avoid repeating already completed champions</li>
         <li>Plan your next Arena sessions strategically</li>
         <li>Track progress clearly and efficiently</li>
+      </ul>
+
+      <h3>Tips for Finishing Arena God Faster</h3>
+      <ul>
+        <li><strong>Clear low-pick-rate champions first.</strong> Champions you rarely play (or that feel weak in Arena) are the ones most likely to get postponed indefinitely — sort by "Not won first" and knock them out early while you still have motivation.</li>
+        <li><strong>Pick augments around your champion's win condition, not your habits.</strong> Arena's augment pool can turn a normally weak pick into a duo-carry build; leaning into whatever the augments offer usually wins more than forcing your main's normal playstyle.</li>
+        <li><strong>Play duos with a partner who covers your weaknesses.</strong> A champion with poor early game pairs well with a duo who can peel or engage for you in the opening rounds, when Arena games are most often decided.</li>
+        <li><strong>Track progress across sessions, not single games.</strong> Export your progress after each session so a browser cache clear, device switch, or reinstall never costs you hours of tracked wins.</li>
       </ul>
 
       <h3>Core Features</h3>
@@ -219,6 +233,8 @@
       </ul>
 
       <h3>Frequently Asked Questions</h3>
+      <p><strong>What is the Arena God challenge?</strong><br>
+      It's a League of Legends challenge that requires winning an Arena match with every champion currently in the game.</p>
       <p><strong>Is Arena LoL Win Tracker free to use?</strong><br>
       Yes, it's completely free, with no account required and no personal data collected.</p>
       <p><strong>Can I back up or transfer my Arena progress?</strong><br>
@@ -228,13 +244,13 @@
 
       <h3>Privacy & Data</h3>
       <p>
-        Your progress is stored locally in your browser. No accounts, no logins, and no personal 
+        Your progress is stored locally in your browser. No accounts, no logins, and no personal
         data collection. You can export your progress at any time to back it up or move it to another device.
       </p>
 
       <h3>Designed for Arena Mode Players</h3>
       <p>
-        Whether you're a casual player aiming to complete the challenge gradually or a competitive 
+        Whether you're a casual player aiming to complete the challenge gradually or a competitive
         player optimizing every session, this Arena LoL Tracker helps you stay organized and focused.
         Save time, track smarter, and reach the Arena God title faster.
       </p>
@@ -242,6 +258,22 @@
     </div>
   </details>
 </section>
+
+<div class="ad-container">
+  <!--
+    Unidad de anuncio manual "Arena Tracker inferior". Sustituye Auto ads:
+    coloca el anuncio junto al contenido editorial real (arriba), no sobre
+    el grid de campeones. Recuerda desactivar "Auto ads" para este sitio
+    en Anuncios > Configuración global.
+  -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2421399084369005"
+       data-ad-slot="1395156889"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
   </main>
 
 
@@ -256,7 +288,8 @@
   </div>
 </div>
 
-  <script src="app.js"></script>
+  <script>window.APP_LANG = "en";</script>
+  <script src="/app.js"></script>
 
 </body>
 
@@ -264,22 +297,17 @@
   <div class="footer-content">
     <div class="footer-section">
       <h3>Arena LoL Win Tracker</h3>
-      <p>Optimiza tu progreso para el desafío <strong>Arena God</strong>. Registra cada victoria y completa el logro de los 160+ campeones en el modo Arena de League of Legends.</p>
+      <p>Optimize your progress toward the <strong>Arena God</strong> challenge. Log every win and complete the 160+ champion checklist in League of Legends' Arena mode.</p>
     </div>
     
     <div class="footer-section">
-      <h3>Quick Guide / Guía Rápida</h3>
-      <p>Use the search bar to find your champion, click the card to mark a win, and export your data to keep it safe. | Usa el buscador, marca tus victorias y exporta tu progreso.</p>
+      <h3>Quick Guide</h3>
+      <p>Use the search bar to find your champion, click the card to mark a win, and export your data to keep it safe.</p>
     </div>
 
     <div class="footer-section">
-      <h3>Keywords</h3>
-      <div class="tags">
-        <span>Arena Mode LoL</span>
-        <span>Champion Tracker</span>
-        <span>Dios de la Arena</span>
-        <span>LoL Challenge</span>
-      </div>
+      <h3>About the Arena God Challenge</h3>
+      <p>Arena God asks you to win with every champion in League of Legends' Arena mode. This tracker exists to make that 160+ champion checklist easy to follow across sessions and devices.</p>
     </div>
   </div>
   <div class="footer-bottom">

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arena LoL Win Tracker - Controla tu progreso hacia Dios de la Arena</title>
+  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/style.css">
+  </noscript>
+  <link rel="icon" type="image/png" href="/assets/ini.png" />
+
+  <meta name="description" content="Lleva la cuenta de tus victorias en el modo Arena de League of Legends. Marca campeones, gestiona tu progreso y completa el reto Dios de la Arena fácilmente." />
+  <meta name="author" content="SGiroWen">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lolarenachampcounter.github.io/es/">
+  <meta property="og:title" content="Arena LoL Win Tracker - Gana con todos los campeones">
+  <meta property="og:description" content="Lleva la cuenta de tus victorias en Arena y consigue el título de Dios de la Arena.">
+  <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/ini.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Arena LoL Win Tracker">
+  <meta property="twitter:description" content="Gestiona tus victorias en el modo Arena de League of Legends. Gratis y fácil de usar.">
+  <link rel="canonical" href="https://lolarenachampcounter.github.io/es/" />
+
+  <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
+  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
+
+  <!-- Preconnects: acelera la primera carga de fuentes de datos externas -->
+  <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
+  <link rel="preconnect" href="https://flagcdn.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://ddragon.leagueoflegends.com">
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-2421399084369005">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421399084369005"
+     crossorigin="anonymous"></script>
+
+  <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Arena LoL Win Tracker",
+        "url": "https://lolarenachampcounter.github.io/es/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "description": "Herramienta gratuita para llevar la cuenta de tus victorias en el modo Arena de League of Legends y completar el reto Dios de la Arena.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es el reto Dios de la Arena?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El reto Dios de la Arena requiere ganar al menos una partida de Arena con cada campeón del juego."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es gratis usar Arena LoL Win Tracker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, la herramienta es completamente gratuita, no requiere cuenta y guarda tu progreso localmente en tu navegador."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo hacer copia de seguridad o transferir mi progreso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, puedes exportar tu progreso como un archivo JSON e importarlo después o en otro dispositivo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Con cuántos campeones necesito ganar para Dios de la Arena?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Necesitas ganar al menos una partida de Arena con cada campeón del juego, actualmente más de 160."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="base">
+  <header class="header">
+  <div class="header-left">
+    <h1>Campeones con victoria</h1>
+
+    <div id="counter" class="counter">Completados: 0</div>
+
+    <div class="search-wrapper">
+  <span id="clearSearch" class="clear-btn">×</span>
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Buscar campeón..."
+    />
+
+    </div>
+
+   <div class="import-export">
+  <button id="exportBtn" class="action-btn">
+    Exportar progreso
+  </button>
+
+  <button id="importBtn" class="action-btn">
+    Importar progreso
+    <input type="file" id="importInput" accept=".json" hidden />
+  </button>
+</div>
+
+    <div class="filters">
+      <label><input type="radio" name="filter" value="all" checked /> Todos</label>
+      <label><input type="radio" name="filter" value="won" /> Con victoria</label>
+      <label><input type="radio" name="filter" value="not-won" /> Sin victoria</label>
+    </div>
+    <div class="sort-container">
+      <label for="sortSelect" id="sortLabel"></label>
+      <select id="sortSelect">
+        <option value="name-asc"></option>
+        <option value="name-desc"></option>
+        <option value="won-first"></option>
+        <option value="not-won-first"></option>
+      </select>
+    </div>
+  </div>
+
+<div class="header-right">
+  <div class="tip-lang">
+    <div class="tipjar-container">
+      <a
+        id="donateLink"
+        href="https://paypal.me/dolm0s"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tipjar"
+      >☕ Buy me a coffee</a>
+    </div>
+
+    <div class="lang-switch">
+      <a href="/es/" hreflang="es" title="Español">
+        <img src="https://flagcdn.com/w20/es.png" alt="Español" class="lang-flag active" />
+      </a>
+      <a href="/" hreflang="en" title="English">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag" />
+      </a>
+    </div>
+  </div>
+</div>
+</header>
+
+
+  <main>
+    <div id="championsGrid" class="grid"></div>
+
+ <section class="seo-content">
+  <details open>
+    <summary>Sobre Arena LoL Win Tracker</summary>
+    <div class="seo-inner">
+
+      <h2>Arena LoL Win Tracker – Completa el reto Dios de la Arena de forma eficiente</h2>
+
+      <p>
+        Arena LoL Win Tracker es una herramienta gratuita y ligera diseñada para ayudar a los jugadores
+        de League of Legends a llevar la cuenta de sus victorias en el modo Arena y completar el reto
+        <strong>Dios de la Arena</strong> de forma eficiente. Marca los campeones con los que ya has ganado,
+        controla los que te faltan y organiza tu progreso en segundos.
+      </p>
+
+      <h3>¿Qué es el reto Dios de la Arena?</h3>
+      <p>
+        Dios de la Arena es un reto de League of Legends que pide a los jugadores ganar al menos una
+        partida de Arena con cada campeón del juego, actualmente más de 160. Riot no ofrece una lista de
+        seguimiento dentro del cliente, así que la mayoría de jugadores acaba adivinando con qué campeones
+        ya ha ganado. Esta herramienta sustituye esas suposiciones por una lista visual sencilla que puedes
+        filtrar y buscar mientras juegas.
+      </p>
+
+      <h3>¿Por qué usar esta herramienta?</h3>
+      <p>
+        Completar el reto Dios de la Arena requiere ganar con más de 160 campeones. Sin un seguimiento,
+        es fácil olvidar con quién ya has jugado. Esta herramienta te ayuda a:
+      </p>
+
+      <ul>
+        <li>Identificar los campeones con los que aún necesitas ganar</li>
+        <li>Evitar repetir campeones ya completados</li>
+        <li>Planificar tus próximas sesiones de Arena de forma estratégica</li>
+        <li>Controlar tu progreso de forma clara y eficiente</li>
+      </ul>
+
+      <h3>Consejos para terminar Dios de la Arena más rápido</h3>
+      <ul>
+        <li><strong>Empieza por los campeones que menos juegas.</strong> Los campeones que casi nunca eliges (o que sientes flojos en Arena) son los que más fácilmente acaban aplazándose para siempre — ordena por "Por ganar primero" y quítatelos de encima cuando aún tengas motivación.</li>
+        <li><strong>Elige aumentos según la condición de victoria del campeón, no tu costumbre.</strong> El pool de aumentos de Arena puede convertir un pick normalmente débil en un build capaz de carrear el dúo; adaptarte a lo que ofrecen los aumentos suele ganar más partidas que forzar el estilo habitual de tu main.</li>
+        <li><strong>Juega en dúo con alguien que cubra tus puntos débiles.</strong> Un campeón con un inicio de partida flojo combina bien con un compañero que pueda protegerte o iniciar por ti en las primeras rondas, que es cuando más se deciden las partidas de Arena.</li>
+        <li><strong>Guarda tu progreso entre sesiones, no solo tras una partida.</strong> Exporta tu progreso después de cada sesión para que borrar la caché del navegador, cambiar de dispositivo o reinstalar nunca te cueste horas de victorias registradas.</li>
+      </ul>
+
+      <h3>Funciones principales</h3>
+      <ul>
+        <li>✔ Marca la victoria de cada campeón</li>
+        <li>✔ Filtra por campeones con o sin victoria</li>
+        <li>✔ Búsqueda instantánea de campeones</li>
+        <li>✔ Ordena alfabéticamente o por estado de victoria</li>
+        <li>✔ Exporta e importa tu progreso (formato JSON)</li>
+        <li>✔ Soporte multilenguaje (español e inglés)</li>
+        <li>✔ Totalmente responsive para escritorio y móvil</li>
+      </ul>
+
+      <h3>Preguntas frecuentes</h3>
+      <p><strong>¿Qué es el reto Dios de la Arena?</strong><br>
+      Es un reto de League of Legends que requiere ganar una partida de Arena con cada campeón del juego.</p>
+      <p><strong>¿Es gratis usar Arena LoL Win Tracker?</strong><br>
+      Sí, es completamente gratis, no necesita cuenta y no recopila datos personales.</p>
+      <p><strong>¿Puedo hacer copia de seguridad o transferir mi progreso?</strong><br>
+      Sí, exporta tu progreso como archivo JSON e impórtalo en cualquier dispositivo.</p>
+      <p><strong>¿Con cuántos campeones necesito ganar para Dios de la Arena?</strong><br>
+      Necesitas al menos una victoria en Arena con cada campeón del juego (más de 160).</p>
+
+      <h3>Privacidad y datos</h3>
+      <p>
+        Tu progreso se guarda localmente en tu navegador. Sin cuentas, sin inicios de sesión y sin
+        recopilación de datos personales. Puedes exportar tu progreso en cualquier momento para
+        respaldarlo o moverlo a otro dispositivo.
+      </p>
+
+      <h3>Pensado para jugadores de modo Arena</h3>
+      <p>
+        Tanto si eres un jugador casual que quiere completar el reto poco a poco como si compites por
+        optimizar cada sesión, este Arena LoL Tracker te ayuda a mantenerte organizado y centrado.
+        Ahorra tiempo, lleva mejor el seguimiento y consigue el título de Dios de la Arena más rápido.
+      </p>
+
+    </div>
+  </details>
+</section>
+
+<div class="ad-container">
+  <!--
+    Unidad de anuncio manual "Arena Tracker inferior" (misma unidad que en
+    la versión en inglés). Recuerda desactivar "Auto ads" para este sitio
+    en Anuncios > Configuración global.
+  -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2421399084369005"
+       data-ad-slot="1395156889"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+  </main>
+
+
+<div id="importModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <p id="modalText"></p>
+    <div class="modal-buttons">
+      <button id="replaceBtn"></button>
+      <button id="addBtn"></button>
+    </div>
+  </div>
+</div>
+
+  <script>window.APP_LANG = "es";</script>
+  <script src="/app.js"></script>
+
+</body>
+
+<footer class="seo-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Arena LoL Win Tracker</h3>
+      <p>Optimiza tu progreso para el desafío <strong>Dios de la Arena</strong>. Registra cada victoria y completa el logro de los 160+ campeones en el modo Arena de League of Legends.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Guía rápida</h3>
+      <p>Usa el buscador para encontrar tu campeón, haz clic en la tarjeta para marcar una victoria y exporta tus datos para no perderlos.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Sobre el reto Dios de la Arena</h3>
+      <p>Dios de la Arena te pide ganar con cada campeón del modo Arena de League of Legends. Esta herramienta existe para que esa lista de más de 160 campeones sea fácil de seguir entre sesiones y dispositivos.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Datos proporcionados por Riot Games.</p>
+  </div>
+</footer>
+</html>
