@@ -2,29 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Arena LoL Win Tracker - Controla tu progreso hacia Dios de la Arena</title>
-  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/style.css">
-  </noscript>
+  <title>Arena LoL Win Tracker</title>
+  <!-- Hoja de estilos única y crítica: cargarla de forma no bloqueante sólo
+       provocaba un flash sin estilos y un salto de layout. Son ~10 KB. -->
+  <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/png" href="/assets/ini.png" />
+  <link rel="apple-touch-icon" href="/assets/ini.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#020617">
 
   <meta name="description" content="Lleva la cuenta de tus victorias en el modo Arena de League of Legends. Marca campeones, gestiona tu progreso y completa el reto Dios de la Arena fácilmente." />
-  <meta name="author" content="SGiroWen">
-  <meta name="robots" content="index, follow">
+  <meta name="author" content="SGiroWeb">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arena LoL Win Tracker">
   <meta property="og:url" content="https://lolarenachampcounter.github.io/es/">
   <meta property="og:title" content="Arena LoL Win Tracker - Gana con todos los campeones">
   <meta property="og:description" content="Lleva la cuenta de tus victorias en Arena y consigue el título de Dios de la Arena.">
-  <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/ini.png">
+  <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Arena LoL Win Tracker - Checklist del reto Dios de la Arena">
   <meta property="og:locale" content="es_ES">
   <meta property="og:locale:alternate" content="en_US">
 
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Arena LoL Win Tracker">
-  <meta property="twitter:description" content="Gestiona tus victorias en el modo Arena de League of Legends. Gratis y fácil de usar.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arena LoL Win Tracker">
+  <meta name="twitter:description" content="Gestiona tus victorias en el modo Arena de League of Legends. Gratis y fácil de usar.">
+  <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <meta name="twitter:image:alt" content="Arena LoL Win Tracker - Checklist del reto Dios de la Arena">
   <link rel="canonical" href="https://lolarenachampcounter.github.io/es/" />
 
   <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
@@ -34,13 +43,13 @@
   <!-- Preconnects: acelera la primera carga de fuentes de datos externas -->
   <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
   <link rel="preconnect" href="https://flagcdn.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://plausible.io">
   <link rel="dns-prefetch" href="https://ddragon.leagueoflegends.com">
 
-  <!-- Google AdSense -->
+  <!-- Google AdSense: el script cargador vive al final de <body> para no
+       competir por CPU y ancho de banda con el render inicial. -->
   <meta name="google-adsense-account" content="ca-pub-2421399084369005">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421399084369005"
-     crossorigin="anonymous"></script>
 
   <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
   <script>
@@ -53,11 +62,32 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://lolarenachampcounter.github.io/es/#website",
+        "name": "Arena LoL Win Tracker",
+        "url": "https://lolarenachampcounter.github.io/es/",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://lolarenachampcounter.github.io/#author" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lolarenachampcounter.github.io/#author",
+        "name": "SGiroWeb",
+        "url": "https://lolarenachampcounter.github.io/"
+      },
+      {
         "@type": "WebApplication",
+        "@id": "https://lolarenachampcounter.github.io/es/#app",
         "name": "Arena LoL Win Tracker",
         "url": "https://lolarenachampcounter.github.io/es/",
         "applicationCategory": "GameApplication",
         "operatingSystem": "Any",
+        "browserRequirements": "Requiere JavaScript para guardar el progreso localmente",
+        "inLanguage": "es",
+        "isPartOf": { "@id": "https://lolarenachampcounter.github.io/es/#website" },
+        "author": { "@id": "https://lolarenachampcounter.github.io/#author" },
+        "image": "https://lolarenachampcounter.github.io/assets/og-cover.png",
+        "dateModified": "2026-09-22",
         "description": "Herramienta gratuita para llevar la cuenta de tus victorias en el modo Arena de League of Legends y completar el reto Dios de la Arena.",
         "offers": {
           "@type": "Offer",
@@ -67,6 +97,9 @@
       },
       {
         "@type": "FAQPage",
+        "@id": "https://lolarenachampcounter.github.io/es/#faq",
+        "inLanguage": "es",
+        "isPartOf": { "@id": "https://lolarenachampcounter.github.io/es/#website" },
         "mainEntity": [
           {
             "@type": "Question",
@@ -109,18 +142,21 @@
 <body class="base">
   <header class="header">
   <div class="header-left">
-    <h1>Campeones con victoria</h1>
+    <h1>Arena LoL Win Tracker</h1>
+    <p class="subtitle">Checklist del reto Dios de la Arena · Campeones con victoria</p>
 
     <div id="counter" class="counter">Completados: 0</div>
 
     <div class="search-wrapper">
-  <span id="clearSearch" class="clear-btn">×</span>
+      <button type="button" id="clearSearch" class="clear-btn" aria-label="Borrar búsqueda">×</button>
 
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Buscar campeón..."
-    />
+      <label for="searchInput" class="sr-only">Buscar campeón</label>
+      <input
+        type="text"
+        id="searchInput"
+        autocomplete="off"
+        placeholder="Buscar campeón..."
+      />
 
     </div>
 
@@ -131,8 +167,10 @@
 
   <button id="importBtn" class="action-btn">
     Importar progreso
-    <input type="file" id="importInput" accept=".json" hidden />
   </button>
+  <!-- Fuera del <button>: contenido interactivo anidado es HTML inválido y
+       applyLanguage() lo borraba al reescribir el texto del botón. -->
+  <input type="file" id="importInput" accept=".json" hidden />
 </div>
 
     <div class="filters">
@@ -141,13 +179,25 @@
       <label><input type="radio" name="filter" value="not-won" /> Sin victoria</label>
     </div>
     <div class="sort-container">
-      <label for="sortSelect" id="sortLabel"></label>
+      <label for="sortSelect" id="sortLabel">Ordenar</label>
       <select id="sortSelect">
-        <option value="name-asc"></option>
-        <option value="name-desc"></option>
-        <option value="won-first"></option>
-        <option value="not-won-first"></option>
+        <option value="name-asc">Nombre A-Z</option>
+        <option value="name-desc">Nombre Z-A</option>
+        <option value="won-first">Ganados primero</option>
+        <option value="not-won-first">Por ganar primero</option>
       </select>
+
+      <!-- Consejo de puesta al día, justo al lado del control del que habla.
+           Se muestra al pasar el ratón (y al enfocar con teclado, con
+           :focus-visible) para no interferir con el flujo normal. -->
+      <span class="tip-info" tabindex="0" aria-describedby="tipPopover">
+        <span aria-hidden="true">i</span>
+        <span class="sr-only">Cómo registrar las victorias que ya tienes</span>
+        <span class="tip-popover" id="tipPopover" role="tooltip">
+          Truco: ordena esta lista y tu desafío Dios de la Arena del cliente
+          <strong>de la A a la Z</strong> para registrar victorias ya hechas.
+        </span>
+      </span>
     </div>
   </div>
 
@@ -177,7 +227,186 @@
 
 
   <main>
-    <div id="championsGrid" class="grid"></div>
+    <!-- Las tarjetas las genera scripts/prerender.py en cada build a partir de
+         data/champions.json, para que el grid exista en el HTML servido.
+         app.js sólo hidrata este marcado. No editar a mano. -->
+    <div id="championsGrid" class="grid" data-prerendered="true">
+      <!-- CHAMPIONS:START -->
+      <button type="button" class="champion" data-champion-id="Aatrox" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Aatrox.png" alt="Aatrox" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aatrox</span></button>
+      <button type="button" class="champion" data-champion-id="Ahri" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ahri.png" alt="Ahri" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ahri</span></button>
+      <button type="button" class="champion" data-champion-id="Akali" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Akali.png" alt="Akali" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akali</span></button>
+      <button type="button" class="champion" data-champion-id="Akshan" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Akshan.png" alt="Akshan" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akshan</span></button>
+      <button type="button" class="champion" data-champion-id="Alistar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Alistar.png" alt="Alistar" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Alistar</span></button>
+      <button type="button" class="champion" data-champion-id="Ambessa" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ambessa.png" alt="Ambessa" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ambessa</span></button>
+      <button type="button" class="champion" data-champion-id="Amumu" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Amumu.png" alt="Amumu" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Amumu</span></button>
+      <button type="button" class="champion" data-champion-id="Anivia" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Anivia.png" alt="Anivia" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Anivia</span></button>
+      <button type="button" class="champion" data-champion-id="Annie" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Annie.png" alt="Annie" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Annie</span></button>
+      <button type="button" class="champion" data-champion-id="Aphelios" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Aphelios.png" alt="Aphelios" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aphelios</span></button>
+      <button type="button" class="champion" data-champion-id="Ashe" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ashe.png" alt="Ashe" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ashe</span></button>
+      <button type="button" class="champion" data-champion-id="AurelionSol" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aurelion Sol</span></button>
+      <button type="button" class="champion" data-champion-id="Aurora" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Aurora.png" alt="Aurora" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Aurora</span></button>
+      <button type="button" class="champion" data-champion-id="Azir" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Azir.png" alt="Azir" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Azir</span></button>
+      <button type="button" class="champion" data-champion-id="Bard" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Bard.png" alt="Bardo" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Bardo</span></button>
+      <button type="button" class="champion" data-champion-id="Belveth" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Belveth.png" alt="Bel'Veth" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Bel'Veth</span></button>
+      <button type="button" class="champion" data-champion-id="Blitzcrank" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Blitzcrank.png" alt="Blitzcrank" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Blitzcrank</span></button>
+      <button type="button" class="champion" data-champion-id="Brand" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Brand.png" alt="Brand" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Brand</span></button>
+      <button type="button" class="champion" data-champion-id="Braum" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Braum.png" alt="Braum" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Braum</span></button>
+      <button type="button" class="champion" data-champion-id="Briar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Briar.png" alt="Briar" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Briar</span></button>
+      <button type="button" class="champion" data-champion-id="Caitlyn" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Caitlyn.png" alt="Caitlyn" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Caitlyn</span></button>
+      <button type="button" class="champion" data-champion-id="Camille" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Camille.png" alt="Camille" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Camille</span></button>
+      <button type="button" class="champion" data-champion-id="Cassiopeia" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Cassiopeia.png" alt="Cassiopeia" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Cassiopeia</span></button>
+      <button type="button" class="champion" data-champion-id="Chogath" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Chogath.png" alt="Cho'Gath" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Cho'Gath</span></button>
+      <button type="button" class="champion" data-champion-id="Corki" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Corki.png" alt="Corki" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Corki</span></button>
+      <button type="button" class="champion" data-champion-id="Darius" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Darius.png" alt="Darius" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Darius</span></button>
+      <button type="button" class="champion" data-champion-id="Diana" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Diana.png" alt="Diana" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Diana</span></button>
+      <button type="button" class="champion" data-champion-id="DrMundo" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/DrMundo.png" alt="Dr. Mundo" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Dr. Mundo</span></button>
+      <button type="button" class="champion" data-champion-id="Draven" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Draven.png" alt="Draven" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Draven</span></button>
+      <button type="button" class="champion" data-champion-id="Ekko" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ekko.png" alt="Ekko" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ekko</span></button>
+      <button type="button" class="champion" data-champion-id="Elise" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Elise.png" alt="Elise" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Elise</span></button>
+      <button type="button" class="champion" data-champion-id="Evelynn" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Evelynn.png" alt="Evelynn" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Evelynn</span></button>
+      <button type="button" class="champion" data-champion-id="Ezreal" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ezreal.png" alt="Ezreal" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ezreal</span></button>
+      <button type="button" class="champion" data-champion-id="Fiddlesticks" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Fiddlesticks.png" alt="Fiddlesticks" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Fiddlesticks</span></button>
+      <button type="button" class="champion" data-champion-id="Fiora" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Fiora.png" alt="Fiora" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Fiora</span></button>
+      <button type="button" class="champion" data-champion-id="Fizz" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Fizz.png" alt="Fizz" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Fizz</span></button>
+      <button type="button" class="champion" data-champion-id="Galio" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Galio.png" alt="Galio" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Galio</span></button>
+      <button type="button" class="champion" data-champion-id="Gangplank" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Gangplank.png" alt="Gangplank" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Gangplank</span></button>
+      <button type="button" class="champion" data-champion-id="Garen" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Garen.png" alt="Garen" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Garen</span></button>
+      <button type="button" class="champion" data-champion-id="Gnar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Gnar.png" alt="Gnar" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Gnar</span></button>
+      <button type="button" class="champion" data-champion-id="Gragas" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Gragas.png" alt="Gragas" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Gragas</span></button>
+      <button type="button" class="champion" data-champion-id="Graves" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Graves.png" alt="Graves" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Graves</span></button>
+      <button type="button" class="champion" data-champion-id="Gwen" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Gwen.png" alt="Gwen" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Gwen</span></button>
+      <button type="button" class="champion" data-champion-id="Hecarim" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Hecarim.png" alt="Hecarim" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Hecarim</span></button>
+      <button type="button" class="champion" data-champion-id="Heimerdinger" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Heimerdinger.png" alt="Heimerdinger" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Heimerdinger</span></button>
+      <button type="button" class="champion" data-champion-id="Hwei" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Hwei.png" alt="Hwei" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Hwei</span></button>
+      <button type="button" class="champion" data-champion-id="Illaoi" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Illaoi.png" alt="Illaoi" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Illaoi</span></button>
+      <button type="button" class="champion" data-champion-id="Irelia" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Irelia.png" alt="Irelia" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Irelia</span></button>
+      <button type="button" class="champion" data-champion-id="Ivern" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ivern.png" alt="Ivern" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ivern</span></button>
+      <button type="button" class="champion" data-champion-id="Janna" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Janna.png" alt="Janna" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Janna</span></button>
+      <button type="button" class="champion" data-champion-id="JarvanIV" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/JarvanIV.png" alt="Jarvan IV" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Jarvan IV</span></button>
+      <button type="button" class="champion" data-champion-id="Jax" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Jax.png" alt="Jax" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Jax</span></button>
+      <button type="button" class="champion" data-champion-id="Jayce" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Jayce.png" alt="Jayce" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Jayce</span></button>
+      <button type="button" class="champion" data-champion-id="Jhin" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Jhin.png" alt="Jhin" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Jhin</span></button>
+      <button type="button" class="champion" data-champion-id="Jinx" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Jinx.png" alt="Jinx" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Jinx</span></button>
+      <button type="button" class="champion" data-champion-id="KSante" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/KSante.png" alt="K'Sante" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">K'Sante</span></button>
+      <button type="button" class="champion" data-champion-id="Kaisa" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kaisa.png" alt="Kai'Sa" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kai'Sa</span></button>
+      <button type="button" class="champion" data-champion-id="Kalista" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kalista.png" alt="Kalista" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kalista</span></button>
+      <button type="button" class="champion" data-champion-id="Karma" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Karma.png" alt="Karma" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Karma</span></button>
+      <button type="button" class="champion" data-champion-id="Karthus" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Karthus.png" alt="Karthus" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Karthus</span></button>
+      <button type="button" class="champion" data-champion-id="Kassadin" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kassadin.png" alt="Kassadin" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kassadin</span></button>
+      <button type="button" class="champion" data-champion-id="Katarina" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Katarina.png" alt="Katarina" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Katarina</span></button>
+      <button type="button" class="champion" data-champion-id="Kayle" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kayle.png" alt="Kayle" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kayle</span></button>
+      <button type="button" class="champion" data-champion-id="Kayn" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kayn.png" alt="Kayn" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kayn</span></button>
+      <button type="button" class="champion" data-champion-id="Kennen" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kennen.png" alt="Kennen" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kennen</span></button>
+      <button type="button" class="champion" data-champion-id="Khazix" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Khazix.png" alt="Kha'Zix" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kha'Zix</span></button>
+      <button type="button" class="champion" data-champion-id="Kindred" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kindred.png" alt="Kindred" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kindred</span></button>
+      <button type="button" class="champion" data-champion-id="Kled" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Kled.png" alt="Kled" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kled</span></button>
+      <button type="button" class="champion" data-champion-id="KogMaw" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/KogMaw.png" alt="Kog'Maw" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Kog'Maw</span></button>
+      <button type="button" class="champion" data-champion-id="Leblanc" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Leblanc.png" alt="LeBlanc" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">LeBlanc</span></button>
+      <button type="button" class="champion" data-champion-id="LeeSin" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/LeeSin.png" alt="Lee Sin" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lee Sin</span></button>
+      <button type="button" class="champion" data-champion-id="Leona" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Leona.png" alt="Leona" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Leona</span></button>
+      <button type="button" class="champion" data-champion-id="Lillia" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Lillia.png" alt="Lillia" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lillia</span></button>
+      <button type="button" class="champion" data-champion-id="Lissandra" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Lissandra.png" alt="Lissandra" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lissandra</span></button>
+      <button type="button" class="champion" data-champion-id="Locke" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Locke.png" alt="Locke" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Locke</span></button>
+      <button type="button" class="champion" data-champion-id="Lucian" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Lucian.png" alt="Lucian" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lucian</span></button>
+      <button type="button" class="champion" data-champion-id="Lulu" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Lulu.png" alt="Lulu" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lulu</span></button>
+      <button type="button" class="champion" data-champion-id="Lux" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Lux.png" alt="Lux" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Lux</span></button>
+      <button type="button" class="champion" data-champion-id="Malphite" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Malphite.png" alt="Malphite" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Malphite</span></button>
+      <button type="button" class="champion" data-champion-id="Malzahar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Malzahar.png" alt="Malzahar" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Malzahar</span></button>
+      <button type="button" class="champion" data-champion-id="Maokai" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Maokai.png" alt="Maokai" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Maokai</span></button>
+      <button type="button" class="champion" data-champion-id="MasterYi" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/MasterYi.png" alt="Maestro Yi" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Maestro Yi</span></button>
+      <button type="button" class="champion" data-champion-id="Mel" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Mel.png" alt="Mel" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Mel</span></button>
+      <button type="button" class="champion" data-champion-id="Milio" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Milio.png" alt="Milio" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Milio</span></button>
+      <button type="button" class="champion" data-champion-id="MissFortune" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/MissFortune.png" alt="Miss Fortune" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Miss Fortune</span></button>
+      <button type="button" class="champion" data-champion-id="MonkeyKing" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/MonkeyKing.png" alt="Wukong" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Wukong</span></button>
+      <button type="button" class="champion" data-champion-id="Mordekaiser" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Mordekaiser.png" alt="Mordekaiser" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Mordekaiser</span></button>
+      <button type="button" class="champion" data-champion-id="Morgana" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Morgana.png" alt="Morgana" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Morgana</span></button>
+      <button type="button" class="champion" data-champion-id="Naafiri" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Naafiri.png" alt="Naafiri" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Naafiri</span></button>
+      <button type="button" class="champion" data-champion-id="Nami" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nami.png" alt="Nami" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nami</span></button>
+      <button type="button" class="champion" data-champion-id="Nasus" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nasus.png" alt="Nasus" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nasus</span></button>
+      <button type="button" class="champion" data-champion-id="Nautilus" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nautilus.png" alt="Nautilus" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nautilus</span></button>
+      <button type="button" class="champion" data-champion-id="Neeko" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Neeko.png" alt="Neeko" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Neeko</span></button>
+      <button type="button" class="champion" data-champion-id="Nidalee" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nidalee.png" alt="Nidalee" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nidalee</span></button>
+      <button type="button" class="champion" data-champion-id="Nilah" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nilah.png" alt="Nilah" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nilah</span></button>
+      <button type="button" class="champion" data-champion-id="Nocturne" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nocturne.png" alt="Nocturne" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nocturne</span></button>
+      <button type="button" class="champion" data-champion-id="Nunu" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Nunu.png" alt="Nunu y Willump" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Nunu y Willump</span></button>
+      <button type="button" class="champion" data-champion-id="Olaf" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Olaf.png" alt="Olaf" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Olaf</span></button>
+      <button type="button" class="champion" data-champion-id="Orianna" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Orianna.png" alt="Orianna" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Orianna</span></button>
+      <button type="button" class="champion" data-champion-id="Ornn" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ornn.png" alt="Ornn" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ornn</span></button>
+      <button type="button" class="champion" data-champion-id="Pantheon" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Pantheon.png" alt="Pantheon" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Pantheon</span></button>
+      <button type="button" class="champion" data-champion-id="Poppy" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Poppy.png" alt="Poppy" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Poppy</span></button>
+      <button type="button" class="champion" data-champion-id="Pyke" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Pyke.png" alt="Pyke" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Pyke</span></button>
+      <button type="button" class="champion" data-champion-id="Qiyana" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Qiyana.png" alt="Qiyana" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Qiyana</span></button>
+      <button type="button" class="champion" data-champion-id="Quinn" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Quinn.png" alt="Quinn" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Quinn</span></button>
+      <button type="button" class="champion" data-champion-id="Rakan" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Rakan.png" alt="Rakan" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rakan</span></button>
+      <button type="button" class="champion" data-champion-id="Rammus" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Rammus.png" alt="Rammus" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rammus</span></button>
+      <button type="button" class="champion" data-champion-id="RekSai" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/RekSai.png" alt="Rek'Sai" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rek'Sai</span></button>
+      <button type="button" class="champion" data-champion-id="Rell" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Rell.png" alt="Rell" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rell</span></button>
+      <button type="button" class="champion" data-champion-id="Renata" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Renata.png" alt="Renata Glasc" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Renata Glasc</span></button>
+      <button type="button" class="champion" data-champion-id="Renekton" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Renekton.png" alt="Renekton" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Renekton</span></button>
+      <button type="button" class="champion" data-champion-id="Rengar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Rengar.png" alt="Rengar" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rengar</span></button>
+      <button type="button" class="champion" data-champion-id="Riven" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Riven.png" alt="Riven" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Riven</span></button>
+      <button type="button" class="champion" data-champion-id="Rumble" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Rumble.png" alt="Rumble" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Rumble</span></button>
+      <button type="button" class="champion" data-champion-id="Ryze" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ryze.png" alt="Ryze" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ryze</span></button>
+      <button type="button" class="champion" data-champion-id="Samira" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Samira.png" alt="Samira" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Samira</span></button>
+      <button type="button" class="champion" data-champion-id="Sejuani" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sejuani.png" alt="Sejuani" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sejuani</span></button>
+      <button type="button" class="champion" data-champion-id="Senna" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Senna.png" alt="Senna" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Senna</span></button>
+      <button type="button" class="champion" data-champion-id="Seraphine" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Seraphine.png" alt="Seraphine" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Seraphine</span></button>
+      <button type="button" class="champion" data-champion-id="Sett" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sett.png" alt="Sett" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sett</span></button>
+      <button type="button" class="champion" data-champion-id="Shaco" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Shaco.png" alt="Shaco" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Shaco</span></button>
+      <button type="button" class="champion" data-champion-id="Shen" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Shen.png" alt="Shen" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Shen</span></button>
+      <button type="button" class="champion" data-champion-id="Shyvana" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Shyvana.png" alt="Shyvana" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Shyvana</span></button>
+      <button type="button" class="champion" data-champion-id="Singed" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Singed.png" alt="Singed" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Singed</span></button>
+      <button type="button" class="champion" data-champion-id="Sion" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sion.png" alt="Sion" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sion</span></button>
+      <button type="button" class="champion" data-champion-id="Sivir" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sivir.png" alt="Sivir" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sivir</span></button>
+      <button type="button" class="champion" data-champion-id="Skarner" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Skarner.png" alt="Skarner" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Skarner</span></button>
+      <button type="button" class="champion" data-champion-id="Smolder" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Smolder.png" alt="Smolder" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Smolder</span></button>
+      <button type="button" class="champion" data-champion-id="Sona" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sona.png" alt="Sona" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sona</span></button>
+      <button type="button" class="champion" data-champion-id="Soraka" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Soraka.png" alt="Soraka" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Soraka</span></button>
+      <button type="button" class="champion" data-champion-id="Swain" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Swain.png" alt="Swain" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Swain</span></button>
+      <button type="button" class="champion" data-champion-id="Sylas" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Sylas.png" alt="Sylas" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Sylas</span></button>
+      <button type="button" class="champion" data-champion-id="Syndra" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Syndra.png" alt="Syndra" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Syndra</span></button>
+      <button type="button" class="champion" data-champion-id="TahmKench" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/TahmKench.png" alt="Tahm Kench" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Tahm Kench</span></button>
+      <button type="button" class="champion" data-champion-id="Taliyah" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Taliyah.png" alt="Taliyah" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Taliyah</span></button>
+      <button type="button" class="champion" data-champion-id="Talon" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Talon.png" alt="Talon" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Talon</span></button>
+      <button type="button" class="champion" data-champion-id="Taric" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Taric.png" alt="Taric" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Taric</span></button>
+      <button type="button" class="champion" data-champion-id="Teemo" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Teemo.png" alt="Teemo" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Teemo</span></button>
+      <button type="button" class="champion" data-champion-id="Thresh" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Thresh.png" alt="Thresh" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Thresh</span></button>
+      <button type="button" class="champion" data-champion-id="Tristana" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Tristana.png" alt="Tristana" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Tristana</span></button>
+      <button type="button" class="champion" data-champion-id="Trundle" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Trundle.png" alt="Trundle" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Trundle</span></button>
+      <button type="button" class="champion" data-champion-id="Tryndamere" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Tryndamere.png" alt="Tryndamere" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Tryndamere</span></button>
+      <button type="button" class="champion" data-champion-id="TwistedFate" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/TwistedFate.png" alt="Twisted Fate" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Twisted Fate</span></button>
+      <button type="button" class="champion" data-champion-id="Twitch" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Twitch.png" alt="Twitch" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Twitch</span></button>
+      <button type="button" class="champion" data-champion-id="Udyr" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Udyr.png" alt="Udyr" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Udyr</span></button>
+      <button type="button" class="champion" data-champion-id="Urgot" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Urgot.png" alt="Urgot" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Urgot</span></button>
+      <button type="button" class="champion" data-champion-id="Varus" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Varus.png" alt="Varus" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Varus</span></button>
+      <button type="button" class="champion" data-champion-id="Vayne" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Vayne.png" alt="Vayne" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Vayne</span></button>
+      <button type="button" class="champion" data-champion-id="Veigar" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Veigar.png" alt="Veigar" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Veigar</span></button>
+      <button type="button" class="champion" data-champion-id="Velkoz" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Velkoz.png" alt="Vel'Koz" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Vel'Koz</span></button>
+      <button type="button" class="champion" data-champion-id="Vex" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Vex.png" alt="Vex" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Vex</span></button>
+      <button type="button" class="champion" data-champion-id="Vi" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Vi.png" alt="Vi" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Vi</span></button>
+      <button type="button" class="champion" data-champion-id="Viego" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Viego.png" alt="Viego" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Viego</span></button>
+      <button type="button" class="champion" data-champion-id="Viktor" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Viktor.png" alt="Viktor" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Viktor</span></button>
+      <button type="button" class="champion" data-champion-id="Vladimir" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Vladimir.png" alt="Vladimir" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Vladimir</span></button>
+      <button type="button" class="champion" data-champion-id="Volibear" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Volibear.png" alt="Volibear" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Volibear</span></button>
+      <button type="button" class="champion" data-champion-id="Warwick" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Warwick.png" alt="Warwick" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Warwick</span></button>
+      <button type="button" class="champion" data-champion-id="Xayah" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Xayah.png" alt="Xayah" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Xayah</span></button>
+      <button type="button" class="champion" data-champion-id="Xerath" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Xerath.png" alt="Xerath" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Xerath</span></button>
+      <button type="button" class="champion" data-champion-id="XinZhao" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/XinZhao.png" alt="Xin Zhao" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Xin Zhao</span></button>
+      <button type="button" class="champion" data-champion-id="Yasuo" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Yasuo.png" alt="Yasuo" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Yasuo</span></button>
+      <button type="button" class="champion" data-champion-id="Yone" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Yone.png" alt="Yone" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Yone</span></button>
+      <button type="button" class="champion" data-champion-id="Yorick" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Yorick.png" alt="Yorick" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Yorick</span></button>
+      <button type="button" class="champion" data-champion-id="Yunara" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Yunara.png" alt="Yunara" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Yunara</span></button>
+      <button type="button" class="champion" data-champion-id="Yuumi" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Yuumi.png" alt="Yuumi" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Yuumi</span></button>
+      <button type="button" class="champion" data-champion-id="Zaahen" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zaahen.png" alt="Zaahen" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zaahen</span></button>
+      <button type="button" class="champion" data-champion-id="Zac" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zac.png" alt="Zac" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zac</span></button>
+      <button type="button" class="champion" data-champion-id="Zed" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zed.png" alt="Zed" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zed</span></button>
+      <button type="button" class="champion" data-champion-id="Zeri" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zeri.png" alt="Zeri" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zeri</span></button>
+      <button type="button" class="champion" data-champion-id="Ziggs" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Ziggs.png" alt="Ziggs" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Ziggs</span></button>
+      <button type="button" class="champion" data-champion-id="Zilean" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zilean.png" alt="Zilean" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zilean</span></button>
+      <button type="button" class="champion" data-champion-id="Zoe" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zoe.png" alt="Zoe" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zoe</span></button>
+      <button type="button" class="champion" data-champion-id="Zyra" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/Zyra.png" alt="Zyra" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Zyra</span></button>
+      <!-- CHAMPIONS:END -->
+    </div>
 
  <section class="seo-content">
   <details open>
@@ -293,27 +522,34 @@
   <script>window.APP_LANG = "es";</script>
   <script src="/app.js"></script>
 
-</body>
+  <!-- AdSense al final del body: async, pero fuera de la ruta crítica. -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421399084369005"
+     crossorigin="anonymous"></script>
 
 <footer class="seo-footer">
   <div class="footer-content">
     <div class="footer-section">
-      <h3>Arena LoL Win Tracker</h3>
+      <h2>Arena LoL Win Tracker</h2>
       <p>Optimiza tu progreso para el desafío <strong>Dios de la Arena</strong>. Registra cada victoria y completa el logro de los 160+ campeones en el modo Arena de League of Legends.</p>
     </div>
 
     <div class="footer-section">
-      <h3>Guía rápida</h3>
+      <h2>Guía rápida</h2>
       <p>Usa el buscador para encontrar tu campeón, haz clic en la tarjeta para marcar una victoria y exporta tus datos para no perderlos.</p>
     </div>
 
     <div class="footer-section">
-      <h3>Sobre el reto Dios de la Arena</h3>
+      <h2>Sobre el reto Dios de la Arena</h2>
       <p>Dios de la Arena te pide ganar con cada campeón del modo Arena de League of Legends. Esta herramienta existe para que esa lista de más de 160 campeones sea fácil de seguir entre sesiones y dispositivos.</p>
     </div>
   </div>
+  <nav class="footer-links" aria-label="Pie de página">
+    <a href="/es/privacidad/">Política de privacidad</a>
+    <a href="/" hreflang="en" lang="en">English version</a>
+  </nav>
   <div class="footer-bottom">
     <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Datos proporcionados por Riot Games.</p>
   </div>
 </footer>
+</body>
 </html>

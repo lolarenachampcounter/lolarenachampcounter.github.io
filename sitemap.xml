@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  changefreq y priority se han eliminado a propósito: Google los ignora.
+  lastmod sí se usa como señal de frescura; scripts/prerender.py lo actualiza
+  cuando data/champions.json trae una fecha más reciente.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lolarenachampcounter.github.io/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
   </url>
   <url>
     <loc>https://lolarenachampcounter.github.io/es/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/privacy/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/privacy/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/es/privacidad/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/privacy/" />
   </url>
 </urlset>

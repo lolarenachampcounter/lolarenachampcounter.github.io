@@ -31,7 +31,26 @@ body.base {
 .header h1 {
   font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #cbd5f5;
   margin-bottom: 10px;
+}
+
+/* Texto sólo para lectores de pantalla (labels de formulario). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .counter {
@@ -53,7 +72,13 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-  color: #64748b;
+  /* #64748b sobre #020617 se quedaba en ~4.2:1, por debajo de WCAG AA. */
+  color: #7d8a9c;
+}
+
+:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
 }
 
 button,
@@ -116,6 +141,7 @@ button:hover,
    SORT
 ========================= */
 .sort-container {
+  position: relative;
   margin-top: 14px;
   display: flex;
   align-items: center;
@@ -140,10 +166,26 @@ button:hover,
 /* =========================
    HEADER RIGHT
 ========================= */
+.header {
+  position: relative;
+}
+
 .header-right {
   position: absolute;
   top: 20px;
   right: 28px;
+}
+
+/* En pantallas estrechas el bloque absoluto se solapaba con el H1. */
+@media (max-width: 720px) {
+  .header-right {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .tip-lang {
+    justify-content: space-between;
+  }
 }
 
 .tip-lang {
@@ -189,9 +231,83 @@ main {
 }
 
 /* =========================
+   TIP (icono de info junto al selector de orden)
+========================= */
+/* El popover se ancla a .sort-container, no al icono: así en móvil empieza
+   en el borde izquierdo del bloque y no se sale de la pantalla. Se muestra
+   con :hover y con :focus-visible (teclado); no necesita JavaScript. */
+/* Verde más apagado que el resto del sitio (#22c55e/#86efac son para el
+   estado "ganado"): este icono es sólo informativo, no un acierto. */
+.tip-info {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #5f9e7d;
+  background: rgba(95, 158, 125, 0.12);
+  color: #9cc9ae;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.6rem;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+}
+
+.tip-info:hover,
+.tip-info:focus-visible {
+  background: #5f9e7d;
+  color: #020617;
+}
+
+.tip-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  width: max-content;
+  max-width: min(260px, calc(100vw - 40px));
+  padding: 10px 14px;
+  background: #020617;
+  border: 1px solid #5f9e7d;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #cbd5f5;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.tip-info:hover .tip-popover,
+.tip-info:focus-visible .tip-popover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tip-popover strong {
+  color: #9cc9ae;
+}
+
+
+/* =========================
    CHAMPION CARD
 ========================= */
+/* Las tarjetas son <button> para que funcionen con teclado y expongan su
+   estado con aria-pressed; hay que neutralizar los estilos genéricos de
+   button (altura fija, inline-flex, fondo) definidos más arriba. */
 .champion {
+  display: block;
+  width: 100%;
+  height: auto;
+  font: inherit;
+  color: inherit;
   background: #020617;
   border: 1px solid #1e293b;
   border-radius: 10px;
@@ -199,6 +315,10 @@ main {
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s, border 0.15s, box-shadow 0.15s;
+}
+
+.champion[hidden] {
+  display: none;
 }
 
 .champion img {
@@ -209,11 +329,13 @@ main {
 }
 
 .champion-name {
+  display: block;
   font-size: 0.75rem;
   color: #cbd5f5;
 }
 
 .champion:hover {
+  background: #020617;
   transform: translateY(-2px);
   border-color: #475569;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
@@ -334,7 +456,9 @@ main {
 .search-wrapper {
   position: relative;
   flex: 1;
-  min-width: 100%;
+  /* min-width: 100% anulaba siempre el max-width (min gana sobre max), así
+     que el clamp() nunca llegaba a aplicarse. */
+  width: 100%;
   max-width: clamp(320px, 40vw, 420px);
 }
 
@@ -343,16 +467,29 @@ main {
   padding-left: 28px;
   padding-right: 10px;
 }
+/* Es un <button> real (focusable y con nombre accesible): hay que quitarle
+   los estilos genéricos de button. */
 .clear-btn {
   position: absolute;
   left: 8px;
   top: 45%;
   transform: translateY(-50%);
+  height: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  line-height: 1;
   font-size: 16px;
   color: #94a3b8;
   cursor: pointer;
   user-select: none;
   display: none;
+}
+
+.clear-btn:hover {
+  background: none;
+  border: none;
 }
 
 .clear-btn:hover {
@@ -369,6 +506,12 @@ main {
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Como flex item, el <ins> se quedaba en 0 px de ancho y AdSense abortaba con
+   "No slot size for availableWidth=0": la unidad responsive nunca se pintaba. */
+.ad-container ins.adsbygoogle {
+  width: 100%;
 }
 
 /* =========================
@@ -389,11 +532,24 @@ main {
   gap: 2rem;
 }
 
-.footer-section h3 {
+.footer-section h2 {
   color: #e5e7eb;
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.footer-links {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  color: #cbd5f5;
 }
 
 .footer-section p {
@@ -406,12 +562,13 @@ main {
 }
 
 .footer-bottom {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #0f172a;
   text-align: center;
   font-size: 0.75rem;
-  opacity: 0.6;
+  /* opacity .6 dejaba el texto en ~3.4:1 sobre #020617 (WCAG AA pide 4.5). */
+  opacity: 0.85;
 }
 
 /* Ajuste para móviles */

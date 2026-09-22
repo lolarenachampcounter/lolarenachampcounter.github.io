@@ -36,6 +36,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prerender champion grid
+        # Reinyecta el grid en el HTML desde data/champions.json para que el
+        # contenido exista sin JavaScript. Es idempotente.
+        run: python scripts/prerender.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
