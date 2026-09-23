@@ -421,6 +421,10 @@ button:hover,
   position: absolute;
   top: 20px;
   right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 
 /* En pantallas estrechas el bloque absoluto se solapaba con el H1. */
@@ -428,6 +432,7 @@ button:hover,
   .header-right {
     position: static;
     margin-top: 16px;
+    align-items: stretch;
   }
 
   .tip-lang {
