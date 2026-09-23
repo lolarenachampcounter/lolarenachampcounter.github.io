@@ -56,6 +56,12 @@
           You can back it up at any time with the <em>Export progress</em> button, which
           generates a JSON file on your own device.
         </p>
+        <p>
+          This site also registers a <strong>service worker</strong> so it keeps working
+          offline and can be installed as an app. It stores a copy of the page's own files
+          (HTML, CSS, JS, champion portraits) in your browser's Cache Storage — no personal
+          data, just static files. Clearing your browser's site data removes this cache too.
+        </p>
 
         <h3>Analytics</h3>
         <p>
@@ -80,8 +86,10 @@
           Champion portraits are hosted on this site and do not request anything from Riot
           Games' servers during normal use. Language flag icons are loaded from
           <strong>flagcdn.com</strong>; as with any web request, that service receives your IP
-          address and browser user agent. The site also links to PayPal for optional
-          donations; no payment data is handled by this site.
+          address and browser user agent. Each champion also links out to a build guide on
+          <strong>metasrc.com</strong>; that request is only made if you click the link, and
+          no data about your progress is shared with it. The site also links to PayPal for
+          optional donations; no payment data is handled by this site.
         </p>
 
         <h3>Hosting</h3>
@@ -130,5 +138,10 @@
     <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Data provided by Riot Games.</p>
   </div>
 </footer>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"));
+  }
+</script>
 </body>
 </html>

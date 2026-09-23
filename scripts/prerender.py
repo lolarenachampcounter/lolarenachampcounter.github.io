@@ -41,17 +41,31 @@ def escape(text: str) -> str:
     )
 
 
+# Texto del enlace a la guía de build, en el mismo idioma que la página.
+BUILD_LINK_LABEL = {
+    "en": "Arena build guide for {name} (opens metasrc.com in a new tab)",
+    "es": "Guía de build de Arena para {name} (abre metasrc.com en una pestaña nueva)",
+}
+
+
 def card(champ: dict, lang: str, eager: bool) -> str:
     name = escape(champ["name"].get(lang) or champ["name"]["en"])
     image = escape(champ["image"])
     champ_id = escape(champ["id"])
+    build_url = escape(champ["buildUrl"])
+    build_label = escape(BUILD_LINK_LABEL[lang].format(name=champ["name"].get(lang) or champ["name"]["en"]))
     loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    # El enlace de build es HERMANO del <button>, no hijo: un <a> dentro de un
+    # <button> es contenido interactivo anidado, inválido en HTML.
     return (
-        f'      <button type="button" class="champion" '
-        f'data-champion-id="{champ_id}" aria-pressed="false">'
+        f'      <div class="champion-cell" data-champion-id="{champ_id}">'
+        f'<button type="button" class="champion" aria-pressed="false">'
         f'<img src="{image}" alt="{name}" width="64" height="64" '
         f'decoding="async" {loading} />'
         f'<span class="champion-name">{name}</span></button>'
+        f'<a class="build-link" href="{build_url}" target="_blank" '
+        f'rel="noopener noreferrer" aria-label="{build_label}" '
+        f'title="{build_label}">↗</a></div>'
     )
 
 

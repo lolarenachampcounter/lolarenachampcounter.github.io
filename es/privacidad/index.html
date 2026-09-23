@@ -56,6 +56,13 @@
           eliminan de forma permanente. Puedes hacer una copia cuando quieras con el botón
           <em>Exportar progreso</em>, que genera un archivo JSON en tu propio dispositivo.
         </p>
+        <p>
+          Este sitio también registra un <strong>service worker</strong> para seguir
+          funcionando sin conexión y poder instalarse como una app. Guarda una copia de los
+          propios archivos de la página (HTML, CSS, JS, retratos de campeones) en el Cache
+          Storage de tu navegador — sin datos personales, solo archivos estáticos. Borrar los
+          datos del sitio en tu navegador también elimina esta caché.
+        </p>
 
         <h3>Analítica</h3>
         <p>
@@ -80,9 +87,11 @@
           Los retratos de campeones están alojados en este sitio y no generan ninguna
           petición a los servidores de Riot Games durante el uso normal. Los iconos de
           banderas se cargan desde <strong>flagcdn.com</strong>; como en cualquier petición
-          web, ese servicio recibe tu dirección IP y el user agent de tu navegador. El sitio
-          también enlaza a PayPal para donaciones opcionales; aquí no se gestiona ningún dato
-          de pago.
+          web, ese servicio recibe tu dirección IP y el user agent de tu navegador. Cada
+          campeón también enlaza a una guía de build en <strong>metasrc.com</strong>; esa
+          petición solo se produce si haces clic en el enlace, y no se comparte con ese sitio
+          ningún dato de tu progreso. El sitio también enlaza a PayPal para donaciones
+          opcionales; aquí no se gestiona ningún dato de pago.
         </p>
 
         <h3>Alojamiento</h3>
@@ -132,5 +141,10 @@
     <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Datos proporcionados por Riot Games.</p>
   </div>
 </footer>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"));
+  }
+</script>
 </body>
 </html>

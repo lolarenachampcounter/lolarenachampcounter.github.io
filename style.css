@@ -56,7 +56,204 @@ body.base {
 .counter {
   font-size: 0.95rem;
   color: #94a3b8;
+}
+
+/* =========================
+   TOTAL PROGRESS
+========================= */
+.total-progress {
+  max-width: 360px;
   margin-bottom: 12px;
+}
+
+.total-progress-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.total-progress-pct {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #9cc9ae;
+  font-variant-numeric: tabular-nums;
+}
+
+.total-progress-bar {
+  height: 10px;
+  border-radius: 5px;
+  background: #1e293b;
+  overflow: hidden;
+}
+
+.total-progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  transition: width 0.2s ease;
+}
+
+/* =========================
+   ROLE BREAKDOWN
+========================= */
+.role-breakdown {
+  margin-bottom: 12px;
+  max-width: 360px;
+}
+
+.role-breakdown summary {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  cursor: pointer;
+  user-select: none;
+}
+
+.role-breakdown summary:hover {
+  color: #cbd5f5;
+}
+
+.role-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.role-list li {
+  margin: 0;
+}
+
+/* Cada fila es un <button>: clic para filtrar el grid por ese rol (clic de
+   nuevo para quitar el filtro). Reset de los estilos genéricos de button. */
+.role-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 48px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  font: inherit;
+  font-size: 0.78rem;
+  color: #cbd5f5;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.role-row:hover,
+.role-row:focus-visible {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.role-row[aria-pressed="true"] {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+}
+
+.role-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #1e293b;
+  overflow: hidden;
+}
+
+.role-bar-fill {
+  /* Es un <span>: sin display:block el width inline no tiene ningún
+     efecto (los elementos inline lo ignoran) y la barra nunca se pintaba. */
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #22c55e;
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+.role-count {
+  text-align: right;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================
+   MILESTONE TOAST
+========================= */
+.milestone-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  z-index: 2000;
+  background: #052e19;
+  border: 1px solid #22c55e;
+  color: #dcfce7;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  max-width: calc(100vw - 40px);
+  text-align: center;
+}
+
+.milestone-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* =========================
+   ACTIVE ROLE FILTER CHIP
+========================= */
+/* Vive dentro del <summary>: así se ve tanto si el desglose está abierto
+   como cerrado, justo al lado de la etiqueta que lo activa. */
+.active-role-chip {
+  color: #86efac;
+  font-weight: 600;
+}
+
+.active-role-chip button {
+  background: none;
+  border: none;
+  color: #86efac;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 2px;
+  margin-left: 2px;
+  line-height: 1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.active-role-chip button:hover,
+.active-role-chip button:focus-visible {
+  color: #cbd5f5;
+}
+
+/* =========================
+   SUGGESTED CHAMPION HIGHLIGHT
+========================= */
+@keyframes suggested-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(250, 204, 21, 0);
+  }
+}
+
+.champion.suggested {
+  border-color: #facc15;
+  animation: suggested-pulse 1s ease-out 2;
 }
 
 /* =========================
@@ -299,6 +496,17 @@ main {
 /* =========================
    CHAMPION CARD
 ========================= */
+/* Contenedor de cada campeón: es el hijo real del grid (se oculta/reordena
+   él, no el <button> de dentro) y da contexto de posición al enlace de
+   build, que flota en la esquina como hermano del botón. */
+.champion-cell {
+  position: relative;
+}
+
+.champion-cell[hidden] {
+  display: none;
+}
+
 /* Las tarjetas son <button> para que funcionen con teclado y expongan su
    estado con aria-pressed; hay que neutralizar los estilos genéricos de
    button (altura fija, inline-flex, fondo) definidos más arriba. */
@@ -315,10 +523,6 @@ main {
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s, border 0.15s, box-shadow 0.15s;
-}
-
-.champion[hidden] {
-  display: none;
 }
 
 .champion img {
@@ -352,6 +556,36 @@ main {
 
 .champion.won .champion-name {
   color: #86efac;
+}
+
+/* Enlace a la guía de build (metasrc), en la esquina de la tarjeta. Hermano
+   del <button>, no hijo: un <a> dentro de un <button> es HTML inválido. */
+.build-link {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid #334155;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.build-link:hover,
+.build-link:focus-visible {
+  opacity: 1;
+  border-color: #60a5fa;
+  color: #bfdbfe;
 }
 
 /* =========================
@@ -459,7 +693,7 @@ main {
   /* min-width: 100% anulaba siempre el max-width (min gana sobre max), así
      que el clamp() nunca llegaba a aplicarse. */
   width: 100%;
-  max-width: clamp(320px, 40vw, 420px);
+  max-width: clamp(320px, 55vw, 600px);
 }
 
 .search-wrapper input {

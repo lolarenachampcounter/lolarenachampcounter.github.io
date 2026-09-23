@@ -36,5 +36,10 @@
     <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Data provided by Riot Games.</p>
   </div>
 </footer>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"));
+  }
+</script>
 </body>
 </html>

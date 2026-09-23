@@ -8,7 +8,11 @@
         "en": "Aatrox",
         "es": "Aatrox"
       },
-      "image": "/assets/champions/Aatrox.png"
+      "image": "/assets/champions/Aatrox.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/aatrox/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Ahri",
@@ -16,7 +20,12 @@
         "en": "Ahri",
         "es": "Ahri"
       },
-      "image": "/assets/champions/Ahri.png"
+      "image": "/assets/champions/Ahri.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ahri/build",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ]
     },
     {
       "id": "Akali",
@@ -24,7 +33,11 @@
         "en": "Akali",
         "es": "Akali"
       },
-      "image": "/assets/champions/Akali.png"
+      "image": "/assets/champions/Akali.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/akali/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Akshan",
@@ -32,7 +45,12 @@
         "en": "Akshan",
         "es": "Akshan"
       },
-      "image": "/assets/champions/Akshan.png"
+      "image": "/assets/champions/Akshan.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/akshan/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Alistar",
@@ -40,7 +58,12 @@
         "en": "Alistar",
         "es": "Alistar"
       },
-      "image": "/assets/champions/Alistar.png"
+      "image": "/assets/champions/Alistar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/alistar/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Ambessa",
@@ -48,7 +71,12 @@
         "en": "Ambessa",
         "es": "Ambessa"
       },
-      "image": "/assets/champions/Ambessa.png"
+      "image": "/assets/champions/Ambessa.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ambessa/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Amumu",
@@ -56,7 +84,12 @@
         "en": "Amumu",
         "es": "Amumu"
       },
-      "image": "/assets/champions/Amumu.png"
+      "image": "/assets/champions/Amumu.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/amumu/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Anivia",
@@ -64,7 +97,11 @@
         "en": "Anivia",
         "es": "Anivia"
       },
-      "image": "/assets/champions/Anivia.png"
+      "image": "/assets/champions/Anivia.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/anivia/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Annie",
@@ -72,7 +109,12 @@
         "en": "Annie",
         "es": "Annie"
       },
-      "image": "/assets/champions/Annie.png"
+      "image": "/assets/champions/Annie.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/annie/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Aphelios",
@@ -80,7 +122,11 @@
         "en": "Aphelios",
         "es": "Aphelios"
       },
-      "image": "/assets/champions/Aphelios.png"
+      "image": "/assets/champions/Aphelios.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/aphelios/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Ashe",
@@ -88,7 +134,12 @@
         "en": "Ashe",
         "es": "Ashe"
       },
-      "image": "/assets/champions/Ashe.png"
+      "image": "/assets/champions/Ashe.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ashe/build",
+      "roles": [
+        "Marksman",
+        "Support"
+      ]
     },
     {
       "id": "AurelionSol",
@@ -96,7 +147,11 @@
         "en": "Aurelion Sol",
         "es": "Aurelion Sol"
       },
-      "image": "/assets/champions/AurelionSol.png"
+      "image": "/assets/champions/AurelionSol.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/aurelion-sol/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Aurora",
@@ -104,7 +159,12 @@
         "en": "Aurora",
         "es": "Aurora"
       },
-      "image": "/assets/champions/Aurora.png"
+      "image": "/assets/champions/Aurora.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/aurora/build",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ]
     },
     {
       "id": "Azir",
@@ -112,7 +172,12 @@
         "en": "Azir",
         "es": "Azir"
       },
-      "image": "/assets/champions/Azir.png"
+      "image": "/assets/champions/Azir.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/azir/build",
+      "roles": [
+        "Mage",
+        "Marksman"
+      ]
     },
     {
       "id": "Bard",
@@ -120,7 +185,12 @@
         "en": "Bard",
         "es": "Bardo"
       },
-      "image": "/assets/champions/Bard.png"
+      "image": "/assets/champions/Bard.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/bard/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Belveth",
@@ -128,7 +198,11 @@
         "en": "Bel'Veth",
         "es": "Bel'Veth"
       },
-      "image": "/assets/champions/Belveth.png"
+      "image": "/assets/champions/Belveth.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/belveth/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Blitzcrank",
@@ -136,7 +210,12 @@
         "en": "Blitzcrank",
         "es": "Blitzcrank"
       },
-      "image": "/assets/champions/Blitzcrank.png"
+      "image": "/assets/champions/Blitzcrank.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/blitzcrank/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Brand",
@@ -144,7 +223,12 @@
         "en": "Brand",
         "es": "Brand"
       },
-      "image": "/assets/champions/Brand.png"
+      "image": "/assets/champions/Brand.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/brand/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Braum",
@@ -152,7 +236,12 @@
         "en": "Braum",
         "es": "Braum"
       },
-      "image": "/assets/champions/Braum.png"
+      "image": "/assets/champions/Braum.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/braum/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Briar",
@@ -160,7 +249,12 @@
         "en": "Briar",
         "es": "Briar"
       },
-      "image": "/assets/champions/Briar.png"
+      "image": "/assets/champions/Briar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/briar/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Caitlyn",
@@ -168,7 +262,11 @@
         "en": "Caitlyn",
         "es": "Caitlyn"
       },
-      "image": "/assets/champions/Caitlyn.png"
+      "image": "/assets/champions/Caitlyn.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/caitlyn/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Camille",
@@ -176,7 +274,12 @@
         "en": "Camille",
         "es": "Camille"
       },
-      "image": "/assets/champions/Camille.png"
+      "image": "/assets/champions/Camille.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/camille/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Cassiopeia",
@@ -184,7 +287,11 @@
         "en": "Cassiopeia",
         "es": "Cassiopeia"
       },
-      "image": "/assets/champions/Cassiopeia.png"
+      "image": "/assets/champions/Cassiopeia.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/cassiopeia/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Chogath",
@@ -192,7 +299,12 @@
         "en": "Cho'Gath",
         "es": "Cho'Gath"
       },
-      "image": "/assets/champions/Chogath.png"
+      "image": "/assets/champions/Chogath.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/chogath/build",
+      "roles": [
+        "Tank",
+        "Mage"
+      ]
     },
     {
       "id": "Corki",
@@ -200,7 +312,12 @@
         "en": "Corki",
         "es": "Corki"
       },
-      "image": "/assets/champions/Corki.png"
+      "image": "/assets/champions/Corki.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/corki/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Darius",
@@ -208,7 +325,12 @@
         "en": "Darius",
         "es": "Darius"
       },
-      "image": "/assets/champions/Darius.png"
+      "image": "/assets/champions/Darius.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/darius/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Diana",
@@ -216,7 +338,12 @@
         "en": "Diana",
         "es": "Diana"
       },
-      "image": "/assets/champions/Diana.png"
+      "image": "/assets/champions/Diana.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/diana/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "DrMundo",
@@ -224,7 +351,12 @@
         "en": "Dr. Mundo",
         "es": "Dr. Mundo"
       },
-      "image": "/assets/champions/DrMundo.png"
+      "image": "/assets/champions/DrMundo.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/dr-mundo/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Draven",
@@ -232,7 +364,11 @@
         "en": "Draven",
         "es": "Draven"
       },
-      "image": "/assets/champions/Draven.png"
+      "image": "/assets/champions/Draven.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/draven/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Ekko",
@@ -240,7 +376,12 @@
         "en": "Ekko",
         "es": "Ekko"
       },
-      "image": "/assets/champions/Ekko.png"
+      "image": "/assets/champions/Ekko.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ekko/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Elise",
@@ -248,7 +389,12 @@
         "en": "Elise",
         "es": "Elise"
       },
-      "image": "/assets/champions/Elise.png"
+      "image": "/assets/champions/Elise.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/elise/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Evelynn",
@@ -256,7 +402,12 @@
         "en": "Evelynn",
         "es": "Evelynn"
       },
-      "image": "/assets/champions/Evelynn.png"
+      "image": "/assets/champions/Evelynn.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/evelynn/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Ezreal",
@@ -264,7 +415,12 @@
         "en": "Ezreal",
         "es": "Ezreal"
       },
-      "image": "/assets/champions/Ezreal.png"
+      "image": "/assets/champions/Ezreal.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ezreal/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Fiddlesticks",
@@ -272,7 +428,12 @@
         "en": "Fiddlesticks",
         "es": "Fiddlesticks"
       },
-      "image": "/assets/champions/Fiddlesticks.png"
+      "image": "/assets/champions/Fiddlesticks.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/fiddlesticks/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Fiora",
@@ -280,7 +441,12 @@
         "en": "Fiora",
         "es": "Fiora"
       },
-      "image": "/assets/champions/Fiora.png"
+      "image": "/assets/champions/Fiora.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/fiora/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Fizz",
@@ -288,7 +454,12 @@
         "en": "Fizz",
         "es": "Fizz"
       },
-      "image": "/assets/champions/Fizz.png"
+      "image": "/assets/champions/Fizz.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/fizz/build",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ]
     },
     {
       "id": "Galio",
@@ -296,7 +467,12 @@
         "en": "Galio",
         "es": "Galio"
       },
-      "image": "/assets/champions/Galio.png"
+      "image": "/assets/champions/Galio.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/galio/build",
+      "roles": [
+        "Tank",
+        "Mage"
+      ]
     },
     {
       "id": "Gangplank",
@@ -304,7 +480,11 @@
         "en": "Gangplank",
         "es": "Gangplank"
       },
-      "image": "/assets/champions/Gangplank.png"
+      "image": "/assets/champions/Gangplank.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/gangplank/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Garen",
@@ -312,7 +492,12 @@
         "en": "Garen",
         "es": "Garen"
       },
-      "image": "/assets/champions/Garen.png"
+      "image": "/assets/champions/Garen.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/garen/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Gnar",
@@ -320,7 +505,12 @@
         "en": "Gnar",
         "es": "Gnar"
       },
-      "image": "/assets/champions/Gnar.png"
+      "image": "/assets/champions/Gnar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/gnar/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Gragas",
@@ -328,7 +518,12 @@
         "en": "Gragas",
         "es": "Gragas"
       },
-      "image": "/assets/champions/Gragas.png"
+      "image": "/assets/champions/Gragas.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/gragas/build",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ]
     },
     {
       "id": "Graves",
@@ -336,7 +531,11 @@
         "en": "Graves",
         "es": "Graves"
       },
-      "image": "/assets/champions/Graves.png"
+      "image": "/assets/champions/Graves.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/graves/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Gwen",
@@ -344,7 +543,11 @@
         "en": "Gwen",
         "es": "Gwen"
       },
-      "image": "/assets/champions/Gwen.png"
+      "image": "/assets/champions/Gwen.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/gwen/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Hecarim",
@@ -352,7 +555,12 @@
         "en": "Hecarim",
         "es": "Hecarim"
       },
-      "image": "/assets/champions/Hecarim.png"
+      "image": "/assets/champions/Hecarim.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/hecarim/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Heimerdinger",
@@ -360,7 +568,12 @@
         "en": "Heimerdinger",
         "es": "Heimerdinger"
       },
-      "image": "/assets/champions/Heimerdinger.png"
+      "image": "/assets/champions/Heimerdinger.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/heimerdinger/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Hwei",
@@ -368,7 +581,12 @@
         "en": "Hwei",
         "es": "Hwei"
       },
-      "image": "/assets/champions/Hwei.png"
+      "image": "/assets/champions/Hwei.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/hwei/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Illaoi",
@@ -376,7 +594,12 @@
         "en": "Illaoi",
         "es": "Illaoi"
       },
-      "image": "/assets/champions/Illaoi.png"
+      "image": "/assets/champions/Illaoi.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/illaoi/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Irelia",
@@ -384,7 +607,12 @@
         "en": "Irelia",
         "es": "Irelia"
       },
-      "image": "/assets/champions/Irelia.png"
+      "image": "/assets/champions/Irelia.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/irelia/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Ivern",
@@ -392,7 +620,12 @@
         "en": "Ivern",
         "es": "Ivern"
       },
-      "image": "/assets/champions/Ivern.png"
+      "image": "/assets/champions/Ivern.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ivern/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Janna",
@@ -400,7 +633,12 @@
         "en": "Janna",
         "es": "Janna"
       },
-      "image": "/assets/champions/Janna.png"
+      "image": "/assets/champions/Janna.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/janna/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "JarvanIV",
@@ -408,7 +646,12 @@
         "en": "Jarvan IV",
         "es": "Jarvan IV"
       },
-      "image": "/assets/champions/JarvanIV.png"
+      "image": "/assets/champions/JarvanIV.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/jarvan/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Jax",
@@ -416,7 +659,11 @@
         "en": "Jax",
         "es": "Jax"
       },
-      "image": "/assets/champions/Jax.png"
+      "image": "/assets/champions/Jax.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/jax/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Jayce",
@@ -424,7 +671,12 @@
         "en": "Jayce",
         "es": "Jayce"
       },
-      "image": "/assets/champions/Jayce.png"
+      "image": "/assets/champions/Jayce.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/jayce/build",
+      "roles": [
+        "Fighter",
+        "Marksman"
+      ]
     },
     {
       "id": "Jhin",
@@ -432,7 +684,12 @@
         "en": "Jhin",
         "es": "Jhin"
       },
-      "image": "/assets/champions/Jhin.png"
+      "image": "/assets/champions/Jhin.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/jhin/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Jinx",
@@ -440,7 +697,11 @@
         "en": "Jinx",
         "es": "Jinx"
       },
-      "image": "/assets/champions/Jinx.png"
+      "image": "/assets/champions/Jinx.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/jinx/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "KSante",
@@ -448,7 +709,12 @@
         "en": "K'Sante",
         "es": "K'Sante"
       },
-      "image": "/assets/champions/KSante.png"
+      "image": "/assets/champions/KSante.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ksante/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Kaisa",
@@ -456,7 +722,12 @@
         "en": "Kai'Sa",
         "es": "Kai'Sa"
       },
-      "image": "/assets/champions/Kaisa.png"
+      "image": "/assets/champions/Kaisa.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kaisa/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Kalista",
@@ -464,7 +735,11 @@
         "en": "Kalista",
         "es": "Kalista"
       },
-      "image": "/assets/champions/Kalista.png"
+      "image": "/assets/champions/Kalista.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kalista/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Karma",
@@ -472,7 +747,12 @@
         "en": "Karma",
         "es": "Karma"
       },
-      "image": "/assets/champions/Karma.png"
+      "image": "/assets/champions/Karma.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/karma/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Karthus",
@@ -480,7 +760,11 @@
         "en": "Karthus",
         "es": "Karthus"
       },
-      "image": "/assets/champions/Karthus.png"
+      "image": "/assets/champions/Karthus.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/karthus/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Kassadin",
@@ -488,7 +772,12 @@
         "en": "Kassadin",
         "es": "Kassadin"
       },
-      "image": "/assets/champions/Kassadin.png"
+      "image": "/assets/champions/Kassadin.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kassadin/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Katarina",
@@ -496,7 +785,12 @@
         "en": "Katarina",
         "es": "Katarina"
       },
-      "image": "/assets/champions/Katarina.png"
+      "image": "/assets/champions/Katarina.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/katarina/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Kayle",
@@ -504,7 +798,12 @@
         "en": "Kayle",
         "es": "Kayle"
       },
-      "image": "/assets/champions/Kayle.png"
+      "image": "/assets/champions/Kayle.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kayle/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Kayn",
@@ -512,7 +811,12 @@
         "en": "Kayn",
         "es": "Kayn"
       },
-      "image": "/assets/champions/Kayn.png"
+      "image": "/assets/champions/Kayn.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kayn/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Kennen",
@@ -520,7 +824,11 @@
         "en": "Kennen",
         "es": "Kennen"
       },
-      "image": "/assets/champions/Kennen.png"
+      "image": "/assets/champions/Kennen.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kennen/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Khazix",
@@ -528,7 +836,11 @@
         "en": "Kha'Zix",
         "es": "Kha'Zix"
       },
-      "image": "/assets/champions/Khazix.png"
+      "image": "/assets/champions/Khazix.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/khazix/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Kindred",
@@ -536,7 +848,11 @@
         "en": "Kindred",
         "es": "Kindred"
       },
-      "image": "/assets/champions/Kindred.png"
+      "image": "/assets/champions/Kindred.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kindred/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Kled",
@@ -544,7 +860,11 @@
         "en": "Kled",
         "es": "Kled"
       },
-      "image": "/assets/champions/Kled.png"
+      "image": "/assets/champions/Kled.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kled/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "KogMaw",
@@ -552,7 +872,12 @@
         "en": "Kog'Maw",
         "es": "Kog'Maw"
       },
-      "image": "/assets/champions/KogMaw.png"
+      "image": "/assets/champions/KogMaw.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/kogmaw/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Leblanc",
@@ -560,7 +885,12 @@
         "en": "LeBlanc",
         "es": "LeBlanc"
       },
-      "image": "/assets/champions/Leblanc.png"
+      "image": "/assets/champions/Leblanc.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/leblanc/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "LeeSin",
@@ -568,7 +898,12 @@
         "en": "Lee Sin",
         "es": "Lee Sin"
       },
-      "image": "/assets/champions/LeeSin.png"
+      "image": "/assets/champions/LeeSin.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lee-sin/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Leona",
@@ -576,7 +911,12 @@
         "en": "Leona",
         "es": "Leona"
       },
-      "image": "/assets/champions/Leona.png"
+      "image": "/assets/champions/Leona.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/leona/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Lillia",
@@ -584,7 +924,12 @@
         "en": "Lillia",
         "es": "Lillia"
       },
-      "image": "/assets/champions/Lillia.png"
+      "image": "/assets/champions/Lillia.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lillia/build",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ]
     },
     {
       "id": "Lissandra",
@@ -592,7 +937,11 @@
         "en": "Lissandra",
         "es": "Lissandra"
       },
-      "image": "/assets/champions/Lissandra.png"
+      "image": "/assets/champions/Lissandra.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lissandra/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Locke",
@@ -600,7 +949,12 @@
         "en": "Locke",
         "es": "Locke"
       },
-      "image": "/assets/champions/Locke.png"
+      "image": "/assets/champions/Locke.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/locke/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Lucian",
@@ -608,7 +962,12 @@
         "en": "Lucian",
         "es": "Lucian"
       },
-      "image": "/assets/champions/Lucian.png"
+      "image": "/assets/champions/Lucian.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lucian/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Lulu",
@@ -616,7 +975,12 @@
         "en": "Lulu",
         "es": "Lulu"
       },
-      "image": "/assets/champions/Lulu.png"
+      "image": "/assets/champions/Lulu.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lulu/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Lux",
@@ -624,7 +988,12 @@
         "en": "Lux",
         "es": "Lux"
       },
-      "image": "/assets/champions/Lux.png"
+      "image": "/assets/champions/Lux.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/lux/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Malphite",
@@ -632,7 +1001,12 @@
         "en": "Malphite",
         "es": "Malphite"
       },
-      "image": "/assets/champions/Malphite.png"
+      "image": "/assets/champions/Malphite.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/malphite/build",
+      "roles": [
+        "Tank",
+        "Mage"
+      ]
     },
     {
       "id": "Malzahar",
@@ -640,7 +1014,11 @@
         "en": "Malzahar",
         "es": "Malzahar"
       },
-      "image": "/assets/champions/Malzahar.png"
+      "image": "/assets/champions/Malzahar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/malzahar/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Maokai",
@@ -648,7 +1026,12 @@
         "en": "Maokai",
         "es": "Maokai"
       },
-      "image": "/assets/champions/Maokai.png"
+      "image": "/assets/champions/Maokai.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/maokai/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "MasterYi",
@@ -656,7 +1039,12 @@
         "en": "Master Yi",
         "es": "Maestro Yi"
       },
-      "image": "/assets/champions/MasterYi.png"
+      "image": "/assets/champions/MasterYi.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/master-yi/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Mel",
@@ -664,7 +1052,12 @@
         "en": "Mel",
         "es": "Mel"
       },
-      "image": "/assets/champions/Mel.png"
+      "image": "/assets/champions/Mel.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/mel/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Milio",
@@ -672,7 +1065,12 @@
         "en": "Milio",
         "es": "Milio"
       },
-      "image": "/assets/champions/Milio.png"
+      "image": "/assets/champions/Milio.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/milio/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "MissFortune",
@@ -680,7 +1078,12 @@
         "en": "Miss Fortune",
         "es": "Miss Fortune"
       },
-      "image": "/assets/champions/MissFortune.png"
+      "image": "/assets/champions/MissFortune.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/miss-fortune/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "MonkeyKing",
@@ -688,7 +1091,12 @@
         "en": "Wukong",
         "es": "Wukong"
       },
-      "image": "/assets/champions/MonkeyKing.png"
+      "image": "/assets/champions/MonkeyKing.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/wukong/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Mordekaiser",
@@ -696,7 +1104,12 @@
         "en": "Mordekaiser",
         "es": "Mordekaiser"
       },
-      "image": "/assets/champions/Mordekaiser.png"
+      "image": "/assets/champions/Mordekaiser.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/mordekaiser/build",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ]
     },
     {
       "id": "Morgana",
@@ -704,7 +1117,12 @@
         "en": "Morgana",
         "es": "Morgana"
       },
-      "image": "/assets/champions/Morgana.png"
+      "image": "/assets/champions/Morgana.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/morgana/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Naafiri",
@@ -712,7 +1130,12 @@
         "en": "Naafiri",
         "es": "Naafiri"
       },
-      "image": "/assets/champions/Naafiri.png"
+      "image": "/assets/champions/Naafiri.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/naafiri/build",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ]
     },
     {
       "id": "Nami",
@@ -720,7 +1143,12 @@
         "en": "Nami",
         "es": "Nami"
       },
-      "image": "/assets/champions/Nami.png"
+      "image": "/assets/champions/Nami.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nami/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Nasus",
@@ -728,7 +1156,12 @@
         "en": "Nasus",
         "es": "Nasus"
       },
-      "image": "/assets/champions/Nasus.png"
+      "image": "/assets/champions/Nasus.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nasus/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Nautilus",
@@ -736,7 +1169,12 @@
         "en": "Nautilus",
         "es": "Nautilus"
       },
-      "image": "/assets/champions/Nautilus.png"
+      "image": "/assets/champions/Nautilus.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nautilus/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Neeko",
@@ -744,7 +1182,12 @@
         "en": "Neeko",
         "es": "Neeko"
       },
-      "image": "/assets/champions/Neeko.png"
+      "image": "/assets/champions/Neeko.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/neeko/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Nidalee",
@@ -752,7 +1195,12 @@
         "en": "Nidalee",
         "es": "Nidalee"
       },
-      "image": "/assets/champions/Nidalee.png"
+      "image": "/assets/champions/Nidalee.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nidalee/build",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ]
     },
     {
       "id": "Nilah",
@@ -760,7 +1208,12 @@
         "en": "Nilah",
         "es": "Nilah"
       },
-      "image": "/assets/champions/Nilah.png"
+      "image": "/assets/champions/Nilah.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nilah/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Nocturne",
@@ -768,7 +1221,12 @@
         "en": "Nocturne",
         "es": "Nocturne"
       },
-      "image": "/assets/champions/Nocturne.png"
+      "image": "/assets/champions/Nocturne.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nocturne/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Nunu",
@@ -776,7 +1234,12 @@
         "en": "Nunu & Willump",
         "es": "Nunu y Willump"
       },
-      "image": "/assets/champions/Nunu.png"
+      "image": "/assets/champions/Nunu.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/nunu/build",
+      "roles": [
+        "Tank",
+        "Mage"
+      ]
     },
     {
       "id": "Olaf",
@@ -784,7 +1247,12 @@
         "en": "Olaf",
         "es": "Olaf"
       },
-      "image": "/assets/champions/Olaf.png"
+      "image": "/assets/champions/Olaf.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/olaf/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Orianna",
@@ -792,7 +1260,12 @@
         "en": "Orianna",
         "es": "Orianna"
       },
-      "image": "/assets/champions/Orianna.png"
+      "image": "/assets/champions/Orianna.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/orianna/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Ornn",
@@ -800,7 +1273,11 @@
         "en": "Ornn",
         "es": "Ornn"
       },
-      "image": "/assets/champions/Ornn.png"
+      "image": "/assets/champions/Ornn.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ornn/build",
+      "roles": [
+        "Tank"
+      ]
     },
     {
       "id": "Pantheon",
@@ -808,7 +1285,12 @@
         "en": "Pantheon",
         "es": "Pantheon"
       },
-      "image": "/assets/champions/Pantheon.png"
+      "image": "/assets/champions/Pantheon.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/pantheon/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Poppy",
@@ -816,7 +1298,12 @@
         "en": "Poppy",
         "es": "Poppy"
       },
-      "image": "/assets/champions/Poppy.png"
+      "image": "/assets/champions/Poppy.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/poppy/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Pyke",
@@ -824,7 +1311,12 @@
         "en": "Pyke",
         "es": "Pyke"
       },
-      "image": "/assets/champions/Pyke.png"
+      "image": "/assets/champions/Pyke.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/pyke/build",
+      "roles": [
+        "Support",
+        "Assassin"
+      ]
     },
     {
       "id": "Qiyana",
@@ -832,7 +1324,11 @@
         "en": "Qiyana",
         "es": "Qiyana"
       },
-      "image": "/assets/champions/Qiyana.png"
+      "image": "/assets/champions/Qiyana.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/qiyana/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Quinn",
@@ -840,7 +1336,12 @@
         "en": "Quinn",
         "es": "Quinn"
       },
-      "image": "/assets/champions/Quinn.png"
+      "image": "/assets/champions/Quinn.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/quinn/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Rakan",
@@ -848,7 +1349,11 @@
         "en": "Rakan",
         "es": "Rakan"
       },
-      "image": "/assets/champions/Rakan.png"
+      "image": "/assets/champions/Rakan.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/rakan/build",
+      "roles": [
+        "Support"
+      ]
     },
     {
       "id": "Rammus",
@@ -856,7 +1361,11 @@
         "en": "Rammus",
         "es": "Rammus"
       },
-      "image": "/assets/champions/Rammus.png"
+      "image": "/assets/champions/Rammus.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/rammus/build",
+      "roles": [
+        "Tank"
+      ]
     },
     {
       "id": "RekSai",
@@ -864,7 +1373,12 @@
         "en": "Rek'Sai",
         "es": "Rek'Sai"
       },
-      "image": "/assets/champions/RekSai.png"
+      "image": "/assets/champions/RekSai.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/reksai/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Rell",
@@ -872,7 +1386,12 @@
         "en": "Rell",
         "es": "Rell"
       },
-      "image": "/assets/champions/Rell.png"
+      "image": "/assets/champions/Rell.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/rell/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Renata",
@@ -880,7 +1399,12 @@
         "en": "Renata Glasc",
         "es": "Renata Glasc"
       },
-      "image": "/assets/champions/Renata.png"
+      "image": "/assets/champions/Renata.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/renata-glasc/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Renekton",
@@ -888,7 +1412,12 @@
         "en": "Renekton",
         "es": "Renekton"
       },
-      "image": "/assets/champions/Renekton.png"
+      "image": "/assets/champions/Renekton.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/renekton/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Rengar",
@@ -896,7 +1425,12 @@
         "en": "Rengar",
         "es": "Rengar"
       },
-      "image": "/assets/champions/Rengar.png"
+      "image": "/assets/champions/Rengar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/rengar/build",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ]
     },
     {
       "id": "Riven",
@@ -904,7 +1438,12 @@
         "en": "Riven",
         "es": "Riven"
       },
-      "image": "/assets/champions/Riven.png"
+      "image": "/assets/champions/Riven.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/riven/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Rumble",
@@ -912,7 +1451,12 @@
         "en": "Rumble",
         "es": "Rumble"
       },
-      "image": "/assets/champions/Rumble.png"
+      "image": "/assets/champions/Rumble.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/rumble/build",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ]
     },
     {
       "id": "Ryze",
@@ -920,7 +1464,11 @@
         "en": "Ryze",
         "es": "Ryze"
       },
-      "image": "/assets/champions/Ryze.png"
+      "image": "/assets/champions/Ryze.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ryze/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Samira",
@@ -928,7 +1476,12 @@
         "en": "Samira",
         "es": "Samira"
       },
-      "image": "/assets/champions/Samira.png"
+      "image": "/assets/champions/Samira.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/samira/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Sejuani",
@@ -936,7 +1489,11 @@
         "en": "Sejuani",
         "es": "Sejuani"
       },
-      "image": "/assets/champions/Sejuani.png"
+      "image": "/assets/champions/Sejuani.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sejuani/build",
+      "roles": [
+        "Tank"
+      ]
     },
     {
       "id": "Senna",
@@ -944,7 +1501,12 @@
         "en": "Senna",
         "es": "Senna"
       },
-      "image": "/assets/champions/Senna.png"
+      "image": "/assets/champions/Senna.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/senna/build",
+      "roles": [
+        "Support",
+        "Marksman"
+      ]
     },
     {
       "id": "Seraphine",
@@ -952,7 +1514,12 @@
         "en": "Seraphine",
         "es": "Seraphine"
       },
-      "image": "/assets/champions/Seraphine.png"
+      "image": "/assets/champions/Seraphine.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/seraphine/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Sett",
@@ -960,7 +1527,12 @@
         "en": "Sett",
         "es": "Sett"
       },
-      "image": "/assets/champions/Sett.png"
+      "image": "/assets/champions/Sett.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sett/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Shaco",
@@ -968,7 +1540,11 @@
         "en": "Shaco",
         "es": "Shaco"
       },
-      "image": "/assets/champions/Shaco.png"
+      "image": "/assets/champions/Shaco.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/shaco/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Shen",
@@ -976,7 +1552,11 @@
         "en": "Shen",
         "es": "Shen"
       },
-      "image": "/assets/champions/Shen.png"
+      "image": "/assets/champions/Shen.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/shen/build",
+      "roles": [
+        "Tank"
+      ]
     },
     {
       "id": "Shyvana",
@@ -984,7 +1564,12 @@
         "en": "Shyvana",
         "es": "Shyvana"
       },
-      "image": "/assets/champions/Shyvana.png"
+      "image": "/assets/champions/Shyvana.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/shyvana/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Singed",
@@ -992,7 +1577,12 @@
         "en": "Singed",
         "es": "Singed"
       },
-      "image": "/assets/champions/Singed.png"
+      "image": "/assets/champions/Singed.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/singed/build",
+      "roles": [
+        "Tank",
+        "Mage"
+      ]
     },
     {
       "id": "Sion",
@@ -1000,7 +1590,12 @@
         "en": "Sion",
         "es": "Sion"
       },
-      "image": "/assets/champions/Sion.png"
+      "image": "/assets/champions/Sion.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sion/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Sivir",
@@ -1008,7 +1603,11 @@
         "en": "Sivir",
         "es": "Sivir"
       },
-      "image": "/assets/champions/Sivir.png"
+      "image": "/assets/champions/Sivir.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sivir/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Skarner",
@@ -1016,7 +1615,12 @@
         "en": "Skarner",
         "es": "Skarner"
       },
-      "image": "/assets/champions/Skarner.png"
+      "image": "/assets/champions/Skarner.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/skarner/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Smolder",
@@ -1024,7 +1628,12 @@
         "en": "Smolder",
         "es": "Smolder"
       },
-      "image": "/assets/champions/Smolder.png"
+      "image": "/assets/champions/Smolder.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/smolder/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Sona",
@@ -1032,7 +1641,12 @@
         "en": "Sona",
         "es": "Sona"
       },
-      "image": "/assets/champions/Sona.png"
+      "image": "/assets/champions/Sona.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sona/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Soraka",
@@ -1040,7 +1654,12 @@
         "en": "Soraka",
         "es": "Soraka"
       },
-      "image": "/assets/champions/Soraka.png"
+      "image": "/assets/champions/Soraka.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/soraka/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Swain",
@@ -1048,7 +1667,12 @@
         "en": "Swain",
         "es": "Swain"
       },
-      "image": "/assets/champions/Swain.png"
+      "image": "/assets/champions/Swain.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/swain/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Sylas",
@@ -1056,7 +1680,12 @@
         "en": "Sylas",
         "es": "Sylas"
       },
-      "image": "/assets/champions/Sylas.png"
+      "image": "/assets/champions/Sylas.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/sylas/build",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ]
     },
     {
       "id": "Syndra",
@@ -1064,7 +1693,11 @@
         "en": "Syndra",
         "es": "Syndra"
       },
-      "image": "/assets/champions/Syndra.png"
+      "image": "/assets/champions/Syndra.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/syndra/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "TahmKench",
@@ -1072,7 +1705,12 @@
         "en": "Tahm Kench",
         "es": "Tahm Kench"
       },
-      "image": "/assets/champions/TahmKench.png"
+      "image": "/assets/champions/TahmKench.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/tahm-kench/build",
+      "roles": [
+        "Tank",
+        "Support"
+      ]
     },
     {
       "id": "Taliyah",
@@ -1080,7 +1718,12 @@
         "en": "Taliyah",
         "es": "Taliyah"
       },
-      "image": "/assets/champions/Taliyah.png"
+      "image": "/assets/champions/Taliyah.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/taliyah/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Talon",
@@ -1088,7 +1731,11 @@
         "en": "Talon",
         "es": "Talon"
       },
-      "image": "/assets/champions/Talon.png"
+      "image": "/assets/champions/Talon.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/talon/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Taric",
@@ -1096,7 +1743,12 @@
         "en": "Taric",
         "es": "Taric"
       },
-      "image": "/assets/champions/Taric.png"
+      "image": "/assets/champions/Taric.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/taric/build",
+      "roles": [
+        "Support",
+        "Tank"
+      ]
     },
     {
       "id": "Teemo",
@@ -1104,7 +1756,12 @@
         "en": "Teemo",
         "es": "Teemo"
       },
-      "image": "/assets/champions/Teemo.png"
+      "image": "/assets/champions/Teemo.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/teemo/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Thresh",
@@ -1112,7 +1769,12 @@
         "en": "Thresh",
         "es": "Thresh"
       },
-      "image": "/assets/champions/Thresh.png"
+      "image": "/assets/champions/Thresh.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/thresh/build",
+      "roles": [
+        "Support",
+        "Tank"
+      ]
     },
     {
       "id": "Tristana",
@@ -1120,7 +1782,12 @@
         "en": "Tristana",
         "es": "Tristana"
       },
-      "image": "/assets/champions/Tristana.png"
+      "image": "/assets/champions/Tristana.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/tristana/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Trundle",
@@ -1128,7 +1795,12 @@
         "en": "Trundle",
         "es": "Trundle"
       },
-      "image": "/assets/champions/Trundle.png"
+      "image": "/assets/champions/Trundle.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/trundle/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Tryndamere",
@@ -1136,7 +1808,12 @@
         "en": "Tryndamere",
         "es": "Tryndamere"
       },
-      "image": "/assets/champions/Tryndamere.png"
+      "image": "/assets/champions/Tryndamere.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/tryndamere/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "TwistedFate",
@@ -1144,7 +1821,12 @@
         "en": "Twisted Fate",
         "es": "Twisted Fate"
       },
-      "image": "/assets/champions/TwistedFate.png"
+      "image": "/assets/champions/TwistedFate.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/twisted-fate/build",
+      "roles": [
+        "Mage",
+        "Marksman"
+      ]
     },
     {
       "id": "Twitch",
@@ -1152,7 +1834,12 @@
         "en": "Twitch",
         "es": "Twitch"
       },
-      "image": "/assets/champions/Twitch.png"
+      "image": "/assets/champions/Twitch.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/twitch/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Udyr",
@@ -1160,7 +1847,12 @@
         "en": "Udyr",
         "es": "Udyr"
       },
-      "image": "/assets/champions/Udyr.png"
+      "image": "/assets/champions/Udyr.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/udyr/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Urgot",
@@ -1168,7 +1860,12 @@
         "en": "Urgot",
         "es": "Urgot"
       },
-      "image": "/assets/champions/Urgot.png"
+      "image": "/assets/champions/Urgot.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/urgot/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Varus",
@@ -1176,7 +1873,12 @@
         "en": "Varus",
         "es": "Varus"
       },
-      "image": "/assets/champions/Varus.png"
+      "image": "/assets/champions/Varus.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/varus/build",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ]
     },
     {
       "id": "Vayne",
@@ -1184,7 +1886,12 @@
         "en": "Vayne",
         "es": "Vayne"
       },
-      "image": "/assets/champions/Vayne.png"
+      "image": "/assets/champions/Vayne.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/vayne/build",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ]
     },
     {
       "id": "Veigar",
@@ -1192,7 +1899,11 @@
         "en": "Veigar",
         "es": "Veigar"
       },
-      "image": "/assets/champions/Veigar.png"
+      "image": "/assets/champions/Veigar.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/veigar/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Velkoz",
@@ -1200,7 +1911,12 @@
         "en": "Vel'Koz",
         "es": "Vel'Koz"
       },
-      "image": "/assets/champions/Velkoz.png"
+      "image": "/assets/champions/Velkoz.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/velkoz/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "Vex",
@@ -1208,7 +1924,11 @@
         "en": "Vex",
         "es": "Vex"
       },
-      "image": "/assets/champions/Vex.png"
+      "image": "/assets/champions/Vex.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/vex/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Vi",
@@ -1216,7 +1936,12 @@
         "en": "Vi",
         "es": "Vi"
       },
-      "image": "/assets/champions/Vi.png"
+      "image": "/assets/champions/Vi.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/vi/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Viego",
@@ -1224,7 +1949,12 @@
         "en": "Viego",
         "es": "Viego"
       },
-      "image": "/assets/champions/Viego.png"
+      "image": "/assets/champions/Viego.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/viego/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Viktor",
@@ -1232,7 +1962,11 @@
         "en": "Viktor",
         "es": "Viktor"
       },
-      "image": "/assets/champions/Viktor.png"
+      "image": "/assets/champions/Viktor.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/viktor/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Vladimir",
@@ -1240,7 +1974,12 @@
         "en": "Vladimir",
         "es": "Vladimir"
       },
-      "image": "/assets/champions/Vladimir.png"
+      "image": "/assets/champions/Vladimir.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/vladimir/build",
+      "roles": [
+        "Mage",
+        "Fighter"
+      ]
     },
     {
       "id": "Volibear",
@@ -1248,7 +1987,12 @@
         "en": "Volibear",
         "es": "Volibear"
       },
-      "image": "/assets/champions/Volibear.png"
+      "image": "/assets/champions/Volibear.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/volibear/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Warwick",
@@ -1256,7 +2000,12 @@
         "en": "Warwick",
         "es": "Warwick"
       },
-      "image": "/assets/champions/Warwick.png"
+      "image": "/assets/champions/Warwick.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/warwick/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Xayah",
@@ -1264,7 +2013,11 @@
         "en": "Xayah",
         "es": "Xayah"
       },
-      "image": "/assets/champions/Xayah.png"
+      "image": "/assets/champions/Xayah.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/xayah/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Xerath",
@@ -1272,7 +2025,12 @@
         "en": "Xerath",
         "es": "Xerath"
       },
-      "image": "/assets/champions/Xerath.png"
+      "image": "/assets/champions/Xerath.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/xerath/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     },
     {
       "id": "XinZhao",
@@ -1280,7 +2038,12 @@
         "en": "Xin Zhao",
         "es": "Xin Zhao"
       },
-      "image": "/assets/champions/XinZhao.png"
+      "image": "/assets/champions/XinZhao.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/xin-zhao/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Yasuo",
@@ -1288,7 +2051,12 @@
         "en": "Yasuo",
         "es": "Yasuo"
       },
-      "image": "/assets/champions/Yasuo.png"
+      "image": "/assets/champions/Yasuo.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/yasuo/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Yone",
@@ -1296,7 +2064,12 @@
         "en": "Yone",
         "es": "Yone"
       },
-      "image": "/assets/champions/Yone.png"
+      "image": "/assets/champions/Yone.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/yone/build",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ]
     },
     {
       "id": "Yorick",
@@ -1304,7 +2077,12 @@
         "en": "Yorick",
         "es": "Yorick"
       },
-      "image": "/assets/champions/Yorick.png"
+      "image": "/assets/champions/Yorick.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/yorick/build",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ]
     },
     {
       "id": "Yunara",
@@ -1312,7 +2090,11 @@
         "en": "Yunara",
         "es": "Yunara"
       },
-      "image": "/assets/champions/Yunara.png"
+      "image": "/assets/champions/Yunara.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/yunara/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Yuumi",
@@ -1320,7 +2102,12 @@
         "en": "Yuumi",
         "es": "Yuumi"
       },
-      "image": "/assets/champions/Yuumi.png"
+      "image": "/assets/champions/Yuumi.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/yuumi/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Zaahen",
@@ -1328,7 +2115,11 @@
         "en": "Zaahen",
         "es": "Zaahen"
       },
-      "image": "/assets/champions/Zaahen.png"
+      "image": "/assets/champions/Zaahen.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zaahen/build",
+      "roles": [
+        "Fighter"
+      ]
     },
     {
       "id": "Zac",
@@ -1336,7 +2127,12 @@
         "en": "Zac",
         "es": "Zac"
       },
-      "image": "/assets/champions/Zac.png"
+      "image": "/assets/champions/Zac.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zac/build",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ]
     },
     {
       "id": "Zed",
@@ -1344,7 +2140,11 @@
         "en": "Zed",
         "es": "Zed"
       },
-      "image": "/assets/champions/Zed.png"
+      "image": "/assets/champions/Zed.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zed/build",
+      "roles": [
+        "Assassin"
+      ]
     },
     {
       "id": "Zeri",
@@ -1352,7 +2152,11 @@
         "en": "Zeri",
         "es": "Zeri"
       },
-      "image": "/assets/champions/Zeri.png"
+      "image": "/assets/champions/Zeri.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zeri/build",
+      "roles": [
+        "Marksman"
+      ]
     },
     {
       "id": "Ziggs",
@@ -1360,7 +2164,11 @@
         "en": "Ziggs",
         "es": "Ziggs"
       },
-      "image": "/assets/champions/Ziggs.png"
+      "image": "/assets/champions/Ziggs.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/ziggs/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Zilean",
@@ -1368,7 +2176,12 @@
         "en": "Zilean",
         "es": "Zilean"
       },
-      "image": "/assets/champions/Zilean.png"
+      "image": "/assets/champions/Zilean.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zilean/build",
+      "roles": [
+        "Support",
+        "Mage"
+      ]
     },
     {
       "id": "Zoe",
@@ -1376,7 +2189,11 @@
         "en": "Zoe",
         "es": "Zoe"
       },
-      "image": "/assets/champions/Zoe.png"
+      "image": "/assets/champions/Zoe.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zoe/build",
+      "roles": [
+        "Mage"
+      ]
     },
     {
       "id": "Zyra",
@@ -1384,7 +2201,12 @@
         "en": "Zyra",
         "es": "Zyra"
       },
-      "image": "/assets/champions/Zyra.png"
+      "image": "/assets/champions/Zyra.png",
+      "buildUrl": "https://www.metasrc.com/lol/arena/champions/zyra/build",
+      "roles": [
+        "Mage",
+        "Support"
+      ]
     }
   ]
 }
