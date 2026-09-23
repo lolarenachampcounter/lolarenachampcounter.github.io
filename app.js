@@ -8,6 +8,10 @@ const importBtn = document.getElementById("importBtn");
 const importInput = document.getElementById("importInput");
 const suggestBtn = document.getElementById("suggestBtn");
 const shareBtn = document.getElementById("shareBtn");
+const feedbackBtn = document.getElementById("feedbackBtn");
+const feedbackModal = document.getElementById("feedbackModal");
+const closeFeedbackModal = document.getElementById("closeFeedbackModal");
+const feedbackMessage = document.getElementById("feedbackMessage");
 const roleList = document.getElementById("roleList");
 const activeRoleChip = document.getElementById("activeRoleChip");
 const activeRoleChipLabel = document.getElementById("activeRoleChipLabel");
@@ -55,6 +59,8 @@ const translations = {
     },
     allWon: "¡Ya has ganado con todos los campeones! 🏆",
     suggested: name => `Prueba con ${name} — todavía te falta esa victoria.`,
+    arenaGodUnlocked: "🏆 ¡Dios de la Arena desbloqueado! Ganaste con 60 campeones distintos. Ahora ve a por el roster completo.",
+    arenaGodBadge: "🏆 Dios de la Arena",
     roleFilterPrefix: "Rol",
     shareTitle: "Arena LoL Win Tracker",
     shareSubtitle: "Progreso del reto Dios de la Arena",
@@ -90,6 +96,8 @@ const translations = {
     },
     allWon: "You've already won with every champion! 🏆",
     suggested: name => `Try ${name} — you haven't won with them yet.`,
+    arenaGodUnlocked: "🏆 Arena God unlocked! You've won with 60 different champions. Now go for the full roster.",
+    arenaGodBadge: "🏆 Arena God",
     roleFilterPrefix: "Role",
     shareTitle: "Arena LoL Win Tracker",
     shareSubtitle: "Arena God Challenge progress",
@@ -229,6 +237,7 @@ function setChampions(list) {
 
   render();
   checkMilestones(false);
+  checkArenaGodAchievement(false);
 }
 
 // El grid prerenderizado no lleva el rol en el DOM (evitar hincharlo con un
@@ -257,6 +266,7 @@ function init() {
   if (hydratePrerenderedGrid()) {
     render();
     checkMilestones(false);
+    checkArenaGodAchievement(false);
     loadChampionRoles().then(render);
   } else {
     loadChampions();
@@ -314,6 +324,7 @@ function toggleWin(championId) {
   saveWins();
   render();
   checkMilestones(true);
+  checkArenaGodAchievement(true);
 }
 
 // 25/50/75/100% del total de campeones. Cada hito se celebra una única vez
@@ -336,6 +347,22 @@ function checkMilestones(announce) {
       if (announce) showToast(translations[currentLang].milestone(pct, wins.size, champions.length));
     }
   });
+}
+
+// El reto "Arena God" de Riot se completa ganando con 60 campeones
+// distintos (cualquiera, no una lista concreta) — no con el roster
+// completo. Mientras no se llega a 60, la barra total mide el progreso
+// hacia ese primer objetivo; al alcanzarlo se desbloquea el sello y la
+// barra pasa a medir el roster completo como objetivo "bonus".
+const ARENA_GOD_GOAL = 60;
+const ARENA_GOD_KEY = "lol-arena-god-achieved";
+let arenaGodAchieved = localStorage.getItem(ARENA_GOD_KEY) === "1";
+
+function checkArenaGodAchievement(announce) {
+  if (arenaGodAchieved || wins.size < ARENA_GOD_GOAL) return;
+  arenaGodAchieved = true;
+  localStorage.setItem(ARENA_GOD_KEY, "1");
+  if (announce) showToast(translations[currentLang].arenaGodUnlocked);
 }
 
 let toastTimer;
@@ -491,10 +518,33 @@ function shareProgressCard() {
 function updateTotalProgress() {
   const fill = document.getElementById("totalProgressFill");
   const pctLabel = document.getElementById("totalProgressPct");
+  const badge = document.getElementById("arenaGodBadge");
   if (!fill || !pctLabel || !champions.length) return;
-  const pct = Math.round((wins.size / champions.length) * 100);
+
+  const t = translations[currentLang];
+  const goalReached = wins.size >= ARENA_GOD_GOAL;
+  const goalTotal = goalReached ? champions.length : ARENA_GOD_GOAL;
+  const pct = Math.min(100, Math.round((wins.size / goalTotal) * 100));
+
+  counter.textContent = `${t.completed}: ${wins.size}/${goalTotal}`;
   fill.style.width = `${pct}%`;
   pctLabel.textContent = `${pct}%`;
+  if (badge) badge.hidden = !goalReached;
+
+  // Antes de conseguir el logro, la barra de arriba mide el progreso hacia
+  // los 60 campeones del reto Arena God — el progreso hacia el roster
+  // completo (173) sólo se ve al desplegar "Progress by role". Una vez
+  // conseguido el logro, la barra de arriba YA mide el roster completo, así
+  // que esta barra extra deja de hacer falta.
+  const allWrap = document.getElementById("allChampionsProgress");
+  if (allWrap) {
+    allWrap.hidden = goalReached;
+    if (!goalReached) {
+      const allPct = Math.round((wins.size / champions.length) * 100);
+      document.getElementById("allChampionsFill").style.width = `${allPct}%`;
+      document.getElementById("allChampionsCount").textContent = `${wins.size}/${champions.length}`;
+    }
+  }
 }
 
 const ROLE_ORDER = ["Fighter", "Mage", "Marksman", "Assassin", "Tank", "Support"];
@@ -565,8 +615,6 @@ function getActiveFilter() {
 }
 
 function render() {
-  const t = translations[currentLang];
-  counter.textContent = `${t.completed}: ${wins.size}`;
   updateTotalProgress();
 
   const search = searchInput.value.toLowerCase();
@@ -648,6 +696,8 @@ function applyLanguage() {
   sortSelect.options[1].textContent = t.sortNameDesc;
   sortSelect.options[2].textContent = t.sortWonFirst;
   sortSelect.options[3].textContent = t.sortNotWonFirst;
+
+  document.getElementById("arenaGodBadge").textContent = t.arenaGodBadge;
 }
 
 
@@ -680,6 +730,7 @@ function finishImport() {
   saveWins();
   render();
   checkMilestones(false);
+  checkArenaGodAchievement(false);
   importModal.style.display = "none";
 
   // Limpiar el input para permitir importar el mismo archivo dos veces si fuera necesario
@@ -694,7 +745,56 @@ window.onclick = (event) => {
   if (event.target == importModal) {
     importModal.style.display = "none";
   }
+  if (event.target == feedbackModal) {
+    feedbackModal.style.display = "none";
+  }
 };
+
+// Envío real sin backend vía Formspree (mismo patrón que docs/contact.html
+// en el proyecto MusicPortfolio): un POST por fetch al endpoint de
+// Formspree ligado a ese email. La primera vez que alguien escribe algo,
+// Formspree manda un correo de confirmación de una sola vez a
+// lolarenachampcounter@gmail.com; hay que abrirlo y confirmar para que este
+// y los siguientes envíos empiecen a llegar de verdad a esa bandeja.
+const feedbackForm = document.getElementById("feedbackForm");
+const feedbackSuccess = document.getElementById("feedbackSuccess");
+const feedbackError = document.getElementById("feedbackError");
+
+feedbackBtn.addEventListener("click", () => {
+  feedbackModal.style.display = "flex";
+  feedbackForm.hidden = false;
+  feedbackSuccess.hidden = true;
+  feedbackError.hidden = true;
+  feedbackMessage.focus();
+});
+
+closeFeedbackModal.addEventListener("click", () => {
+  feedbackModal.style.display = "none";
+});
+
+feedbackForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const data = new FormData(feedbackForm);
+
+  fetch(feedbackForm.action, {
+    method: feedbackForm.method,
+    body: data,
+    headers: { Accept: "application/json" }
+  })
+    .then(res => {
+      if (res.ok) {
+        feedbackForm.reset();
+        feedbackForm.hidden = true;
+        feedbackError.hidden = true;
+        feedbackSuccess.hidden = false;
+      } else {
+        feedbackError.hidden = false;
+      }
+    })
+    .catch(() => {
+      feedbackError.hidden = false;
+    });
+});
 
 if (importBtn) {
   importBtn.addEventListener("click", () => {

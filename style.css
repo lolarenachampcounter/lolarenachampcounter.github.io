@@ -73,6 +73,12 @@ body.base {
   margin-bottom: 4px;
 }
 
+.total-progress-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .total-progress-pct {
   font-size: 0.85rem;
   font-weight: 600;
@@ -93,6 +99,50 @@ body.base {
   border-radius: 5px;
   background: linear-gradient(90deg, #16a34a, #22c55e);
   transition: width 0.2s ease;
+}
+
+/* Sello de logro conseguido: se gana ganando con 60 campeones distintos
+   (el reto real "Arena God" de Riot, no el roster completo). */
+.arena-god-badge[hidden] {
+  /* Sin esto, [hidden] y esta clase empatan en especificidad y gana la que
+     va detrás en la cascada (esta) — el sello se vería aunque estuviera
+     "oculto". Mismo motivo que .champion-cell[hidden] más abajo. */
+  display: none;
+}
+
+.arena-god-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 9px;
+  border: 2px solid #facc15;
+  border-radius: 999px;
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.1);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transform: rotate(-4deg);
+  white-space: nowrap;
+}
+
+/* Barra secundaria (roster completo) dentro del desglose por rol; sólo
+   visible antes de conseguir el sello de arriba. */
+.all-champions-progress {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.all-champions-progress .total-progress-header {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.all-champions-progress .total-progress-bar {
+  height: 6px;
 }
 
 /* =========================
@@ -635,6 +685,88 @@ main {
 .close:hover {
   color: #e5e7eb;
 }
+
+/* =========================
+   FEEDBACK
+========================= */
+.feedback-btn {
+  background: none;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #cbd5f5;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.feedback-btn:hover,
+.feedback-btn:focus-visible {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+.feedback-content {
+  max-width: 480px;
+  text-align: left;
+}
+
+.feedback-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+.feedback-intro {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.feedback-textarea,
+.feedback-email {
+  width: 100%;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e5e7eb;
+  font: inherit;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.feedback-textarea:focus-visible,
+.feedback-email:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 1px;
+}
+
+.feedback-content .modal-buttons {
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.feedback-success {
+  color: #86efac;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.feedback-error {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.feedback-error a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .import-export {
   display: flex;
   gap: 8px;

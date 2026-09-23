@@ -150,7 +150,10 @@
     <div class="total-progress">
       <div class="total-progress-header">
         <span id="counter" class="counter">Completados: 0</span>
-        <span class="total-progress-pct" id="totalProgressPct">0%</span>
+        <span class="total-progress-right">
+          <span class="total-progress-pct" id="totalProgressPct">0%</span>
+          <span id="arenaGodBadge" class="arena-god-badge" hidden>🏆 Dios de la Arena</span>
+        </span>
       </div>
       <div class="total-progress-bar">
         <div class="total-progress-fill" id="totalProgressFill"></div>
@@ -165,6 +168,22 @@
           <button type="button" id="clearRoleFilter" aria-label="Quitar filtro de rol">✕</button>
         </span>
       </summary>
+
+      <!-- Sólo se ve antes de conseguir el logro Dios de la Arena (60
+           campeones): la barra de arriba mide el progreso hacia esos 60, así
+           que el progreso hacia el roster completo sólo se muestra aquí. Una
+           vez conseguido el logro, la barra de arriba ya mide el roster
+           completo y esto deja de hacer falta. -->
+      <div class="all-champions-progress" id="allChampionsProgress" hidden>
+        <div class="total-progress-header">
+          <span>Todos los campeones</span>
+          <span id="allChampionsCount">0/173</span>
+        </div>
+        <div class="total-progress-bar">
+          <div class="total-progress-fill" id="allChampionsFill"></div>
+        </div>
+      </div>
+
       <ul class="role-list" id="roleList"></ul>
     </details>
 
@@ -232,6 +251,10 @@
 
 <div class="header-right">
   <div class="tip-lang">
+    <button type="button" id="feedbackBtn" class="feedback-btn">
+      💬 Opinión
+    </button>
+
     <div class="tipjar-container">
       <a
         id="donateLink"
@@ -545,6 +568,46 @@
       <button id="replaceBtn"></button>
       <button id="addBtn"></button>
     </div>
+  </div>
+</div>
+
+<div id="feedbackModal" class="modal">
+  <div class="modal-content feedback-content">
+    <span id="closeFeedbackModal" class="close">&times;</span>
+    <h2 class="feedback-title">Opinión y sugerencias</h2>
+    <p class="feedback-intro">
+      ¿Has encontrado un fallo o tienes una idea para el tracker? Cuéntanosla
+      abajo. Deja tu email si quieres respuesta.
+    </p>
+    <form id="feedbackForm" action="https://formspree.io/lolarenachampcounter@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Opinión sobre Arena LoL Win Tracker" />
+      <label for="feedbackMessage" class="sr-only">Tu mensaje</label>
+      <textarea
+        id="feedbackMessage"
+        name="message"
+        class="feedback-textarea"
+        rows="5"
+        placeholder="¿Qué cambiarías o añadirías?"
+        required
+      ></textarea>
+      <label for="feedbackEmail" class="sr-only">Tu correo (opcional)</label>
+      <input
+        type="email"
+        id="feedbackEmail"
+        name="email"
+        class="feedback-email"
+        placeholder="Tu correo (opcional, por si quieres respuesta)"
+        autocomplete="email"
+      />
+      <div class="modal-buttons">
+        <button type="submit" id="sendFeedback" class="action-btn">Enviar opinión</button>
+      </div>
+    </form>
+    <p id="feedbackSuccess" class="feedback-success" hidden>✓ ¡Gracias! Tu mensaje se ha enviado.</p>
+    <p id="feedbackError" class="feedback-error" hidden>
+      Algo ha fallado. También puedes
+      <a href="mailto:lolarenachampcounter@gmail.com">escribirnos directamente</a>.
+    </p>
   </div>
 </div>
 
