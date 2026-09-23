@@ -751,11 +751,9 @@ window.onclick = (event) => {
 };
 
 // Envío real sin backend vía Formspree (mismo patrón que docs/contact.html
-// en el proyecto MusicPortfolio): un POST por fetch al endpoint de
-// Formspree ligado a ese email. La primera vez que alguien escribe algo,
-// Formspree manda un correo de confirmación de una sola vez a
-// lolarenachampcounter@gmail.com; hay que abrirlo y confirmar para que este
-// y los siguientes envíos empiecen a llegar de verdad a esa bandeja.
+// en el proyecto MusicPortfolio): un POST por fetch al endpoint del
+// formulario creado desde el panel de Formspree (sin paso de confirmación,
+// a diferencia del endpoint "email directo" que se probó al principio).
 const feedbackForm = document.getElementById("feedbackForm");
 const feedbackSuccess = document.getElementById("feedbackSuccess");
 const feedbackError = document.getElementById("feedbackError");
