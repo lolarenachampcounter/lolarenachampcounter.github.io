@@ -179,7 +179,7 @@
     const fresh = tmp.firstChild;
     old.replaceWith(fresh);
     const target = fresh.querySelector(focusSelector) || fresh.querySelector(".wl-add");
-    if (target) target.focus();
+    if (target) target.focus({ preventScroll: true });
   }
 
   function change(id, kind, delta) {

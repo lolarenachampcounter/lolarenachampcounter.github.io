@@ -660,12 +660,27 @@ function render() {
 
   // 4️⃣ Reordenar moviendo los nodos existentes (appendChild los mueve, no
   //    los duplica). Las tarjetas ocultas quedan delante y no afectan.
-  const fragment = document.createDocumentFragment();
-  filteredChamps.forEach(champ => {
-    const entry = cardById.get(champ.id);
-    if (entry) fragment.appendChild(entry.cell);
-  });
-  grid.appendChild(fragment);
+  //    Sólo si el orden ha cambiado: sacar todas las tarjetas del DOM encoge
+  //    la página un instante y el navegador recolocaba el scroll arriba al
+  //    marcar una victoria. Si hay que reordenar, se conservan scroll y foco.
+  const currentOrder = Array.from(grid.querySelectorAll(".champion-cell:not([hidden])"), el => el.dataset.championId);
+  const sameOrder =
+    currentOrder.length === filteredChamps.length &&
+    filteredChamps.every((champ, i) => currentOrder[i] === champ.id);
+  if (!sameOrder) {
+    const scrollX = window.scrollX, scrollY = window.scrollY;
+    const focused = document.activeElement;
+    const fragment = document.createDocumentFragment();
+    filteredChamps.forEach(champ => {
+      const entry = cardById.get(champ.id);
+      if (entry) fragment.appendChild(entry.cell);
+    });
+    grid.appendChild(fragment);
+    window.scrollTo(scrollX, scrollY);
+    if (focused && focused !== document.body && grid.contains(focused)) {
+      focused.focus({ preventScroll: true });
+    }
+  }
 
   renderRoleBreakdown();
 }
