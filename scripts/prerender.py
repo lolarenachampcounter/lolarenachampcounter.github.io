@@ -48,13 +48,15 @@ BUILD_LINK_LABEL = {
 }
 
 
-def card(champ: dict, lang: str, eager: bool) -> str:
+def card(champ: dict, lang: str, eager: bool, first: bool = False) -> str:
     name = escape(champ["name"].get(lang) or champ["name"]["en"])
     image = escape(champ["image"])
     champ_id = escape(champ["id"])
     build_url = escape(champ["buildUrl"])
     build_label = escape(BUILD_LINK_LABEL[lang].format(name=champ["name"].get(lang) or champ["name"]["en"]))
-    loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    # fetchpriority="high" sólo en la primera tarjeta: si se marca en muchas,
+    # el navegador deja de poder priorizar la imagen LCP real.
+    loading = 'loading="lazy"' if not eager else ('loading="eager" fetchpriority="high"' if first else 'loading="eager"')
     # El enlace de build es HERMANO del <button>, no hijo: un <a> dentro de un
     # <button> es contenido interactivo anidado, inválido en HTML.
     return (
@@ -111,7 +113,7 @@ def main() -> None:
 
         eol = "\r\n" if "\r\n" in html else "\n"
         cards = eol.join(
-            card(c, lang, eager=i < EAGER_CARDS) for i, c in enumerate(champions)
+            card(c, lang, eager=i < EAGER_CARDS, first=i == 0) for i, c in enumerate(champions)
         )
         block = f"{START}{eol}{cards}{eol}      {END}"
         html = re.sub(

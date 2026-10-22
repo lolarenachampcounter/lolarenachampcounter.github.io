@@ -14,9 +14,9 @@
  * Sube CACHE_VERSION cuando cambies esta lista o la lógica de fetch, para
  * forzar que los clientes viejos limpien su caché de shell.
  */
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v3";
 const STATIC_CACHE = `arena-tracker-static-${CACHE_VERSION}`;
-const IMAGE_CACHE = "arena-tracker-images-v1";
+const IMAGE_CACHE = "arena-tracker-images-v2";
 
 const APP_SHELL = [
   "/",
@@ -26,6 +26,8 @@ const APP_SHELL = [
   "/404.html",
   "/style.css",
   "/app.js",
+  "/wl.js",
+  "/wl.css",
   "/data/champions.json",
   "/site.webmanifest",
   "/assets/icon-192.png",
@@ -66,7 +68,8 @@ self.addEventListener("fetch", event => {
           cached =>
             cached ||
             fetch(request).then(response => {
-              cache.put(request, response.clone());
+              // No guardar errores 4xx/5xx.
+              if (response.ok) cache.put(request, response.clone());
               return response;
             })
         )
@@ -78,8 +81,11 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     fetch(request)
       .then(response => {
-        const copy = response.clone();
-        caches.open(STATIC_CACHE).then(cache => cache.put(request, copy));
+        // No guardar errores 4xx/5xx en la caché.
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(STATIC_CACHE).then(cache => cache.put(request, copy));
+        }
         return response;
       })
       .catch(() => caches.match(request))

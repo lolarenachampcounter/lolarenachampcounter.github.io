@@ -8,30 +8,72 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lolarenachampcounter.github.io/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
   </url>
   <url>
     <loc>https://lolarenachampcounter.github.io/es/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/" />
   </url>
   <url>
     <loc>https://lolarenachampcounter.github.io/privacy/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/privacy/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/privacidad/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/privacy/" />
   </url>
   <url>
     <loc>https://lolarenachampcounter.github.io/es/privacidad/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/privacy/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/privacidad/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/privacy/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/arena-god-easy-champions/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/arena-god-easy-champions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/campeones-faciles-dios-de-la-arena/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/arena-god-easy-champions/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/es/campeones-faciles-dios-de-la-arena/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/arena-god-easy-champions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/campeones-faciles-dios-de-la-arena/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/arena-god-easy-champions/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/lol-win-rate-tracker/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-lol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+  </url>
+  <url>
+    <loc>https://lolarenachampcounter.github.io/es/contador-victorias-lol/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-lol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
   </url>
 </urlset>

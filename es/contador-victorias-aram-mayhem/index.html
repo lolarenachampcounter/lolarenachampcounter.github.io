@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contador de victorias ARAM Mayhem – % de victoria por campeón</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wl.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#020617">
+  <meta name="description" content="Contador gratuito de ARAM Mayhem para League of Legends: apunta victorias y derrotas con cada campeón, mira tu % de victoria por campeón y sigue retos como ganar con todos." />
+  <meta name="author" content="SGiroWeb">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arena LoL Win Tracker">
+  <meta property="og:url" content="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/">
+  <meta property="og:title" content="Contador de victorias ARAM Mayhem – % de victoria por campeón">
+  <meta property="og:description" content="Contador gratuito de ARAM Mayhem para League of Legends: apunta victorias y derrotas con cada campeón, mira tu % de victoria por campeón y sigue retos como ganar con todos.">
+  <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Contador de victorias ARAM Mayhem">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contador de victorias ARAM Mayhem – % de victoria por campeón">
+  <meta name="twitter:description" content="Contador gratuito de ARAM Mayhem para League of Legends: apunta victorias y derrotas con cada campeón, mira tu % de victoria por campeón y sigue retos como ganar con todos.">
+  <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <link rel="canonical" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/" />
+  <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/" />
+  <link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
+  <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Contador de victorias ARAM Mayhem",
+      "url": "https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/",
+      "description": "Contador gratuito de ARAM Mayhem para League of Legends: apunta victorias y derrotas con cada campeón, mira tu % de victoria por campeón y sigue retos como ganar con todos.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "es",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isPartOf": {
+        "@id": "https://lolarenachampcounter.github.io/#website"
+      },
+      "dateModified": "2026-10-22"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Contador Dios de la Arena",
+          "item": "https://lolarenachampcounter.github.io/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contador de victorias ARAM Mayhem",
+          "item": "https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="base" data-wl-mode="aram-mayhem">
+  <header class="header">
+    <div class="header-left">
+      <nav class="wl-nav" aria-label="Contadores"><a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-mayhem/" aria-current="page">Contador ARAM Mayhem</a><a href="/es/contador-victorias-lol/">Contador partidas normales</a></nav>
+      <h1>Contador de victorias ARAM Mayhem</h1>
+      <p class="subtitle">Apunta tus victorias y derrotas y mira tu % de victoria con cada campeón</p>
+      <div class="wl-summary">
+        <div class="wl-stat"><span>Partidas</span><strong id="wlGames">0</strong></div>
+        <div class="wl-stat"><span>Victorias</span><strong id="wlWins">0</strong></div>
+        <div class="wl-stat"><span>Derrotas</span><strong id="wlLosses">0</strong></div>
+        <div class="wl-stat"><span>% de victoria</span><strong id="wlPct">—</strong></div>
+        <div class="wl-stat"><span>Campeones jugados</span><strong id="wlPlayed">0</strong></div>
+        <div class="wl-stat"><span>Campeones con victoria</span><strong id="wlWonWith">0</strong></div>
+      </div>
+      <div class="wl-progress" aria-hidden="true"><div class="wl-progress-fill" id="wlProgressFill"></div></div>
+      <div class="wl-controls">
+        <div class="search-wrapper">
+          <button type="button" id="wlClear" class="clear-btn" aria-label="Borrar búsqueda">×</button>
+          <label for="wlSearch" class="sr-only">Buscar campeón</label>
+          <input type="text" id="wlSearch" autocomplete="off" placeholder="Buscar campeón..." />
+        </div>
+        <span class="wl-field"><label for="wlFilter">Mostrar</label>
+        <select id="wlFilter">
+          <option value="all">Todos</option><option value="played">Jugados</option><option value="unplayed">Sin jugar</option><option value="won">Con victoria</option><option value="never-won">Sin victoria</option>
+        </select>
+        </span>
+        <span class="wl-field"><label for="wlRole">Rol</label>
+        <select id="wlRole"><option value="all">Todos los roles</option></select>
+        </span>
+        <span class="wl-field"><label for="wlSort">Ordenar por</label>
+        <select id="wlSort">
+          <option value="name-asc">Nombre A-Z</option><option value="games-desc">Más partidas</option><option value="wins-desc">Más victorias</option><option value="pct-desc">Mayor % de victoria</option><option value="pct-asc">Menor % de victoria</option>
+        </select></span>
+      </div>
+      <div class="wl-actions">
+        <button type="button" id="wlUndo" class="action-btn">↶ Deshacer</button>
+        <button type="button" id="wlExport" class="action-btn">Exportar progreso</button>
+        <button type="button" id="wlImportBtn" class="action-btn">Importar progreso</button>
+        <input type="file" id="wlImport" accept=".json" hidden />
+        <button type="button" id="wlReset" class="action-btn wl-danger">Borrar progreso</button>
+      </div>
+      <p class="local-note">Tu progreso nunca sale de tu navegador: no lo vemos ni lo guardamos nosotros. Por eso te damos la opción de exportarlo e importarlo, para que tengas tu propia copia. <a href="/es/privacidad/">Política de privacidad</a></p>
+    </div>
+  </header>
+  <main>
+    <noscript><p class="wl-empty">Este contador necesita JavaScript para guardar tus partidas en el navegador.</p></noscript>
+    <div id="wlGrid" class="wl-grid" aria-live="polite"></div>
+    <section class="seo-content">
+      <div class="seo-inner">
+<h2>Sigue tu % de victoria en ARAM Mayhem por campeón</h2>
+<p>En ARAM Mayhem te toca un campeón aleatorio cada partida, así que con el tiempo es difícil recordar con cuáles ganas de verdad. Este contador lleva un registro sencillo: pulsa <strong>+W</strong> tras una victoria y <strong>+L</strong> tras una derrota, y verás tu % de victoria con cada campeón y en total.</p>
+<h3>Cómo usarlo</h3>
+<ul><li>Busca el campeón que acabas de jugar y pulsa +W o +L. Pulsa <em>Deshacer</em> (o Ctrl+Z) si te equivocas.</li>
+<li>Ordena por <em>Mayor % de victoria</em> para ver tus mejores campeones, o por <em>Menor % de victoria</em> para ver cuáles practicar.</li>
+<li>Exporta tu progreso de vez en cuando para tener una copia o pasarlo a otro dispositivo.</li></ul>
+<h3>Ideas de retos</h3>
+<ul><li>Ganar una partida de ARAM Mayhem con todos los campeones: filtra por <em>Sin victoria</em> para ver cuáles faltan.</li>
+<li>Llegar al 50% de victorias con cada rol: combina el filtro de rol con el orden por %.</li>
+<li>Jugar 10 partidas con un campeón y mantenerlo por encima del 60%.</li></ul>
+<h3>Preguntas frecuentes</h3>
+<p><strong>¿Lee mi historial de partidas?</strong><br>No. Apuntas cada partida a mano; no se conecta a tu cuenta de Riot.</p>
+<p><strong>¿Es independiente del contador de Dios de la Arena?</strong><br>Sí. ARAM Mayhem, partidas normales y Arena guardan cada uno su propio progreso en tu navegador.</p>
+<p><strong>¿Dónde se guardan mis datos?</strong><br>Solo en tu navegador. Detalles en la <a href="/es/privacidad/">política de privacidad</a>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="wlToast" class="wl-toast" role="status" hidden></div>
+<footer class="seo-footer">
+  <nav class="footer-links" aria-label="Footer">
+    <a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-mayhem/">Contador ARAM Mayhem</a><a href="/es/contador-victorias-lol/">Contador partidas normales</a>
+    <a href="/aram-mayhem-win-tracker/" hreflang="en" lang="en">English version</a>
+    <a href="/es/privacidad/">Política de privacidad</a>
+  </nav>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Arena LoL Win Tracker, por SGiroWeb</p>
+    <p class="riot-legal">Arena LoL Win Tracker no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie implicado oficialmente en la producción o gestión de las propiedades de Riot Games. Riot Games y todas sus propiedades asociadas son marcas comerciales o marcas registradas de Riot Games, Inc.</p>
+  </div>
+</footer>
+<script src="/wl.js" defer></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"));
+  }
+</script>
+</body>
+</html>

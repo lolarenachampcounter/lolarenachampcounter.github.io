@@ -44,11 +44,17 @@ jobs:
         # Reinyecta el grid en el HTML desde data/champions.json para que el
         # contenido exista sin JavaScript. Es idempotente.
         run: python scripts/prerender.py
+      - name: Build _site with public files only
+        run: |
+          mkdir -p _site/assets
+          cp index.html 404.html app.js wl.js wl.css sw.js style.css robots.txt sitemap.xml site.webmanifest ads.txt google6dae54fd1f12f3c0.html _site/
+          cp -r es privacy data arena-god-easy-champions aram-mayhem-win-tracker lol-win-rate-tracker _site/
+          # assets/ sin ini.png (no se referencia en el sitio)
+          for f in assets/*; do [ "$(basename "$f")" = "ini.png" ] || cp -r "$f" _site/assets/; done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

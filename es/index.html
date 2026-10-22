@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Arena LoL Win Tracker - Checklist del reto Dios de la Arena</title>
+  <title>Dios de la Arena LoL – Contador de victorias en Arena (60 campeones)</title>
   <!-- Hoja de estilos única y crítica: cargarla de forma no bloqueante sólo
        provocaba un flash sin estilos y un salto de layout. Son ~10 KB. -->
   <link rel="stylesheet" href="/style.css">
@@ -11,7 +11,7 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#020617">
 
-  <meta name="description" content="Lleva la cuenta de tus victorias en el modo Arena de League of Legends. Marca campeones, gestiona tu progreso y completa el reto Dios de la Arena fácilmente." />
+  <meta name="description" content="Contador gratuito del reto Dios de la Arena de League of Legends: marca cada campeón con el que ganas en Arena, filtra por rol, consulta builds y sigue tu progreso hasta los 60." />
   <meta name="author" content="SGiroWeb">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Arena LoL Win Tracker">
   <meta property="og:url" content="https://lolarenachampcounter.github.io/es/">
-  <meta property="og:title" content="Arena LoL Win Tracker - Gana con todos los campeones">
-  <meta property="og:description" content="Lleva la cuenta de tus victorias en Arena y consigue el título de Dios de la Arena.">
+  <meta property="og:title" content="Dios de la Arena LoL – Contador de victorias en Arena (60 campeones)">
+  <meta property="og:description" content="Contador gratuito del reto Dios de la Arena de League of Legends: marca cada campeón con el que ganas en Arena, filtra por rol, consulta builds y sigue tu progreso hasta los 60.">
   <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -30,8 +30,8 @@
   <meta property="og:locale:alternate" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arena LoL Win Tracker">
-  <meta name="twitter:description" content="Gestiona tus victorias en el modo Arena de League of Legends. Gratis y fácil de usar.">
+  <meta name="twitter:title" content="Dios de la Arena LoL – Contador de victorias en Arena (60 campeones)">
+  <meta name="twitter:description" content="Contador gratuito del reto Dios de la Arena de League of Legends: marca cada campeón con el que ganas en Arena, filtra por rol, consulta builds y sigue tu progreso hasta los 60.">
   <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
   <meta name="twitter:image:alt" content="Arena LoL Win Tracker - Checklist del reto Dios de la Arena">
   <link rel="canonical" href="https://lolarenachampcounter.github.io/es/" />
@@ -89,7 +89,7 @@
         "isPartOf": { "@id": "https://lolarenachampcounter.github.io/es/#website" },
         "author": { "@id": "https://lolarenachampcounter.github.io/#author" },
         "image": "https://lolarenachampcounter.github.io/assets/og-cover.png",
-        "dateModified": "2026-09-22",
+        "dateModified": "2026-10-22",
         "description": "Herramienta gratuita para llevar la cuenta de tus victorias en el modo Arena de League of Legends y completar el reto Dios de la Arena.",
         "offers": {
           "@type": "Offer",
@@ -108,7 +108,7 @@
             "name": "¿Qué es el reto Dios de la Arena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "El reto Dios de la Arena requiere ganar al menos una partida de Arena con cada campeón del juego."
+              "text": "Dios de la Arena es un reto de League of Legends que requiere ganar una partida de Arena con 60 campeones distintos."
             }
           },
           {
@@ -116,7 +116,7 @@
             "name": "¿Es gratis usar Arena LoL Win Tracker?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí, la herramienta es completamente gratuita, no requiere cuenta y guarda tu progreso localmente en tu navegador."
+              "text": "Sí, es gratis y no necesita cuenta. Consulta la política de privacidad sobre anuncios, analítica y formulario de opinión."
             }
           },
           {
@@ -132,7 +132,7 @@
             "name": "¿Con cuántos campeones necesito ganar para Dios de la Arena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Necesitas ganar al menos una partida de Arena con cada campeón del juego, actualmente más de 160."
+              "text": "Necesitas al menos una victoria en Arena con 60 campeones distintos. La herramienta también cubre el roster completo si quieres ganar con todos."
             }
           }
         ]
@@ -144,6 +144,7 @@
 <body class="base">
   <header class="header">
   <div class="header-left">
+    <nav class="mode-nav" aria-label="Contadores"><a href="/es/" aria-current="page">Dios de la Arena</a><a href="/es/contador-victorias-aram-mayhem/">ARAM Mayhem</a><a href="/es/contador-victorias-lol/">Partidas normales</a></nav>
     <h1>Arena LoL Win Tracker — Checklist del reto Dios de la Arena</h1>
     <p class="subtitle">Campeones con victoria</p>
 
@@ -263,10 +264,10 @@
 
     <div class="lang-switch">
       <a href="/es/" hreflang="es" title="Español">
-        <img src="https://flagcdn.com/w20/es.png" alt="Español" class="lang-flag active" />
+        <img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="Español" class="lang-flag active" />
       </a>
       <a href="/" hreflang="en" title="English">
-        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag" />
+        <img src="https://flagcdn.com/w20/gb.png" width="20" height="15" alt="English" class="lang-flag" />
       </a>
     </div>
   </div>
@@ -285,17 +286,17 @@
     <div id="championsGrid" class="grid" data-prerendered="true">
       <!-- CHAMPIONS:START -->
       <div class="champion-cell" data-champion-id="Aatrox"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aatrox.png" alt="Aatrox" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aatrox</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aatrox/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aatrox (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aatrox (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ahri"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ahri.png" alt="Ahri" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ahri</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ahri/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ahri (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ahri (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Akali"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akali.png" alt="Akali" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akali</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akali/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Akali (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Akali (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Akshan"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akshan.png" alt="Akshan" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akshan</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akshan/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Akshan (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Akshan (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Alistar"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Alistar.png" alt="Alistar" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Alistar</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/alistar/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Alistar (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Alistar (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ambessa"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ambessa.png" alt="Ambessa" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ambessa</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ambessa/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ambessa (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ambessa (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Amumu"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Amumu.png" alt="Amumu" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Amumu</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/amumu/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Amumu (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Amumu (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Anivia"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Anivia.png" alt="Anivia" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Anivia</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/anivia/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Anivia (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Anivia (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Annie"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Annie.png" alt="Annie" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Annie</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/annie/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Annie (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Annie (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Aphelios"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aphelios.png" alt="Aphelios" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aphelios</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aphelios/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aphelios (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aphelios (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ashe"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ashe.png" alt="Ashe" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ashe</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ashe/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ashe (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ashe (abre metasrc.com en una pestaña nueva)">↗</a></div>
-      <div class="champion-cell" data-champion-id="AurelionSol"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aurelion Sol</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurelion-sol/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aurelion Sol (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aurelion Sol (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ahri"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ahri.png" alt="Ahri" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ahri</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ahri/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ahri (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ahri (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Akali"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akali.png" alt="Akali" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Akali</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akali/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Akali (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Akali (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Akshan"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akshan.png" alt="Akshan" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Akshan</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akshan/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Akshan (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Akshan (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Alistar"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Alistar.png" alt="Alistar" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Alistar</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/alistar/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Alistar (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Alistar (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ambessa"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ambessa.png" alt="Ambessa" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ambessa</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ambessa/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ambessa (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ambessa (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Amumu"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Amumu.png" alt="Amumu" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Amumu</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/amumu/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Amumu (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Amumu (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Anivia"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Anivia.png" alt="Anivia" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Anivia</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/anivia/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Anivia (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Anivia (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Annie"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Annie.png" alt="Annie" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Annie</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/annie/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Annie (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Annie (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Aphelios"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aphelios.png" alt="Aphelios" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Aphelios</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aphelios/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aphelios (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aphelios (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ashe"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ashe.png" alt="Ashe" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ashe</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ashe/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Ashe (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Ashe (abre metasrc.com en una pestaña nueva)">↗</a></div>
+      <div class="champion-cell" data-champion-id="AurelionSol"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Aurelion Sol</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurelion-sol/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aurelion Sol (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aurelion Sol (abre metasrc.com en una pestaña nueva)">↗</a></div>
       <div class="champion-cell" data-champion-id="Aurora"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aurora.png" alt="Aurora" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Aurora</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurora/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Aurora (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Aurora (abre metasrc.com en una pestaña nueva)">↗</a></div>
       <div class="champion-cell" data-champion-id="Azir"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Azir.png" alt="Azir" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Azir</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/azir/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Azir (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Azir (abre metasrc.com en una pestaña nueva)">↗</a></div>
       <div class="champion-cell" data-champion-id="Bard"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Bard.png" alt="Bardo" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Bardo</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/bard/build" target="_blank" rel="noopener noreferrer" aria-label="Guía de build de Arena para Bardo (abre metasrc.com en una pestaña nueva)" title="Guía de build de Arena para Bardo (abre metasrc.com en una pestaña nueva)">↗</a></div>
@@ -461,11 +462,12 @@
     </div>
 
  <section class="seo-content">
-  <details open>
+  <p class="local-note">Tu progreso nunca sale de tu navegador: no lo vemos ni lo guardamos nosotros. Por eso te damos la opción de exportarlo e importarlo, para que tengas tu propia copia. <a href="/es/privacidad/">Política de privacidad</a></p>
+  <details class="seo-details">
     <summary>Sobre Arena LoL Win Tracker</summary>
     <div class="seo-inner">
 
-      <h2>Arena LoL Win Tracker – Completa el reto Dios de la Arena de forma eficiente</h2>
+      <h2>Cómo funciona el contador de Dios de la Arena</h2>
 
       <p>
         Arena LoL Win Tracker es una herramienta gratuita y ligera diseñada para ayudar a los jugadores
@@ -477,7 +479,7 @@
       <h3>¿Qué es el reto Dios de la Arena?</h3>
       <p>
         Dios de la Arena es un reto de League of Legends que pide a los jugadores ganar al menos una
-        partida de Arena con cada campeón del juego, actualmente más de 160. Riot no ofrece una lista de
+        partida de Arena con 60 campeones distintos. Riot no ofrece una lista de
         seguimiento dentro del cliente, así que la mayoría de jugadores acaba adivinando con qué campeones
         ya ha ganado. Esta herramienta sustituye esas suposiciones por una lista visual sencilla que puedes
         filtrar y buscar mientras juegas.
@@ -485,7 +487,7 @@
 
       <h3>¿Por qué usar esta herramienta?</h3>
       <p>
-        Completar el reto Dios de la Arena requiere ganar con más de 160 campeones. Sin un seguimiento,
+        Completar el reto Dios de la Arena requiere ganar en Arena con 60 campeones distintos. Sin un seguimiento,
         es fácil olvidar con quién ya has jugado. Esta herramienta te ayuda a:
       </p>
 
@@ -493,10 +495,10 @@
         <li>Identificar los campeones con los que aún necesitas ganar</li>
         <li>Evitar repetir campeones ya completados</li>
         <li>Planificar tus próximas sesiones de Arena de forma estratégica</li>
-        <li>Controlar tu progreso de forma clara y eficiente</li>
       </ul>
 
       <h3>Consejos para terminar Dios de la Arena más rápido</h3>
+      <p>¿Atascado con los últimos campeones? Mira los <a href="/es/campeones-faciles-dios-de-la-arena/">campeones más fáciles para Dios de la Arena</a>, agrupados por estilo de juego. ¿Juegas otros modos? Sigue tu % de victoria por campeón en <a href="/es/contador-victorias-aram-mayhem/">ARAM Mayhem</a> o en <a href="/es/contador-victorias-lol/">partidas normales</a>.</p>
       <ul>
         <li><strong>Empieza por los campeones que menos juegas.</strong> Los campeones que casi nunca eliges (o que sientes flojos en Arena) son los que más fácilmente acaban aplazándose para siempre — ordena por "Por ganar primero" y quítatelos de encima cuando aún tengas motivación.</li>
         <li><strong>Elige aumentos según la condición de victoria del campeón, no tu costumbre.</strong> El pool de aumentos de Arena puede convertir un pick normalmente débil en un build capaz de carrear el dúo; adaptarte a lo que ofrecen los aumentos suele ganar más partidas que forzar el estilo habitual de tu main.</li>
@@ -517,18 +519,19 @@
 
       <h3>Preguntas frecuentes</h3>
       <p><strong>¿Qué es el reto Dios de la Arena?</strong><br>
-      Es un reto de League of Legends que requiere ganar una partida de Arena con cada campeón del juego.</p>
+      Es un reto de League of Legends que requiere ganar una partida de Arena con 60 campeones distintos.</p>
       <p><strong>¿Es gratis usar Arena LoL Win Tracker?</strong><br>
-      Sí, es completamente gratis, no necesita cuenta y no recopila datos personales.</p>
+      Sí, es gratis y no necesita cuenta. Consulta la <a href="/es/privacidad/">política de privacidad</a> sobre anuncios, analítica y formulario de opinión.</p>
       <p><strong>¿Puedo hacer copia de seguridad o transferir mi progreso?</strong><br>
       Sí, exporta tu progreso como archivo JSON e impórtalo en cualquier dispositivo.</p>
       <p><strong>¿Con cuántos campeones necesito ganar para Dios de la Arena?</strong><br>
-      Necesitas al menos una victoria en Arena con cada campeón del juego (más de 160).</p>
+      Necesitas al menos una victoria en Arena con 60 campeones distintos. La herramienta también cubre el roster completo si quieres ganar con todos.</p>
 
       <h3>Privacidad y datos</h3>
       <p>
-        Tu progreso se guarda localmente en tu navegador. Sin cuentas, sin inicios de sesión y sin
-        recopilación de datos personales. Puedes exportar tu progreso en cualquier momento para
+        Tu progreso se guarda solo en tu navegador; no hay cuenta ni inicio de sesión. La web muestra
+        anuncios de Google AdSense, que pueden usar cookies, y el formulario de opinión me envía el
+        mensaje (y tu email, si lo pones). Detalles en la <a href="/es/privacidad/">política de privacidad</a>. Puedes exportar tu progreso en cualquier momento para
         respaldarlo o moverlo a otro dispositivo.
       </p>
 
@@ -576,7 +579,7 @@
     <span id="closeFeedbackModal" class="close">&times;</span>
     <h2 class="feedback-title">Opinión y sugerencias</h2>
     <p class="feedback-intro">
-      ¿Has encontrado un fallo o tienes una idea para el tracker? Cuéntanosla
+      ¿Has encontrado un fallo o tienes una idea para el tracker? Cuéntamela
       abajo. Deja tu email si quieres respuesta.
     </p>
     <form id="feedbackForm" action="https://formspree.io/f/mvkgrdlz" method="POST">
@@ -606,7 +609,7 @@
     <p id="feedbackSuccess" class="feedback-success" hidden>✓ ¡Gracias! Tu mensaje se ha enviado.</p>
     <p id="feedbackError" class="feedback-error" hidden>
       Algo ha fallado. También puedes
-      <a href="mailto:lolarenachampcounter@gmail.com">escribirnos directamente</a>.
+      <a href="mailto:lolarenachampcounter@gmail.com">escribirme directamente</a>.
     </p>
   </div>
 </div>
@@ -629,7 +632,7 @@
   <div class="footer-content">
     <div class="footer-section">
       <h2>Arena LoL Win Tracker</h2>
-      <p>Optimiza tu progreso para el desafío <strong>Dios de la Arena</strong>. Registra cada victoria y completa el logro de los 160+ campeones en el modo Arena de League of Legends.</p>
+      <p>Optimiza tu progreso para el desafío <strong>Dios de la Arena</strong>. Registra cada victoria y alcanza el objetivo de los 60 campeones en el modo Arena de League of Legends.</p>
     </div>
 
     <div class="footer-section">
@@ -639,15 +642,18 @@
 
     <div class="footer-section">
       <h2>Sobre el reto Dios de la Arena</h2>
-      <p>Dios de la Arena te pide ganar con cada campeón del modo Arena de League of Legends. Esta herramienta existe para que esa lista de más de 160 campeones sea fácil de seguir entre sesiones y dispositivos.</p>
+      <p>Dios de la Arena te pide ganar con 60 campeones distintos en el modo Arena de League of Legends. Esta herramienta existe para que esa lista sea fácil de seguir entre sesiones y dispositivos. ¿Te atascas con los últimos? Mira los <a href="/es/campeones-faciles-dios-de-la-arena/">campeones más fáciles para Dios de la Arena</a>.</p>
     </div>
   </div>
   <nav class="footer-links" aria-label="Pie de página">
+    <a href="/es/contador-victorias-aram-mayhem/">Contador de victorias ARAM Mayhem</a>
+    <a href="/es/contador-victorias-lol/">Contador de % de victoria en partidas normales</a>
     <a href="/es/privacidad/">Política de privacidad</a>
     <a href="/" hreflang="en" lang="en">English version</a>
   </nav>
   <div class="footer-bottom">
-    <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Datos proporcionados por Riot Games.</p>
+    <p>&copy; 2026 Arena LoL Win Tracker by SGiroWeb - Datos proporcionados por Riot Games.</p>
+    <p class="riot-legal">Arena LoL Win Tracker no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie implicado oficialmente en la producción o gestión de las propiedades de Riot Games. Riot Games y todas sus propiedades asociadas son marcas comerciales o marcas registradas de Riot Games, Inc.</p>
   </div>
 </footer>
 </body>

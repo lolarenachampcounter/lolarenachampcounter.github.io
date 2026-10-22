@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LoL Win Rate Tracker – Wins & Losses per Champion</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wl.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#020617">
+  <meta name="description" content="Free League of Legends tracker for normal games: log wins and losses with each champion, see your personal win rate per champion and set your own challenges." />
+  <meta name="author" content="SGiroWeb">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arena LoL Win Tracker">
+  <meta property="og:url" content="https://lolarenachampcounter.github.io/lol-win-rate-tracker/">
+  <meta property="og:title" content="LoL Win Rate Tracker – Wins & Losses per Champion">
+  <meta property="og:description" content="Free League of Legends tracker for normal games: log wins and losses with each champion, see your personal win rate per champion and set your own challenges.">
+  <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LoL Champion Win Rate Tracker">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LoL Win Rate Tracker – Wins & Losses per Champion">
+  <meta name="twitter:description" content="Free League of Legends tracker for normal games: log wins and losses with each champion, see your personal win rate per champion and set your own challenges.">
+  <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
+  <link rel="canonical" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+  <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-lol/" />
+  <link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/lol-win-rate-tracker/" />
+  <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "LoL Champion Win Rate Tracker",
+      "url": "https://lolarenachampcounter.github.io/lol-win-rate-tracker/",
+      "description": "Free League of Legends tracker for normal games: log wins and losses with each champion, see your personal win rate per champion and set your own challenges.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isPartOf": {
+        "@id": "https://lolarenachampcounter.github.io/#website"
+      },
+      "dateModified": "2026-10-22"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Arena God tracker",
+          "item": "https://lolarenachampcounter.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "LoL Champion Win Rate Tracker",
+          "item": "https://lolarenachampcounter.github.io/lol-win-rate-tracker/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="base" data-wl-mode="normal">
+  <header class="header">
+    <div class="header-left">
+      <nav class="wl-nav" aria-label="Trackers"><a href="/">Arena God tracker</a><a href="/aram-mayhem-win-tracker/">ARAM Mayhem tracker</a><a href="/lol-win-rate-tracker/" aria-current="page">Normal games tracker</a></nav>
+      <h1>LoL Champion Win Rate Tracker</h1>
+      <p class="subtitle">Log normal games and see your personal win rate with each champion</p>
+      <div class="wl-summary">
+        <div class="wl-stat"><span>Games</span><strong id="wlGames">0</strong></div>
+        <div class="wl-stat"><span>Wins</span><strong id="wlWins">0</strong></div>
+        <div class="wl-stat"><span>Losses</span><strong id="wlLosses">0</strong></div>
+        <div class="wl-stat"><span>Win rate</span><strong id="wlPct">—</strong></div>
+        <div class="wl-stat"><span>Champions played</span><strong id="wlPlayed">0</strong></div>
+        <div class="wl-stat"><span>Champions with a win</span><strong id="wlWonWith">0</strong></div>
+      </div>
+      <div class="wl-progress" aria-hidden="true"><div class="wl-progress-fill" id="wlProgressFill"></div></div>
+      <div class="wl-controls">
+        <div class="search-wrapper">
+          <button type="button" id="wlClear" class="clear-btn" aria-label="Clear search">×</button>
+          <label for="wlSearch" class="sr-only">Search champion</label>
+          <input type="text" id="wlSearch" autocomplete="off" placeholder="Search champion..." />
+        </div>
+        <span class="wl-field"><label for="wlFilter">Show</label>
+        <select id="wlFilter">
+          <option value="all">All</option><option value="played">Played</option><option value="unplayed">Not played</option><option value="won">With a win</option><option value="never-won">No win yet</option>
+        </select>
+        </span>
+        <span class="wl-field"><label for="wlRole">Role</label>
+        <select id="wlRole"><option value="all">All roles</option></select>
+        </span>
+        <span class="wl-field"><label for="wlSort">Sort by</label>
+        <select id="wlSort">
+          <option value="name-asc">Name A-Z</option><option value="games-desc">Most games</option><option value="wins-desc">Most wins</option><option value="pct-desc">Highest win rate</option><option value="pct-asc">Lowest win rate</option>
+        </select></span>
+      </div>
+      <div class="wl-actions">
+        <button type="button" id="wlUndo" class="action-btn">↶ Undo</button>
+        <button type="button" id="wlExport" class="action-btn">Export progress</button>
+        <button type="button" id="wlImportBtn" class="action-btn">Import progress</button>
+        <input type="file" id="wlImport" accept=".json" hidden />
+        <button type="button" id="wlReset" class="action-btn wl-danger">Delete progress</button>
+      </div>
+      <p class="local-note">Your progress never leaves your browser: we don't see it or store it. That's why you can export and import it, so you always keep your own copy. <a href="/privacy/">Privacy policy</a></p>
+    </div>
+  </header>
+  <main>
+    <noscript><p class="wl-empty">This tracker needs JavaScript to save your games in your browser.</p></noscript>
+    <div id="wlGrid" class="wl-grid" aria-live="polite"></div>
+    <section class="seo-content">
+      <div class="seo-inner">
+<h2>Your own win rate per champion, game by game</h2>
+<p>Use this tracker for normal games, or for any personal challenge on Summoner's Rift. Press <strong>+W</strong> after a win and <strong>+L</strong> after a loss; it calculates your win rate with each champion and your overall record.</p>
+<h3>How to use it</h3>
+<ul><li>Search the champion and press +W or +L after each game. <em>Undo</em> (or Ctrl+Z) reverts the last entry.</li>
+<li>Sort by <em>Most games</em> to see your real champion pool, or by win rate to see where you perform best.</li>
+<li>Export your progress to keep a backup.</li></ul>
+<h3>Challenge ideas</h3>
+<ul><li>Win a normal game with every champion.</li>
+<li>Win with every champion of one role: pick the role in the filter and go for <em>No win yet</em>.</li>
+<li>Keep your three most played champions above 55%.</li></ul>
+<h3>Frequently asked questions</h3>
+<p><strong>Does it read my match history?</strong><br>No. You log each game by hand; it doesn't connect to your Riot account.</p>
+<p><strong>Is it separate from the other trackers?</strong><br>Yes. Normal games, ARAM Mayhem and Arena each keep their own progress in your browser.</p>
+<p><strong>Where is my data stored?</strong><br>Only in your browser. Details in the <a href="/privacy/">privacy policy</a>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="wlToast" class="wl-toast" role="status" hidden></div>
+<footer class="seo-footer">
+  <nav class="footer-links" aria-label="Footer">
+    <a href="/">Arena God tracker</a><a href="/aram-mayhem-win-tracker/">ARAM Mayhem tracker</a><a href="/lol-win-rate-tracker/">Normal games tracker</a>
+    <a href="/es/contador-victorias-lol/" hreflang="es" lang="es">Versión en español</a>
+    <a href="/privacy/">Privacy policy</a>
+  </nav>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Arena LoL Win Tracker by SGiroWeb</p>
+    <p class="riot-legal">Arena LoL Win Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+  </div>
+</footer>
+<script src="/wl.js" defer></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"));
+  }
+</script>
+</body>
+</html>

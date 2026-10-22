@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arena LoL Win Tracker - Arena God Challenge Checklist</title>
+  <title>Arena God Tracker – LoL Arena Win Checklist (60 Champions)</title>
   <!-- Hoja de estilos única y crítica: cargarla de forma no bloqueante sólo
        provocaba un flash sin estilos y un salto de layout. Son ~10 KB. -->
   <link rel="stylesheet" href="/style.css">
@@ -11,7 +11,7 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#020617">
 
-  <meta name="description" content="Track your Arena wins in League of Legends. Mark champions, manage progress and complete the Arena God challenge easily." />
+  <meta name="description" content="Free Arena God tracker for League of Legends: mark each champion you win Arena with, filter by role, open builds and track your progress to 60." />
   <meta name="author" content="SGiroWeb">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Arena LoL Win Tracker">
   <meta property="og:url" content="https://lolarenachampcounter.github.io/">
-  <meta property="og:title" content="Arena LoL Win Tracker - Win with every Champion">
-  <meta property="og:description" content="Track your Arena wins in League of Legends and reach the Arena God title.">
+  <meta property="og:title" content="Arena God Tracker – LoL Arena Win Checklist (60 Champions)">
+  <meta property="og:description" content="Free Arena God tracker for League of Legends: mark each champion you win Arena with, filter by role, open builds and track your progress to 60.">
   <meta property="og:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -30,8 +30,8 @@
   <meta property="og:locale:alternate" content="es_ES">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arena LoL Win Tracker">
-  <meta name="twitter:description" content="Manage your Arena Mode wins in League of Legends. Free and easy to use.">
+  <meta name="twitter:title" content="Arena God Tracker – LoL Arena Win Checklist (60 Champions)">
+  <meta name="twitter:description" content="Free Arena God tracker for League of Legends: mark each champion you win Arena with, filter by role, open builds and track your progress to 60.">
   <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
   <meta name="twitter:image:alt" content="Arena LoL Win Tracker - Arena God challenge checklist">
   <link rel="canonical" href="https://lolarenachampcounter.github.io/" />
@@ -89,7 +89,7 @@
         "isPartOf": { "@id": "https://lolarenachampcounter.github.io/#website" },
         "author": { "@id": "https://lolarenachampcounter.github.io/#author" },
         "image": "https://lolarenachampcounter.github.io/assets/og-cover.png",
-        "dateModified": "2026-09-22",
+        "dateModified": "2026-10-22",
         "description": "Free tool to track your League of Legends Arena mode wins and complete the Arena God challenge.",
         "offers": {
           "@type": "Offer",
@@ -108,7 +108,7 @@
             "name": "What is the Arena God challenge?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Arena God challenge requires winning with every champion in Arena mode."
+              "text": "Arena God is a League of Legends challenge that requires winning an Arena match with 60 different champions."
             }
           },
           {
@@ -116,7 +116,7 @@
             "name": "Is Arena LoL Win Tracker free to use?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, the tracker is completely free, requires no account, and stores your progress locally in your browser."
+              "text": "Yes, it's free and needs no account. See the privacy policy for the ads, analytics and feedback form."
             }
           },
           {
@@ -132,7 +132,7 @@
             "name": "How many champions do I need to win with for Arena God?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need to win at least one Arena match with every champion currently in the game, which is currently over 160 champions."
+              "text": "You need at least one Arena win with 60 different champions. The tracker also covers the full roster if you want to win with every champion."
             }
           }
         ]
@@ -144,6 +144,7 @@
 <body class="base">
   <header class="header">
   <div class="header-left">
+    <nav class="mode-nav" aria-label="Trackers"><a href="/" aria-current="page">Arena God</a><a href="/aram-mayhem-win-tracker/">ARAM Mayhem</a><a href="/lol-win-rate-tracker/">Normal games</a></nav>
     <h1>Arena LoL Win Tracker — Arena God Challenge Checklist</h1>
     <p class="subtitle">Champions with victory</p>
 
@@ -263,10 +264,10 @@
 
     <div class="lang-switch">
       <a href="/es/" hreflang="es" title="Español">
-        <img src="https://flagcdn.com/w20/es.png" alt="Español" class="lang-flag" />
+        <img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="Español" class="lang-flag" />
       </a>
       <a href="/" hreflang="en" title="English">
-        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag active" />
+        <img src="https://flagcdn.com/w20/gb.png" width="20" height="15" alt="English" class="lang-flag active" />
       </a>
     </div>
   </div>
@@ -285,17 +286,17 @@
     <div id="championsGrid" class="grid" data-prerendered="true">
       <!-- CHAMPIONS:START -->
       <div class="champion-cell" data-champion-id="Aatrox"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aatrox.png" alt="Aatrox" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aatrox</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aatrox/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aatrox (opens metasrc.com in a new tab)" title="Arena build guide for Aatrox (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ahri"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ahri.png" alt="Ahri" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ahri</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ahri/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ahri (opens metasrc.com in a new tab)" title="Arena build guide for Ahri (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Akali"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akali.png" alt="Akali" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akali</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akali/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Akali (opens metasrc.com in a new tab)" title="Arena build guide for Akali (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Akshan"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akshan.png" alt="Akshan" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Akshan</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akshan/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Akshan (opens metasrc.com in a new tab)" title="Arena build guide for Akshan (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Alistar"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Alistar.png" alt="Alistar" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Alistar</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/alistar/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Alistar (opens metasrc.com in a new tab)" title="Arena build guide for Alistar (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ambessa"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ambessa.png" alt="Ambessa" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ambessa</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ambessa/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ambessa (opens metasrc.com in a new tab)" title="Arena build guide for Ambessa (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Amumu"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Amumu.png" alt="Amumu" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Amumu</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/amumu/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Amumu (opens metasrc.com in a new tab)" title="Arena build guide for Amumu (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Anivia"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Anivia.png" alt="Anivia" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Anivia</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/anivia/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Anivia (opens metasrc.com in a new tab)" title="Arena build guide for Anivia (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Annie"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Annie.png" alt="Annie" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Annie</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/annie/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Annie (opens metasrc.com in a new tab)" title="Arena build guide for Annie (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Aphelios"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aphelios.png" alt="Aphelios" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aphelios</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aphelios/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aphelios (opens metasrc.com in a new tab)" title="Arena build guide for Aphelios (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="Ashe"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ashe.png" alt="Ashe" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Ashe</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ashe/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ashe (opens metasrc.com in a new tab)" title="Arena build guide for Ashe (opens metasrc.com in a new tab)">↗</a></div>
-      <div class="champion-cell" data-champion-id="AurelionSol"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" decoding="async" loading="eager" fetchpriority="high" /><span class="champion-name">Aurelion Sol</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurelion-sol/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aurelion Sol (opens metasrc.com in a new tab)" title="Arena build guide for Aurelion Sol (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ahri"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ahri.png" alt="Ahri" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ahri</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ahri/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ahri (opens metasrc.com in a new tab)" title="Arena build guide for Ahri (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Akali"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akali.png" alt="Akali" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Akali</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akali/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Akali (opens metasrc.com in a new tab)" title="Arena build guide for Akali (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Akshan"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Akshan.png" alt="Akshan" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Akshan</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/akshan/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Akshan (opens metasrc.com in a new tab)" title="Arena build guide for Akshan (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Alistar"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Alistar.png" alt="Alistar" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Alistar</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/alistar/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Alistar (opens metasrc.com in a new tab)" title="Arena build guide for Alistar (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ambessa"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ambessa.png" alt="Ambessa" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ambessa</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ambessa/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ambessa (opens metasrc.com in a new tab)" title="Arena build guide for Ambessa (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Amumu"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Amumu.png" alt="Amumu" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Amumu</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/amumu/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Amumu (opens metasrc.com in a new tab)" title="Arena build guide for Amumu (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Anivia"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Anivia.png" alt="Anivia" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Anivia</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/anivia/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Anivia (opens metasrc.com in a new tab)" title="Arena build guide for Anivia (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Annie"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Annie.png" alt="Annie" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Annie</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/annie/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Annie (opens metasrc.com in a new tab)" title="Arena build guide for Annie (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Aphelios"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aphelios.png" alt="Aphelios" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Aphelios</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aphelios/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aphelios (opens metasrc.com in a new tab)" title="Arena build guide for Aphelios (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="Ashe"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Ashe.png" alt="Ashe" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Ashe</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/ashe/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Ashe (opens metasrc.com in a new tab)" title="Arena build guide for Ashe (opens metasrc.com in a new tab)">↗</a></div>
+      <div class="champion-cell" data-champion-id="AurelionSol"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/AurelionSol.png" alt="Aurelion Sol" width="64" height="64" decoding="async" loading="eager" /><span class="champion-name">Aurelion Sol</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurelion-sol/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aurelion Sol (opens metasrc.com in a new tab)" title="Arena build guide for Aurelion Sol (opens metasrc.com in a new tab)">↗</a></div>
       <div class="champion-cell" data-champion-id="Aurora"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Aurora.png" alt="Aurora" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Aurora</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/aurora/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Aurora (opens metasrc.com in a new tab)" title="Arena build guide for Aurora (opens metasrc.com in a new tab)">↗</a></div>
       <div class="champion-cell" data-champion-id="Azir"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Azir.png" alt="Azir" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Azir</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/azir/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Azir (opens metasrc.com in a new tab)" title="Arena build guide for Azir (opens metasrc.com in a new tab)">↗</a></div>
       <div class="champion-cell" data-champion-id="Bard"><button type="button" class="champion" aria-pressed="false"><img src="/assets/champions/Bard.png" alt="Bard" width="64" height="64" decoding="async" loading="lazy" /><span class="champion-name">Bard</span></button><a class="build-link" href="https://www.metasrc.com/lol/arena/champions/bard/build" target="_blank" rel="noopener noreferrer" aria-label="Arena build guide for Bard (opens metasrc.com in a new tab)" title="Arena build guide for Bard (opens metasrc.com in a new tab)">↗</a></div>
@@ -461,11 +462,12 @@
     </div>
 
  <section class="seo-content">
-  <details open>
+  <p class="local-note">Your progress never leaves your browser: we don't see it or store it. That's why you can export and import it, so you always keep your own copy. <a href="/privacy/">Privacy policy</a></p>
+  <details class="seo-details">
     <summary>About Arena LoL Win Tracker</summary>
     <div class="seo-inner">
 
-      <h2>Arena LoL Win Tracker – Complete the Arena God Challenge Efficiently</h2>
+      <h2>How the Arena God tracker works</h2>
 
       <p>
         Arena LoL Win Tracker is a free, lightweight tool designed to help League of Legends players
@@ -476,14 +478,14 @@
       <h3>What Is the Arena God Challenge?</h3>
       <p>
         Arena God is a League of Legends challenge that asks players to win at least one Arena match
-        with every champion in the game — currently over 160. Riot doesn't provide an in-client checklist
+        with 60 different champions. Riot doesn't provide an in-client checklist
         for this, so most players end up guessing which champions they've already used. This tracker
         replaces the guesswork with a simple, visual list you can filter and search as you play.
       </p>
 
       <h3>Why Use This Tracker?</h3>
       <p>
-        Completing the Arena God challenge requires winning with 160+ champions. Without tracking,
+        Completing the Arena God challenge requires Arena wins with 60 different champions. Without tracking,
         it’s easy to forget who you’ve already used. This tool helps you:
       </p>
 
@@ -491,10 +493,10 @@
         <li>Identify champions you still need to win with</li>
         <li>Avoid repeating already completed champions</li>
         <li>Plan your next Arena sessions strategically</li>
-        <li>Track progress clearly and efficiently</li>
       </ul>
 
       <h3>Tips for Finishing Arena God Faster</h3>
+      <p>Stuck on the last champions? See the <a href="/arena-god-easy-champions/">easiest champions for Arena God</a>, grouped by playstyle. Playing other modes? Track your win rate per champion in <a href="/aram-mayhem-win-tracker/">ARAM Mayhem</a> or <a href="/lol-win-rate-tracker/">normal games</a>.</p>
       <ul>
         <li><strong>Clear low-pick-rate champions first.</strong> Champions you rarely play (or that feel weak in Arena) are the ones most likely to get postponed indefinitely — sort by "Not won first" and knock them out early while you still have motivation.</li>
         <li><strong>Pick augments around your champion's win condition, not your habits.</strong> Arena's augment pool can turn a normally weak pick into a duo-carry build; leaning into whatever the augments offer usually wins more than forcing your main's normal playstyle.</li>
@@ -515,18 +517,19 @@
 
       <h3>Frequently Asked Questions</h3>
       <p><strong>What is the Arena God challenge?</strong><br>
-      It's a League of Legends challenge that requires winning an Arena match with every champion currently in the game.</p>
+      It's a League of Legends challenge that requires winning an Arena match with 60 different champions.</p>
       <p><strong>Is Arena LoL Win Tracker free to use?</strong><br>
-      Yes, it's completely free, with no account required and no personal data collected.</p>
+      Yes, it's free and needs no account. See the <a href="/privacy/">privacy policy</a> for the ads, analytics and feedback form.</p>
       <p><strong>Can I back up or transfer my Arena progress?</strong><br>
       Yes, export your progress as a JSON file and import it on any device.</p>
       <p><strong>How many champions do I need for Arena God?</strong><br>
-      You need at least one Arena win with every champion currently in the game (160+).</p>
+      You need at least one Arena win with 60 different champions. The tracker also covers the full roster if you want to win with every champion.</p>
 
       <h3>Privacy & Data</h3>
       <p>
-        Your progress is stored locally in your browser. No accounts, no logins, and no personal
-        data collection. You can export your progress at any time to back it up or move it to another device.
+        Your tracker progress is stored only in your browser; there is no account or login. This site
+        shows Google AdSense ads, which may use cookies, and the feedback form sends the message (and
+        email, if you add one) to me. Details in the <a href="/privacy/">privacy policy</a>. You can export your progress at any time to back it up or move it to another device.
       </p>
 
       <h3>Designed for Arena Mode Players</h3>
@@ -574,7 +577,7 @@
     <span id="closeFeedbackModal" class="close">&times;</span>
     <h2 class="feedback-title">Feedback &amp; suggestions</h2>
     <p class="feedback-intro">
-      Found a bug, or have an idea for the tracker? Let us know below. Leave
+      Found a bug, or have an idea for the tracker? Let me know below. Leave
       your email if you'd like a reply.
     </p>
     <form id="feedbackForm" action="https://formspree.io/f/mvkgrdlz" method="POST">
@@ -604,7 +607,7 @@
     <p id="feedbackSuccess" class="feedback-success" hidden>✓ Thanks! Your message has been sent.</p>
     <p id="feedbackError" class="feedback-error" hidden>
       Something went wrong. You can also
-      <a href="mailto:lolarenachampcounter@gmail.com">email us directly</a>.
+      <a href="mailto:lolarenachampcounter@gmail.com">email me directly</a>.
     </p>
   </div>
 </div>
@@ -627,7 +630,7 @@
   <div class="footer-content">
     <div class="footer-section">
       <h2>Arena LoL Win Tracker</h2>
-      <p>Optimize your progress toward the <strong>Arena God</strong> challenge. Log every win and complete the 160+ champion checklist in League of Legends' Arena mode.</p>
+      <p>Optimize your progress toward the <strong>Arena God</strong> challenge. Log every win and reach the 60-champion goal in League of Legends' Arena mode.</p>
     </div>
 
     <div class="footer-section">
@@ -637,15 +640,18 @@
 
     <div class="footer-section">
       <h2>About the Arena God Challenge</h2>
-      <p>Arena God asks you to win with every champion in League of Legends' Arena mode. This tracker exists to make that 160+ champion checklist easy to follow across sessions and devices.</p>
+      <p>Arena God asks you to win with 60 different champions in League of Legends' Arena mode. This tracker exists to make that checklist easy to follow across sessions and devices. Stuck on the last ones? See the <a href="/arena-god-easy-champions/">easiest champions for Arena God</a>.</p>
     </div>
   </div>
   <nav class="footer-links" aria-label="Footer">
+    <a href="/aram-mayhem-win-tracker/">ARAM Mayhem win tracker</a>
+    <a href="/lol-win-rate-tracker/">Normal games win rate tracker</a>
     <a href="/privacy/">Privacy policy</a>
     <a href="/es/" hreflang="es" lang="es">Versión en español</a>
   </nav>
   <div class="footer-bottom">
-    <p>&copy; 2026 Arena LoL Tracker by SGiroWeb - Data provided by Riot Games.</p>
+    <p>&copy; 2026 Arena LoL Win Tracker by SGiroWeb - Data provided by Riot Games.</p>
+    <p class="riot-legal">Arena LoL Win Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
   </div>
 </footer>
 </body>
