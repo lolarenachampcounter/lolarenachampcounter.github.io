@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://lolarenachampcounter.github.io/assets/og-cover.png">
   <link rel="canonical" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
   <link rel="alternate" hreflang="en" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
-  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-mayhem/" />
+  <link rel="alternate" hreflang="es" href="https://lolarenachampcounter.github.io/es/contador-victorias-aram-caos/" />
   <link rel="alternate" hreflang="x-default" href="https://lolarenachampcounter.github.io/aram-mayhem-win-tracker/" />
   <script async src="https://plausible.io/js/pa-haeu0VJ3XxhcPlHHVfHfm.js"></script>
   <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
@@ -121,6 +121,18 @@
       </div>
       <p class="local-note">Your progress never leaves your browser: we don't see it or store it. That's why you can export and import it, so you always keep your own copy. <a href="/privacy/">Privacy policy</a></p>
     </div>
+    <div class="header-right">
+      <div class="tip-lang">
+        <div class="tipjar-container">
+          <a id="donateLink" href="https://paypal.me/dolm0s" target="_blank" rel="noopener noreferrer" class="tipjar">☕ Buy me a coffee</a>
+        </div>
+        <div class="lang-switch">
+          <a href="/es/contador-victorias-aram-caos/" hreflang="es" title="Español"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="Español" class="lang-flag" /></a>
+          <a href="/aram-mayhem-win-tracker/" hreflang="en" title="English"><img src="https://flagcdn.com/w20/gb.png" width="20" height="15" alt="English" class="lang-flag active" /></a>
+        </div>
+      </div>
+      <button type="button" id="feedbackBtn" class="feedback-btn">💬 Feedback</button>
+    </div>
   </header>
   <main>
     <noscript><p class="wl-empty">This tracker needs JavaScript to save your games in your browser.</p></noscript>
@@ -144,11 +156,30 @@
       </div>
     </section>
   </main>
+  <div id="feedbackModal" class="modal">
+    <div class="modal-content feedback-content">
+      <span id="closeFeedbackModal" class="close" role="button" tabindex="0" aria-label="Close">&times;</span>
+      <h2 class="feedback-title">Feedback &amp; suggestions</h2>
+      <p class="feedback-intro">Found a bug, or have an idea for the tracker? Let me know below. Leave your email if you'd like a reply.</p>
+      <form id="feedbackForm" action="https://formspree.io/f/mvkgrdlz" method="POST">
+        <input type="hidden" name="_subject" value="Arena LoL Win Tracker feedback (ARAM Mayhem Win Tracker)" />
+        <label for="feedbackMessage" class="sr-only">Your message</label>
+        <textarea id="feedbackMessage" name="message" class="feedback-textarea" rows="5" placeholder="What would you change or add?" required></textarea>
+        <label for="feedbackEmail" class="sr-only">Your email (optional)</label>
+        <input type="email" id="feedbackEmail" name="email" class="feedback-email" placeholder="Your email (optional, if you want a reply)" autocomplete="email" />
+        <div class="modal-buttons">
+          <button type="submit" id="sendFeedback" class="action-btn">Send feedback</button>
+        </div>
+      </form>
+      <p id="feedbackSuccess" class="feedback-success" hidden>✓ Thanks! Your message has been sent.</p>
+      <p id="feedbackError" class="feedback-error" hidden>Something went wrong. You can also <a href="mailto:lolarenachampcounter@gmail.com">email me directly</a>.</p>
+    </div>
+  </div>
   <div id="wlToast" class="wl-toast" role="status" hidden></div>
 <footer class="seo-footer">
   <nav class="footer-links" aria-label="Footer">
     <a href="/">Arena God tracker</a><a href="/aram-mayhem-win-tracker/">ARAM Mayhem tracker</a><a href="/lol-win-rate-tracker/">Normal games tracker</a>
-    <a href="/es/contador-victorias-aram-mayhem/" hreflang="es" lang="es">Versión en español</a>
+    <a href="/es/contador-victorias-aram-caos/" hreflang="es" lang="es">Versión en español</a>
     <a href="/privacy/">Privacy policy</a>
   </nav>
   <div class="footer-bottom">

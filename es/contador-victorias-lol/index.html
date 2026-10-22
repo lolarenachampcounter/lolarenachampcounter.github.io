@@ -81,7 +81,7 @@
 <body class="base" data-wl-mode="normal">
   <header class="header">
     <div class="header-left">
-      <nav class="wl-nav" aria-label="Contadores"><a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-mayhem/">Contador ARAM Mayhem</a><a href="/es/contador-victorias-lol/" aria-current="page">Contador partidas normales</a></nav>
+      <nav class="wl-nav" aria-label="Contadores"><a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-caos/">Contador ARAM Caos</a><a href="/es/contador-victorias-lol/" aria-current="page">Contador partidas normales</a></nav>
       <h1>Contador de % de victoria por campeón en LoL</h1>
       <p class="subtitle">Apunta tus partidas normales y mira tu % de victoria con cada campeón</p>
       <div class="wl-summary">
@@ -121,6 +121,18 @@
       </div>
       <p class="local-note">Tu progreso nunca sale de tu navegador: no lo vemos ni lo guardamos nosotros. Por eso te damos la opción de exportarlo e importarlo, para que tengas tu propia copia. <a href="/es/privacidad/">Política de privacidad</a></p>
     </div>
+    <div class="header-right">
+      <div class="tip-lang">
+        <div class="tipjar-container">
+          <a id="donateLink" href="https://paypal.me/dolm0s" target="_blank" rel="noopener noreferrer" class="tipjar">☕ Buy me a coffee</a>
+        </div>
+        <div class="lang-switch">
+          <a href="/es/contador-victorias-lol/" hreflang="es" title="Español"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="Español" class="lang-flag active" /></a>
+          <a href="/lol-win-rate-tracker/" hreflang="en" title="English"><img src="https://flagcdn.com/w20/gb.png" width="20" height="15" alt="English" class="lang-flag" /></a>
+        </div>
+      </div>
+      <button type="button" id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
+    </div>
   </header>
   <main>
     <noscript><p class="wl-empty">Este contador necesita JavaScript para guardar tus partidas en el navegador.</p></noscript>
@@ -139,15 +151,34 @@
 <li>Mantener tus tres campeones más jugados por encima del 55%.</li></ul>
 <h3>Preguntas frecuentes</h3>
 <p><strong>¿Lee mi historial de partidas?</strong><br>No. Apuntas cada partida a mano; no se conecta a tu cuenta de Riot.</p>
-<p><strong>¿Es independiente de los otros contadores?</strong><br>Sí. Partidas normales, ARAM Mayhem y Arena guardan cada uno su propio progreso en tu navegador.</p>
+<p><strong>¿Es independiente de los otros contadores?</strong><br>Sí. Partidas normales, ARAM Caos y Arena guardan cada uno su propio progreso en tu navegador.</p>
 <p><strong>¿Dónde se guardan mis datos?</strong><br>Solo en tu navegador. Detalles en la <a href="/es/privacidad/">política de privacidad</a>.</p>
       </div>
     </section>
   </main>
+  <div id="feedbackModal" class="modal">
+    <div class="modal-content feedback-content">
+      <span id="closeFeedbackModal" class="close" role="button" tabindex="0" aria-label="Cerrar">&times;</span>
+      <h2 class="feedback-title">Opinión y sugerencias</h2>
+      <p class="feedback-intro">¿Has encontrado un fallo o tienes una idea para el tracker? Cuéntamela abajo. Deja tu email si quieres respuesta.</p>
+      <form id="feedbackForm" action="https://formspree.io/f/mvkgrdlz" method="POST">
+        <input type="hidden" name="_subject" value="Opinión sobre Arena LoL Win Tracker (Contador de % de victoria por campeón en LoL)" />
+        <label for="feedbackMessage" class="sr-only">Tu mensaje</label>
+        <textarea id="feedbackMessage" name="message" class="feedback-textarea" rows="5" placeholder="¿Qué cambiarías o añadirías?" required></textarea>
+        <label for="feedbackEmail" class="sr-only">Tu correo (opcional)</label>
+        <input type="email" id="feedbackEmail" name="email" class="feedback-email" placeholder="Tu correo (opcional, por si quieres respuesta)" autocomplete="email" />
+        <div class="modal-buttons">
+          <button type="submit" id="sendFeedback" class="action-btn">Enviar opinión</button>
+        </div>
+      </form>
+      <p id="feedbackSuccess" class="feedback-success" hidden>✓ ¡Gracias! Tu mensaje se ha enviado.</p>
+      <p id="feedbackError" class="feedback-error" hidden>Algo ha fallado. También puedes <a href="mailto:lolarenachampcounter@gmail.com">escribirme directamente</a>.</p>
+    </div>
+  </div>
   <div id="wlToast" class="wl-toast" role="status" hidden></div>
 <footer class="seo-footer">
   <nav class="footer-links" aria-label="Footer">
-    <a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-mayhem/">Contador ARAM Mayhem</a><a href="/es/contador-victorias-lol/">Contador partidas normales</a>
+    <a href="/es/">Contador Dios de la Arena</a><a href="/es/contador-victorias-aram-caos/">Contador ARAM Caos</a><a href="/es/contador-victorias-lol/">Contador partidas normales</a>
     <a href="/lol-win-rate-tracker/" hreflang="en" lang="en">English version</a>
     <a href="/es/privacidad/">Política de privacidad</a>
   </nav>

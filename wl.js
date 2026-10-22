@@ -285,11 +285,41 @@
   $("wlImport").addEventListener("change", e => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ""; });
   $("wlReset").addEventListener("click", resetAll);
   document.addEventListener("keydown", e => {
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && document.activeElement !== search) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
       e.preventDefault();
       undo();
     }
   });
+
+  // ---------- opinión (mismo formulario de Formspree que la portada) ----------
+  const fbModal = $("feedbackModal");
+  if (fbModal) {
+    const fbForm = $("feedbackForm"), fbOk = $("feedbackSuccess"), fbErr = $("feedbackError");
+    const closeFb = () => { fbModal.style.display = "none"; $("feedbackBtn").focus(); };
+    $("feedbackBtn").addEventListener("click", () => {
+      fbModal.style.display = "flex";
+      fbForm.hidden = false;
+      fbOk.hidden = true;
+      fbErr.hidden = true;
+      $("feedbackMessage").focus();
+    });
+    $("closeFeedbackModal").addEventListener("click", closeFb);
+    $("closeFeedbackModal").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeFb(); } });
+    fbModal.addEventListener("click", e => { if (e.target === fbModal) closeFb(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && fbModal.style.display === "flex") closeFb(); });
+    fbForm.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(fbForm.action, { method: "POST", body: new FormData(fbForm), headers: { Accept: "application/json" } })
+        .then(res => {
+          if (!res.ok) throw new Error("bad");
+          fbForm.reset();
+          fbForm.hidden = true;
+          fbErr.hidden = true;
+          fbOk.hidden = false;
+        })
+        .catch(() => { fbErr.hidden = false; });
+    });
+  }
 
   // ---------- carga ----------
   fetch("/data/champions.json")
